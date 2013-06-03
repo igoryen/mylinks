@@ -17,8 +17,8 @@
 body 
 {
     /*font-family: sans-serif;*/
-    font-family: Verdana , Gill Sans MT, sans-serif;
-    /*font-family:  Consolas, monospace;*/
+    /* font-family: Verdana , Gill Sans MT, sans-serif;*/
+    font-family:  Consolas, monospace;
     font-size: 10px;
     font-weight:  lighter;
     color: green;
@@ -31,12 +31,21 @@ body.monospaced
 {
     font-family: Consolas, monospace;
 
-    font-size: 10px;
+    font-size: 100px;
     font-weight:  lighter;
     color: green;
     /*color: black;*/
     background-color: black;
 }
+
+.button {
+display:inline-block;
+min-width: 50px;
+width: 80px;
+padding:5px 10px;
+
+}
+
 .blink 
 {
     text-decoration: blink;
@@ -84,12 +93,29 @@ div.block{
     width: 100% ;
 
 }
+div.display_pane{
+    display: table-cell;
+    width: 80%;
+}
 
 div.menu_centered{
     display:  
     margin: auto;
     text-align: center;
 }
+
+div.navigation_pane{
+    /*margin-left: 5px;*/
+
+    display: table-cell;
+    width: 20%;
+}
+
+div.table_container{
+    display: table;
+    width: 100%;
+
+};
 
 h2{
     font-family: 'Times New Roman',Times,serif;
@@ -134,7 +160,7 @@ a:visited {color:#00FF00;}  /* visited link */
 a:hover{
     background: #ffff66;
     color: red;
-    font-weight: bold;	
+    /*font-weight: bold;*/	
 }
 
 div.b{
