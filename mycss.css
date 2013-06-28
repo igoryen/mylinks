@@ -31,12 +31,21 @@ body.monospaced
 {
     font-family: Consolas, monospace;
 
-    font-size: 10px;
+    font-size: 100px;
     font-weight:  lighter;
     color: green;
     /*color: black;*/
     background-color: black;
 }
+
+.button {
+display:inline-block;
+min-width: 50px;
+width: 80px;
+padding:5px 10px;
+
+}
+
 .blink 
 {
     text-decoration: blink;
