@@ -1,47 +1,5 @@
 
 
-//---------------------------------------------------------------
-//$( document ).ready(function() {
-
-// printing out buttons
-
-// VERSION 1: printing out an array
-/*
-var buttons = [
-
-'<button onclick="funny()">Funny</button>'
-,'<button onclick="git()">git</button>'
-, '<button onclick="gregoriana()">Gregoriana</button>'
-, '<button onclick="health()">Health</button>'
-, '<button onclick="html5()">HTML5</button>'
-, '<button onclick="its()">IT stuff</button>'
-, '<button onclick="itt()">IT terms</button>'
-, '<button onclick="java()">Java</button>'
-, '<button onclick="js()">JS</button>'
-, '<button onclick="latina()">Latina</button>'
-, '<button onclick="l10n()">L10N</button>'
-, '<button onclick="mus()">Music</button>'
-, '<button onclick="nodejs()">Node.js</button>'
-, '<button onclick="php()">PHP</button>'
-, '<button onclick="p_t()">Preach&Teach</button>'
-
-, '<button onclick="p_w()">P&W</button>'
-, '<button onclick="selfdefense()">Self-defense</button>'
-, '<button onclick="seneca()">Seneca</button>'
-, '<button onclick="tolkiniana()">Tolkieniana</button>'
-, '<button onclick="unsorted()">Unsorted</button>'
-
-, '<button onclick="video()">Video</button>'
-];
-
-for (var b in buttons){
-  document.write(buttons[b] + '<br>');
-
-};
-*/
-
-// end of VERSION 1 
-
 //----------------------------------------------------------------------------
 
 
@@ -57,8 +15,10 @@ var buttons = {
   , "IT terms":"itt()"
   , "Java":"java()"
   , "JavaScript":"js()"
+  , "Job Search" : "jobsearch()"
   , "Latina":"latina()"
   , "Localization":"l10n()"
+  , "Mozilla" : "mozilla()"
   , "Music":"mus()"
   , "Node.js":"nodejs()"
   , "PHP":"php()"
@@ -67,8 +27,10 @@ var buttons = {
   , "Self-Defense":"selfdefense()"
   , "Seneca":"seneca()"
   , "Tolkieniana":"tolkiniana()"
+  , "Transifex" : "transifex()"
   , "Unsorted":"unsorted()"
   , "Video":"video()"
+  , "Webdev":"webdev()"
 };
 var keys = [];
 var key,f;
@@ -522,7 +484,7 @@ for (f = 0; f < keys.length; f++){
 return retval; // if you use 'document.write()' the document will have only the contents of the object on white background
 }; // end printObj()
 
-//----------------------------------------------------------------------------
+//=========================================================================================
 
 function funny(){
   document.getElementById("demo").innerHTML=funnyFunc();
@@ -622,6 +584,7 @@ var funnyFunc = function(){
     , "Terminator in verse":"http://www.youtube.com/watch?v=oETUre2ey3A"
     , "They`re taking the hobbits to Isengard ":"http://www.youtube.com/watch?v=uE-1RPDqJAY"
     , "Turkish Action Movie":"http://www.youtube.com/watch?annotation_id=annotation_491226&feature=iv&src_vid=eECkdle_dTo&v=sPNYYr4aLaM"
+    , "Twelve Chairs, the":"http://lib.ru/ILFPETROV/ilf_petrov_12_chairs_engl.txt"
     , "When I was little I had a grandma, too ":"http://www.youtube.com/watch?v=gffZRbGVJG4"
     , "Who Could Be President ":"http://www.youtube.com/watch?v=0SHsg20-9LM"
     , "Who farted?":"https://www.youtube.com/watch?v=78WEaRm2W2k"
@@ -646,70 +609,73 @@ var git2 = function (){
 
 
     "Abiu":"https://github.com/igoryen/abiu"
-   , "Acerola":"https://github.com/igoryen/acerola"
-   , "Ackee":"https://github.com/igoryen/ackee"
-   , "Ambarella":"https://github.com/igoryen/ambarella"
-   , "Amore":"https://github.com/humphd/amore.webmaker.org"
-   , "Apple":"https://github.com/igoryen/apple"
-   , "Apricot":"https://github.com/igoryen/apricot"
-   , "Araza":"https://github.com/igoryen/araza"
-   , "Atemoya":"https://github.com/igoryen/atemoya"
-   , "Avocado":"https://github.com/igoryen/avocado"
-   , "Banana":"https://github.com/igoryen/banana"
-   , "Butter":"https://github.com/mozilla/butter"
-   , "Create a repo":"https://help.github.com/articles/create-a-repo"
-   , "Culinary fruit, list":"http://en.wikipedia.org/wiki/List_of_culinary_fruits"
-   , "EJS":"https://github.com/visionmedia/ejs"
-   , "Friendlycode":"https://github.com/mozilla/friendlycode"
-   , "Transifex":"https://www.transifex.com/projects/p/friendlycode/"
-   , "Friendlycode, trivial embedding":"http://localhost:8005/examples/bare.html"
-   , "Friendlycode, alternate publishing":"http://localhost:8005/examples/alternate-publisher.html"
-   , "Transifex":"http://localhost:8005/examples/transifex.html"
-   , "Friendly code, l10ns":"http://localhost:8005/examples/transifex.html?local=1"
-   , "git blame":"http://jeanbahnik.com/2012/05/using-git-blame/"
-   , "git Book":"http://git-scm.com/book"
-   , "git: install":"https://help.github.com/articles/set-up-git"
-   , "git reference":"http://gitref.org/basic/"
-   , "Gobbledygook":"https://github.com/lloyd/gobbledygook"
-   , "Hello World!":"https://github.com/alicoding/Hello-World/"
-   , "Interactive Rebase":"https://help.github.com/articles/interactive-rebase"
-   , "Igoryen":"https://github.com/igoryen"
-   , "login.webmaker.org (igoryen)":"https://github.com/igoryen/login.webmaker.org"
-   , "login.webmaker.org (mozilla)":"https://github.com/humphd/login.webmaker.org"
-   , "login.webmaker.org (humph)":"https://github.com/mozilla/login.webmaker.org"
-   , "localhost:3000":"http://localhost:3000"
-   , "localhost:7777":"http://localhost:7777"
-   , "MakeAPI (igoryen)":"https://github.com/igoryen/MakeAPI"
-   , "MakeAPI (humphd)" : "https://github.com/humphd/MakeAPI"
-   , "MakeAPI (moz)":"https://github.com/mozilla/MakeAPI"
-   , "Mango":"https://github.com/igoryen/mango"
-   , "Markdown Syntax":"https://github.com/fletcher/MultiMarkdown/blob/master/Documentation/Markdown%20Syntax.md"
-   , "My links":"https://github.com/igoryen/mylinks"
-   , "NVM":"https://github.com/creationix/nvm"
-   , "node-webmaker-loginapi":"https://github.com/mozilla/node-webmaker-loginapi"
-   , "Pay attention to Node.js":"http://readwrite.com/2010/10/20/why-developers-should-pay-atte"
-   , "Popcorn_maker":"https://github.com/mozilla/popcorn_maker"
-   , "popcorn.webmaker.org":"https://github.com/mozilla/popcorn.webmaker.org"
-   , "Power your workflow":"https://www.youtube.com/watch?v=GYnOwPl8yCE"
-   , "SSH keys: generating":"https://help.github.com/articles/generating-ssh-keys"
-   , "SIL2013":"https://github.com/storytellinginnovationlab2013"
-   , "10 things I hate about git":"http://steveko.wordpress.com/2012/02/24/10-things-i-hate-about-git/"
-   , "Test":"https://github.com/igoryen/Test"
-   , "thimble.webmaker.org":"https://github.com/mozilla/thimble.webmaker.org"
-   , "Toolness":"https://github.com/toolness"
-   , "Webmaker.org":"https://github.com/mozilla/webmaker.org"
-   , "bug870429 (locales)":"https://bugzilla.mozilla.org/show_bug.cgi?id=870429"
-   , "bug869643 (MONGO)":"https://bugzilla.mozilla.org/show_bug.cgi?id=869643"
-   , "bug873064 (prune)":"https://bugzilla.mozilla.org/show_bug.cgi?id=873064"
-   , "bug873098 (old code)":"https://bugzilla.mozilla.org/show_bug.cgi?id=873098"
-   , "bug877305 (comma)":"https://bugzilla.mozilla.org/show_bug.cgi?id=877305"
-   , "bug881734 (audit)":"https://bugzilla.mozilla.org/show_bug.cgi?id=881734"
-   , "bug870995 (Make! - '!')":"https://bugzilla.mozilla.org/show_bug.cgi?id=870995"
-   , "bug883426 (update module)":"https://bugzilla.mozilla.org/show_bug.cgi?id=883426"
-   , "bug885193 (search field)":"https://bugzilla.mozilla.org/show_bug.cgi?id=885193"
- };
+    , "Acerola":"https://github.com/igoryen/acerola"
+    , "Ackee":"https://github.com/igoryen/ackee"
+    , "Ambarella":"https://github.com/igoryen/ambarella"
+    , "Amore":"https://github.com/humphd/amore.webmaker.org"
+    , "Apple":"https://github.com/igoryen/apple"
+    , "Apricot":"https://github.com/igoryen/apricot"
+    , "Araza":"https://github.com/igoryen/araza"
+    , "Atemoya":"https://github.com/igoryen/atemoya"
+    , "Avocado":"https://github.com/igoryen/avocado"
+    , "Banana":"https://github.com/igoryen/banana"
+    , "Butter":"https://github.com/mozilla/butter"
+    , "Create a repo":"https://help.github.com/articles/create-a-repo"
+    , "Culinary fruit, list":"http://en.wikipedia.org/wiki/List_of_culinary_fruits"
+    , "EJS":"https://github.com/visionmedia/ejs"
+    , "Friendlycode":"https://github.com/mozilla/friendlycode"
+    , "Transifex":"https://www.transifex.com/projects/p/friendlycode/"
+    , "Friendlycode, trivial embedding":"http://localhost:8005/examples/bare.html"
+    , "Friendlycode, alternate publishing":"http://localhost:8005/examples/alternate-publisher.html"
+    , "Transifex":"http://localhost:8005/examples/transifex.html"
+    , "Friendly code, l10ns":"http://localhost:8005/examples/transifex.html?local=1"
+    , "git blame":"http://jeanbahnik.com/2012/05/using-git-blame/"
+    , "git Book":"http://git-scm.com/book"
+    , "git: install":"https://help.github.com/articles/set-up-git"
+    , "git reference":"http://gitref.org/basic/"
+    , "Gobbledygook":"https://github.com/lloyd/gobbledygook"
+    , "Hello World!":"https://github.com/alicoding/Hello-World/"
+    , "Interactive Rebase":"https://help.github.com/articles/interactive-rebase"
+    , "Igoryen":"https://github.com/igoryen"
+    , "LoginAPI & User Model" : "https://github.com/mozilla/login.webmaker.org/wiki/LoginAPI-&-User-Model"
+    , "login.webmaker.org (igoryen)":"https://github.com/igoryen/login.webmaker.org"
+    , "login.webmaker.org (mozilla)":"https://github.com/humphd/login.webmaker.org"
+    , "login.webmaker.org (humph)":"https://github.com/mozilla/login.webmaker.org"
+    , "localhost:3000":"http://localhost:3000"
+    , "localhost:7777":"http://localhost:7777"
+    , "MakeAPI (igoryen)":"https://github.com/igoryen/MakeAPI"
+    , "MakeAPI (humphd)" : "https://github.com/humphd/MakeAPI"
+    , "MakeAPI (moz)":"https://github.com/mozilla/MakeAPI"
+    , "MakeAPI model" : "https://gist.github.com/mjschranz/e37e7429373861a3d11e"
+    , "MakeAPI API reference"  : "https://github.com/mozilla/MakeAPI/wiki/API-Reference"
+    , "Mango":"https://github.com/igoryen/mango"
+    , "Markdown Syntax":"https://github.com/fletcher/MultiMarkdown/blob/master/Documentation/Markdown%20Syntax.md"
+    , "My links":"https://github.com/igoryen/mylinks"
+    , "NVM":"https://github.com/creationix/nvm"
+    , "node-webmaker-loginapi":"https://github.com/mozilla/node-webmaker-loginapi"
+    , "Pay attention to Node.js":"http://readwrite.com/2010/10/20/why-developers-should-pay-atte"
+    , "Popcorn_maker":"https://github.com/mozilla/popcorn_maker"
+    , "popcorn.webmaker.org":"https://github.com/mozilla/popcorn.webmaker.org"
+    , "Power your workflow":"https://www.youtube.com/watch?v=GYnOwPl8yCE"
+    , "SSH keys: generating":"https://help.github.com/articles/generating-ssh-keys"
+    , "SIL2013":"https://github.com/storytellinginnovationlab2013"
+    , "10 things I hate about git":"http://steveko.wordpress.com/2012/02/24/10-things-i-hate-about-git/"
+    , "Test":"https://github.com/igoryen/Test"
+    , "thimble.webmaker.org (moz)":"https://github.com/mozilla/thimble.webmaker.org"
+    , "Toolness":"https://github.com/toolness"
+    , "Webmaker.org":"https://github.com/mozilla/webmaker.org"
+    , "bug870429 (locales)":"https://bugzilla.mozilla.org/show_bug.cgi?id=870429"
+    , "bug869643 (MONGO)":"https://bugzilla.mozilla.org/show_bug.cgi?id=869643"
+    , "bug873064 (prune)":"https://bugzilla.mozilla.org/show_bug.cgi?id=873064"
+    , "bug873098 (old code)":"https://bugzilla.mozilla.org/show_bug.cgi?id=873098"
+    , "bug877305 (comma)":"https://bugzilla.mozilla.org/show_bug.cgi?id=877305"
+    , "bug881734 (audit)":"https://bugzilla.mozilla.org/show_bug.cgi?id=881734"
+    , "bug870995 (Make! - '!')":"https://bugzilla.mozilla.org/show_bug.cgi?id=870995"
+    , "bug883426 (update module)":"https://bugzilla.mozilla.org/show_bug.cgi?id=883426"
+    , "bug885193 (search field)":"https://bugzilla.mozilla.org/show_bug.cgi?id=885193"
+  };
 
- return printObj(gitObj);
+  return printObj(gitObj);
 
 }; // end git2()
 
@@ -1086,2070 +1052,12 @@ var gregorianaFunc = function(){
   }; // end of gregoriana
   
     ////////////////////////////////////
-    /*
 
-    var html5 = [
-    '<hr><b>A</b><br>'
-    , '<!--A-->'
-    , '<a href="http://www.w3schools.com/tags/canvas_addcolorstop.asp" target="_blank">addColorStop()</a><br>'
-    , '<a href="http://www.w3schools.com/tags/canvas_arc.asp" target="_blank">arc()</a><br>'
-    
 
 
 
-    , '<!--B-->'
-    , '<hr><b>B</b><br>'
-    , '<a href="http://www.w3schools.com/tags/canvas_beginpath.asp" target="_blank">beginPath()</a><br>'
-    
 
 
-
-    , '<!--C-->'
-    , '<hr><b>C</b><br>'
-    , '<a href="http://www.w3schools.com/html/html5_canvas.asp" target="_blank">canvas</a><br>'
-    , '<a href="http://www.w3schools.com/tags/canvas_createlineargradient.asp" target="_blank">createLinearGradient()</a><br>'
-    , '<a href="http://www.w3schools.com/tags/canvas_createradialgradient.asp" target="_blank">createRadialGradient()</a><br>'
-
-    
-
-
-    , '<!--D-->'
-    , '<hr><b>D</b><br>'
-
-    , '<a href="xxx" target="_blank">xxx</a><i> xxx</i><br>'
-    
-
-    
-    
-    
-    
-
-
-
-    , '<!--E-->'
-    , '<hr><b>E</b><br>'
-    
-    , '<!--F-->'
-    , '<hr><b>F</b><br>'
-    , '<a href="http://www.w3schools.com/tags/canvas_fillrect.asp" target="_blank">fillRect()</a><br>'
-    , '<a href="http://www.w3schools.com/tags/canvas_fillstyle.asp" target="_blank">fillStyle</a><br>'
-    , '<a href="http://www.w3schools.com/tags/canvas_filltext.asp" target="_blank">fillText()</a><br>'
-    , '<a href="http://www.w3schools.com/tags/canvas_font.asp" target="_blank">font=</a><br>'
-    
-
-
-    , '<!--G-->'
-    , '<hr><b>G</b><br>'
-    , '<a href="http://www.w3schools.com/jsref/met_doc_getelementbyid.asp" target="_blank">getElementById()</a><br>'
-    , '<a href="http://www.w3schools.com/tags/canvas_drawimage.asp" target="_blank">drawImage()</a><br>'
-    , '<!--H-->'
-    , '<hr><b>H</b><br>'
-    
-
-
-    
-    , '<!--I-->'
-    , '<hr><b>I</b><br>'
-
-
-
-    , '<!--J-->'
-    , '<hr><b>J</b><br>'
-    
-    
-
-    
-
-
-    , '<!--K-->'
-    , '<hr><b>K</b><br>'
-
-    , '<!--L-->'
-    , '<hr><b>L</b><br>'
-    , '<a href="http://www.w3schools.com/tags/canvas_lineto.asp" target="_blank">lineTo()</a><br>'
-    
-
-    , '<!--M-->'
-    , '<hr><b>M</b><br>'
-    , '<a href="http://www.w3schools.com/tags/canvas_moveto.asp" target="_blank">moveTo()</a><br>'
-
-    
-    , '<!--N-->'
-    , '<hr><b>N</b><br>'
-
-    , '<!--O-->'
-    , '<hr><b>O</b><br>'
-    
-
-    , '<!--P-->'
-    , '<hr><b>P</b><br>'
-    
-
-
-    , '<!--Q-->'
-    , '<hr><b>Q</b><br>'
-
-
-    , '<!--R-->'
-    , '<hr><b>R</b><br>'
-    
-    
-    
-    
-
-
-    , '<!--S-->'
-    , '<hr><b>S</b><br>'
-    , '<a href="http://www.w3schools.com/tags/canvas_stroke.asp" target="_blank">stroke()</a><br>'
-    , '<a href="http://www.w3schools.com/tags/canvas_stroketext.asp" target="_blank">strokeText()</a><br>'
-
-
-
-    , '<!--T-->'
-    , '<hr><b>T</b><br>'
-
-
-
-    , '<!--U-->'
-    , '<hr><b>U</b><br>'
-
-    , '<!--V-->'
-    , '<hr><b>V</b><br>'
-
-    , '<!--W-->'
-    , '<hr><b>W</b><br>'
-    
-    , '<!--X-->'
-    , '<hr><b>X</b><br>'
-
-    , '<!--Y-->'
-    , '<hr><b>Y</b><br>'
-
-    , '<!--Z-->'
-    , '<hr><b>Z</b><br>'  
-    
-
-
-
-
-
-    ];
-
-
-    ///////////////
-    
-    
-
-    var _java = [
-    '<hr><b>A</b><br>'
-    , '<!--A-->'
-    , '<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/StringBuffer.html#append(boolean)" target="_blank">append()</a><i> StringBuffer</i><br>' 
-    
-
-
-
-    , '<!--B-->'
-    , '<hr><b>B</b><br>'
-    
-
-
-
-    , '<!--C-->'
-    , '<hr><b>C</b><br>'
-
-
-
-
-    , '<!--D-->'
-    , '<hr><b>D</b><br>'
-
-    , '<a href="xxx" target="_blank">xxx</a><i> xxx</i><br>'
-    
-
-    
-    
-    
-    
-
-
-
-    , '<!--E-->'
-    , '<hr><b>E</b><br>'
-    
-    , '<!--F-->'
-    , '<hr><b>F</b><br>'
-    
-
-
-    , '<!--G-->'
-    , '<hr><b>G</b><br>'
-
-    , '<!--H-->'
-    , '<hr><b>H</b><br>'
-    
-
-
-
-    , '<!--I-->'
-    , '<hr><b>I</b><br>'
-
-
-
-    , '<!--J-->'
-    , '<hr><b>J</b><br>'
-    
-    
-
-    
-
-
-    , '<!--K-->'
-    , '<hr><b>K</b><br>'
-
-    , '<!--L-->'
-    , '<hr><b>L</b><br>'
-    , '<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html#length()" target="_blank">length()</a><i> String</i><br>'
-    , '<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/StringBuffer.html#length()" target="_blank">length()</a><i> StringBuffer</i><br>'
-    
-
-    , '<!--M-->'
-    , '<hr><b>M</b><br>'
-
-    
-    , '<!--N-->'
-    , '<hr><b>N</b><br>'
-
-    , '<!--O-->'
-    , '<hr><b>O</b><br>'
-    
-
-    , '<!--P-->'
-    , '<hr><b>P</b><br>'
-
-
-
-    , '<!--Q-->'
-    , '<hr><b>Q</b><br>'
-
-
-    , '<!--R-->'
-    , '<hr><b>R</b><br>'
-    
-    
-    
-    
-
-
-    , '<!--S-->'
-    , '<hr><b>S</b><br>'
-    , '<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/StringBuffer.html" target="_blank">StringBuffer</a><br>'
-    , '<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/StringBuffer.html#substring(int)" target="_blank">substring()</a><i> StringBuffer</i><br>'
-    
-
-
-
-    , '<!--T-->'
-    , '<hr><b>T</b><br>'
-
-
-
-    , '<!--U-->'
-    , '<hr><b>U</b><br>'
-
-    , '<!--V-->'
-    , '<hr><b>V</b><br>'
-
-    , '<!--W-->'
-    , '<hr><b>W</b><br>'
-    
-    , '<!--X-->'
-    , '<hr><b>X</b><br>'
-
-    , '<!--Y-->'
-    , '<hr><b>Y</b><br>'
-
-    , '<!--Z-->'
-    , '<hr><b>Z</b><br>'  
-
-
-
-
-    ];
-
-
-    ////////////////
-    var javascript = [
-
-
-
-    '<hr><b>A</b><br>'
-    , '<!--A-->'
-
-
-
-
-    , '<!--B-->'
-    , '<hr><b>B</b><br>'
-
-
-
-
-    , '<!--C-->'
-    , '<hr><b>C</b><br>'
-
-
-
-
-    , '<!--D-->'
-    , '<hr><b>D</b><br>'
-
-    , '<a href="http://www.w3schools.com/js/js_obj_date.asp" target="_blank">Date</a><i> object</i><br>'
-    , '<a href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock" target="_blank">display a clock</a><br>'
-
-
-
-
-
-
-
-
-
-    , '<!--E-->'
-    , '<hr><b>E</b><br>'
-    , '<a href="http://www.lynda.com/JavaScript-tutorials/Essential-Training-2011/81266-2.html" target="_blank">Essential trainiung</a> <i></i><br>'
-
-    , '<!--F-->'
-    , '<hr><b>F</b><br>'
-
-
-
-    , '<!--G-->'
-    , '<hr><b>G</b><br>'
-    , '<a href="http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_date_weekday" target="_blank">getDay()</a><br>'
-    , '<a href="http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_getfullyear" target="_blank">getFullYear()</a><br>'
-    , '<a href="http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_gettime" target="_blank">getTime()</a><br>'
-
-
-
-    , '<!--H-->'
-    , '<hr><b>H</b><br>'
-
-
-
-
-    , '<!--I-->'
-    , '<hr><b>I</b><br>'
-    , '<a href="http://www.w3schools.com/jsref/prop_html_innerhtml.asp" target="_blank">innerHTML=</a><i> property</i><br>'
-
-
-
-    , '<!--J-->'
-    , '<hr><b>J</b><br>'
-    , '<a href="http://www.w3schools.com/js/default.asp" target="_blank">JavaScript</a> <i>w3schools</i><br>'
-    , '<a href="http://jsfiddle.net/" target="_blank">JS Fiddle</a> <i></i><br>'
-    , '<a href="http://doc.jsfiddle.net/tutorial.html" target="_blank">JS Fiddle Tutorial</a> <i></i><br>'
-    , '<a href="http://www.jshint.com/" target="_blank">JS hint</a> <i>error detection</i><br>'
-    , '<a href="http://eleventyone.done.hu/OReilly.JavaScript.The.Good.Parts.May.2008.pdf" target="_blank">JS the Good Parts</a> <i></i><br>'
-
-
-
-
-
-
-
-
-    , '<!--K-->'
-    , '<hr><b>K</b><br>'
-
-    , '<!--L-->'
-    , '<hr><b>L</b><br>'
-
-
-    , '<!--M-->'
-    , '<hr><b>M</b><br>'
-
-
-    , '<!--N-->'
-    , '<hr><b>N</b><br>'
-
-    , '<!--O-->'
-    , '<hr><b>O</b><br>'
-    , '<a href="http://www.w3schools.com/jsref/event_onclick.asp" target="_blank">onclick=</a><i> event</i><br>'
-
-
-    , '<!--P-->'
-    , '<hr><b>P</b><br>'
-
-
-
-    , '<!--Q-->'
-    , '<hr><b>Q</b><br>'
-
-
-    , '<!--R-->'
-    , '<hr><b>R</b><br>'
-
-
-
-
-
-
-    , '<!--S-->'
-    , '<hr><b>S</b><br>'
-    , '<a href="http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_setfullyear2" target="_blank">setFullYear()</a><br>'
-    , '<a href="http://www.w3schools.com/js/js_timing.asp" target="_blank">setInterval()</a> <i></i><br>'
-    , '<a href="http://www.w3schools.com/js/js_timing.asp" target="_blank">setTimeOut()</a> <i></i><br>'
-
-
-
-
-    , '<!--T-->'
-    , '<hr><b>T</b><br>'
-    , '<a href="http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_toutcstring" target="_blank">toUTCString()</a><br>'
-
-
-
-    , '<!--U-->'
-    , '<hr><b>U</b><br>'
-
-    , '<!--V-->'
-    , '<hr><b>V</b><br>'
-
-    , '<!--W-->'
-    , '<hr><b>W</b><br>'
-
-    , '<!--X-->'
-    , '<hr><b>X</b><br>'
-
-    , '<!--Y-->'
-    , '<hr><b>Y</b><br>'
-
-    , '<!--Z-->'
-    , '<hr><b>Z</b><br>' 
-
-
-    , '<hr>'
-    , 'JS Fiddle examples:<br>'
-    , '-------------------<br>'
-    , '<a href="http://jsfiddle.net/igoryen/3pEyA/" target="_blank">Hello World!</a> <i></i><br>'
-    , '<a href="http://jsfiddle.net/igoryen/3pEyA/1/" target="_blank">Hello World!</a> <i></i><br>'
-    , '<a href="http://jsfiddle.net/igoryen/3pEyA/2/" target="_blank">Hello World!</a> <i></i><br>'
-    , '<a href="http://jsfiddle.net/praveen_prasad/XNJxT/14/" target="_blank">Hello World!</a> <i></i><br>'
-    , '<a href="http://jsfiddle.net/rniemeyer/bxfXd/" target="_blank">List</a> <i></i><br>'
-    , '<a href="http://jsfiddle.net/rwaldron/xhXE6/" target="_blank">Popcorn</a> <i></i><br>'
-    , '-------------------<br>'
-
-
-
-    ];
-
-
-    var l10n = [
-
-    '<hr><b>A</b><br>'
-    , '<!--A-->'
-
-
-
-
-    , '<!--B-->'
-    , '<hr><b>B</b><br>'
-
-
-
-
-    , '<!--C-->'
-    , '<hr><b>C</b><br>'
-
-
-
-
-    , '<!--D-->'
-    , '<hr><b>D</b><br>'
-
-
-
-
-
-
-
-
-
-
-    , '<!--E-->'
-    , '<hr><b>E</b><br>'
-
-
-    , '<!--F-->'
-    , '<hr><b>F</b><br>'
-
-
-
-    , '<!--G-->'
-    , '<hr><b>G</b><br>'
-
-    , '<!--H-->'
-    , '<hr><b>H</b><br>'
-    , '<a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html" target="_blank">Header field definitions</a> <i></i><br>'
-
-
-
-
-    , '<!--I-->'
-    , '<hr><b>I</b><br>'
-    , '<a href="http://en.wikipedia.org/wiki/IETF_language_tag" target="_blank"><abbr title="Internet engineering task force">IETF</abbr> language tag</a> <i></i><br>'
-    , '<a href="http://www.i18nguy.com/" target="_blank">i18n guy</a> <i></i><br>'
-    , '<a href="http://ejohn.org/blog/a-strategy-for-i18n-and-node/" target="_blank">i18n in Node</a> <i></i><br>'
-    , '<a href="http://iloveyou-localized.herokuapp.com/" target="_blank">I love you</a> <i>localized</i><br>'
-
-
-
-    , '<!--J-->'
-    , '<hr><b>J</b><br>'
-
-
-
-
-
-
-    , '<!--K-->'
-    , '<hr><b>K</b><br>'
-
-    , '<!--L-->'
-    , '<hr><b>L</b><br>'
-    , '<a href="https://github.com/mozilla/i18n-abide" target="_blank">l10n-abide</a> <i></i><br>'
-    , '<a href="https://hacks.mozilla.org/2013/04/localization-community-tools-process-part-2-of-3-a-node-js-holiday-season-part-10/" target="_blank">l10n community</a> <i></i><br>'
-    , '<a href="http://www.i18nguy.com/unicode/language-identifiers.html" target="_blank">Language identifiers</a> <i></i><br>'
-
-
-
-    , '<!--M-->'
-    , '<hr><b>M</b><br>'
-
-
-    , '<!--N-->'
-    , '<hr><b>N</b><br>'
-
-    , '<!--O-->'
-    , '<hr><b>O</b><br>'
-
-
-    , '<!--P-->'
-    , '<hr><b>P</b><br>'
-
-
-
-    , '<!--Q-->'
-    , '<hr><b>Q</b><br>'
-
-
-    , '<!--R-->'
-    , '<hr><b>R</b><br>'
-
-
-
-
-
-
-    , '<!--S-->'
-    , '<hr><b>S</b><br>'
-
-
-
-
-    , '<!--T-->'
-    , '<hr><b>T</b><br>'
-    , '<a href="https://www.transifex.com/" target="_blank">Transifex</a> <i></i><br>'
-    , '<a href="http://help.transifex.com/contents.html" target="_blank">Transifex</a> <i>documentation</i><br>'
-
-
-
-
-    , '<!--U-->'
-    , '<hr><b>U</b><br>'
-
-    , '<!--V-->'
-    , '<hr><b>V</b><br>'
-
-    , '<!--W-->'
-    , '<hr><b>W</b><br>'
-
-    , '<!--X-->'
-    , '<hr><b>X</b><br>'
-
-    , '<!--Y-->'
-    , '<hr><b>Y</b><br>'
-
-    , '<!--Z-->'
-    , '<hr><b>Z</b><br>'  
-
-
-
-
-
-
-
-
-    ];
-
-
-
-    var latina = [
-    'Latina<br>'
-    , '<hr>'
-
-
-    , '<hr><b>A</b><br>'
-    , '<!--A-->'
-
-
-
-
-    , '<!--B-->'
-    , '<hr><b>B</b><br>'
-
-
-
-
-    , '<!--C-->'
-    , '<hr><b>C</b><br>'
-
-
-
-
-    , '<!--D-->'
-    , '<hr><b>D</b><br>'
-
-    , '<a href="xxx" target="_blank">xxx</a><i> xxx</i><br>'
-
-
-
-
-
-
-
-
-
-    , '<!--E-->'
-    , '<hr><b>E</b><br>'
-
-    , '<!--F-->'
-    , '<hr><b>F</b><br>'
-
-
-
-    , '<!--G-->'
-    , '<hr><b>G</b><br>'
-
-    , '<!--H-->'
-    , '<hr><b>H</b><br>'
-
-
-
-
-    , '<!--I-->'
-    , '<hr><b>I</b><br>'
-
-
-
-    , '<!--J-->'
-    , '<hr><b>J</b><br>'
-
-
-
-
-
-
-    , '<!--K-->'
-    , '<hr><b>K</b><br>'
-
-    , '<!--L-->'
-    , '<hr><b>L</b><br>'
-    , '<a href="http://www.frcoulter.com/latin/links.html" target="_blank">Latin Links</a> >><br>'
-    , '<a href="https://sites.google.com/site/janualinguae/latin" target="_blank">Latinum</a> <i></i><br>'
-
-    , '<!--M-->'
-    , '<hr><b>M</b><br>'
-
-
-    , '<!--N-->'
-    , '<hr><b>N</b><br>'
-    , '<a href="http://yle.fi/radio1/tiede/nuntii_latini/" target="_blank">Nuntii Latini</a> <i></i><br>'
-
-    , '<!--O-->'
-    , '<hr><b>O</b><br>'
-    , '<a href="http://www.orbilat.com/" target="_blank">Orbilat</a><br>'
-
-
-    , '<!--P-->'
-    , '<hr><b>P</b><br>'
-
-
-
-    , '<!--Q-->'
-    , '<hr><b>Q</b><br>'
-
-
-    , '<!--R-->'
-    , '<hr><b>R</b><br>'
-    , '<a href="file:///D:/Language/Latina/html/latinitas_recens_latine.html" target="_blank">Recens Latinitas </a> <i> c. 2350 words</i><br>'
-    , '<a href="http://www.antimoon.com/forum/t2129-0.htm" target="_blank">Romanian closest to Classical Latin</a> <i></i><br>'
-
-
-
-
-
-
-    , '<!--S-->'
-    , '<hr><b>S</b><br>'
-
-
-
-
-    , '<!--T-->'
-    , '<hr><b>T</b><br>'
-
-
-
-    , '<!--U-->'
-    , '<hr><b>U</b><br>'
-
-    , '<!--V-->'
-    , '<hr><b>V</b><br>'
-
-    , '<!--W-->'
-    , '<hr><b>W</b><br>'
-
-    , '<!--X-->'
-    , '<hr><b>X</b><br>'
-
-    , '<!--Y-->'
-    , '<hr><b>Y</b><br>'
-
-    , '<!--Z-->'
-    , '<hr><b>Z</b><br>'  
-
-
-
-
-
-    ];
-
-
-    
-
-    var p_w = [
-
-    '<!--A-->'
-    , '<hr><b>A</b><br>'
-    
-
-
-
-    , '<!--B-->'
-    , '<hr><b>B</b><br>'
-    
-
-
-
-    , '<!--C-->'
-    , '<hr><b>C</b><br>'
-
-
-
-
-    , '<!--D-->'
-    , '<hr><b>D</b><br>'
-
-    , '<a href="xxx" target="_blank">xxx</a><i> xxx</i><br>'
-
-
-    
-    
-    
-    
-
-
-
-    , '<!--E-->'
-    , '<hr><b>E</b><br>'
-    , '<a href="http://www.youtube.com/watch?v=WUJSElja3d4" target="_blank">Eighth Wonder</a> <i>WhiteHeart</i><br>'
-    
-    , '<!--F-->'
-    , '<hr><b>F</b><br>'
-
-
-
-    , '<!--G-->'
-    , '<hr><b>G</b><br>'
-
-    , '<!--H-->'
-    , '<hr><b>H</b><br>'
-
-
-
-
-    , '<!--I-->'
-    , '<hr><b>I</b><br>'
-    , '<a href="https://www.youtube.com/watch?v=aLcpLD5DHDU" target="_blank">I will enter His Gates</a> <i>Maranatha</i><br>'
-    , '<a href="https://www.youtube.com/watch?v=nr_YiSZ8KBc" target="_blank">I will enter His Gates</a> <i></i><br>'
-
-
-    , '<!--J-->'
-    , '<hr><b>J</b><br>'
-
-
-
-    
-
-
-    , '<!--K-->'
-    , '<hr><b>K</b><br>'
-
-    , '<!--L-->'
-    , '<hr><b>L</b><br>'
-    
-
-    , '<!--M-->'
-    , '<hr><b>M</b><br>'
-    , '<a href="https://www.youtube.com/watch?v=F3X0KhvJwsQ" target="_blank">Maranatha Double Praise 1</a> <i></i><br>'
-    , '<a href="https://www.youtube.com/watch?v=jfAbAOI-aj0" target="_blank">Maranatha Double Praise 2</a> <i></i><br>'
-    , '<a href="https://www.youtube.com/watch?v=Z_Sg93io5c4" target="_blank">Maranatha Double Praise 3</a> <i></i><br>'
-    , '<a href="https://www.youtube.com/watch?v=dd0O7GPR6QE" target="_blank">Maranatha Double Praise 4</a><br>'
-    , '<a href="" target="_blank">Maranatha Double Praise 5</a> <i></i><br>'
-    , '<a href="" target="_blank">Maranatha Double Praise 6</a> <i></i><br>'
-    , '<a href="" target="_blank">Maranatha Double Praise 7</a> <i></i><br>'
-    , '<a href="https://www.youtube.com/watch?v=Bl0R9AT0lPk" target="_blank">Maranatha Double Praise 8</a> <i></i><br>'
-    , '<a href="" target="_blank">Maranatha Double Praise 9</a> <i></i><br>'
-    , '<a href="" target="_blank">Maranatha Double Praise 10</a> <i></i><br>'
-    , '<a href="https://www.youtube.com/watch?NR=1&feature=endscreen&v=uyrxmG1Ctio" target="_blank">Maranatha Double Praise 11</a> <i></i><br>'
-    , '<a href="" target="_blank">Maranatha Double Praise 12</a> <i></i><br>'
-    , '<a href="" target="_blank">Maranatha Double Praise 13</a> <i></i><br>'
-    , '<a href="https://www.youtube.com/watch?v=Pce_M-XT8Jc" target="_blank">Maranathe Double Praise 14</a> <i></i><br>'
-    
-    , '<!--N-->'
-    , '<hr><b>N</b><br>'
-
-    , '<!--O-->'
-    , '<hr><b>O</b><br>'
-    
-
-    , '<!--P-->'
-    , '<hr><b>P</b><br>'
-
-
-
-    , '<!--Q-->'
-    , '<hr><b>Q</b><br>'
-
-
-    , '<!--R-->'
-    , '<hr><b>R</b><br>'
-
-
-    
-    
-
-
-    , '<!--S-->'
-    , '<hr><b>S</b><br>'
-    
-
-
-
-    , '<!--T-->'
-    , '<hr><b>T</b><br>'
-
-
-
-    , '<!--U-->'
-    , '<hr><b>U</b><br>'
-
-    , '<!--V-->'
-    , '<hr><b>V</b><br>'
-
-    , '<!--W-->'
-    , '<hr><b>W</b><br>'
-    
-    , '<!--X-->'
-    , '<hr><b>X</b><br>'
-
-    , '<!--Y-->'
-    , '<hr><b>Y</b><br>'
-
-    , '<!--Z-->'
-    , '<hr><b>Z</b><br>'  
-
-
-    ];
-
-
-
-    var phpcodes = [
-    '<!--A-->'
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/practice/121025_arrays.php" target="_blank">Arrays</a><br>'
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/assign1/add.php" target="_blank">Asgmt 1 </a> <br>'
-    , '<a href="https://zenit.senecac.on.ca/~int322_123a07/assign2/login.php" target="_blank">Asgmt 2 </a> <br>'
-
-    , '<!--B-->'
-    , '<hr><b>B</b><br>'
-
-    , '<!--C-->'
-    , '<hr><b>C</b><br>'
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/practice/caseless.php" target="_blank">Caseless</a><br>'
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/practice/121110_classes_01.php" target="_blank">Classes 01</a><br>'
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/practice/121110_classes_02.php" target="_blank">Classes 02</a><br>'
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/lab5/cookies.php" target="_blank">Lab 5-1</a><i> cookies.php</i><br>'
-
-    , '<!--D-->'
-    , '<hr><b>D</b><br>'
-
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/practice/121110_class_db_01.php" target="_blank">DB thru classes</a><br>'
-
-    , '<!--E-->'
-    , '<hr><b>E</b><br>'
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/practice/121120_encrypting.php" target="_blank">Encrypting</a><br>'
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/practice/121024_advanced_escaping_001.php" target="_blank">Escaping (advanced)</a><br>'
-    , '<!--F-->'
-    , '<hr><b>F</b><br>'
-
-    , '<!--G-->'
-    , '<hr><b>G</b><br>'
-
-    , '<!--H-->'
-    , '<hr><b>H</b><br>'
-
-    , '<!--I-->'
-    , '<hr><b>I</b><br>'
-
-    , '<!--J-->'
-    , '<hr><b>J</b><br>'
-
-    , '<!--K-->'
-    , '<hr><b>K</b><br>'
-
-    , '<!--L-->'
-    , '<hr><b>L</b><br>'
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/lab1/lab1.php" target="_blank">Lab 1 </a> <br>'  
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/lab2/forms-part3.php" target="_blank">Lab 2 </a> <br>'   
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/lab3/mysqlform.php" target="_blank">Lab 3 </a> <br>'  
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/lab4/pcv.php" target="_blank">Lab 4-1 </a> <br>' 
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/lab4/pcv2.php" target="_blank">Lab 4-2 </a> <br>' 
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/lab4/pcv3.php" target="_blank">Lab 4-3 </a> <br>' 
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/lab4/lab4_4.php" target="_blank">Lab 4-4 </a> <br>' 
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/lab4/lab4_5.php" target="_blank">Lab 4-5 </a> <br>' 
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/lab4/lab4_6.php" target="_blank">Lab 4-6 </a> <br>'
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/lab5/login.php" target="_blank">Lab 5-2a</a><i> login.php</i><br>'
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/lab5/login.php" target="_blank">Lab 5-2b</a><i> loginStatus.php</i><br>'
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/lab6/myClasses.php" target="_blank">Lab 6</a><i> myClasses.php</i><br>'
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/lab6/testMenu.php" target="_blank">Lab6</a> testmenu.php<br>'
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/lab6/oo-login.php" target="_blank">oo-login.php</a> Lab 6<br>'
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/lab6/testMenu.php" target="_blank">testMenu.php</a> Lab 6<br>'
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/practice/login_prx.php" target="_blank">login prx</a><br>'
-
-    , '<!--M-->'
-    , '<hr><b>M</b><br>'
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/practice/121110_destructor_01.php" target="_blank">My_class</a><br>'
-
-    , '<!--N-->'
-    , '<hr><b>N</b><br>'
-
-    , '<!--O-->'
-    , '<hr><b>O</b><br>'
-    , '<!--P-->'
-    , '<hr><b>P</b><br>'
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/practice/121028_regex.php" target="_blank">Reg Ex</a><br>'
-
-    , '<!--Q-->'
-    , '<hr><b>Q</b><br>'
-
-
-    , '<!--R-->'
-    , '<hr><b>R</b><br>'
-
-    , '<!--S-->'
-    , '<hr><b>S</b><br>'
-
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/practice/121110_specialMethodsPHP5_test.php" target="_blank">Salve!</a><br>'
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/practice/121028_strings.php" target="_blank">Strings</a><br>'
-
-    , '<!--T-->'
-    , '<hr><b>T</b><br>'
-    , ' Templating: '
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/practice/templating/a.php" target="_blank">a.php</a> | '
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/practice/templating/cc.html" target="_blank">cc.html</a> | '
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/practice/templating/dd.php" target="_blank">dd.php</a> | '
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/ff.php" target="_blank">ff.php</a> | '
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/gg.php" target="_blank">gg.php</a> |'
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/hh.php" target="_blank">hh.php</a> |'
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/practice/test1.php" target="_blank">test1.php</a> | '
-    , '<!--U-->'
-    , '<hr><b>U</b><br>'
-
-    , '<!--V-->'
-    , '<hr><b>V</b><br>'
-
-    , '<!--W-->'
-    , '<hr><b>W</b><br>'
-    , '<!--X-->'
-    , '<hr><b>X</b><br>'
-    , '<!--Y-->'
-    , '<hr><b>Y</b><br>'
-
-    , '<!--Z-->'
-    , '<hr><b>Z</b><br>'  
-
-
-
-
-    ];
-
-
-
-    var preach_teach =  [
-    '<hr><b>A</b><br>'
-    , '<!--A-->'
-    
-
-
-
-    , '<!--B-->'
-    , '<hr><b>B</b><br>'
-    
-
-
-
-    , '<!--C-->'
-    , '<hr><b>C</b><br>'
-
-
-
-
-    , '<!--D-->'
-    , '<hr><b>D</b><br>'
-
-    , '<a href="http://www.youtube.com/watch?v=D_TXYEmqn6U" target="_blank">Devil`s under my feet</a><i> Hagin</i><br>'
-    , '<a href="http://www.youtube.com/watch?v=NomZHolreBk" target="_blank">Doubt, Fear, and Unbelief</a><i> Hagin 1982</i><br>'
-
-    
-    
-    
-    
-
-
-
-    , '<!--E-->'
-    , '<hr><b>E</b><br>'
-    
-    , '<!--F-->'
-    , '<hr><b>F</b><br>'
-    
-
-
-    , '<!--G-->'
-    , '<hr><b>G</b><br>'
-    , '<a href="http://www.youtube.com/watch?v=d2Wp5_bL338" target="_blank">God`s Medicine</a> <i>KH</i><br>'
-
-    , '<!--H-->'
-    , '<hr><b>H</b><br>'
-    , '<a href="http://www.youtube.com/playlist?list=PL4C095CACCE805213" target="_blank">Hagin</a><i></i><br>'
-
-
-
-    , '<!--I-->'
-    , '<hr><b>I</b><br>'
-
-
-
-    , '<!--J-->'
-    , '<hr><b>J</b><br>'
-    , '<a href="https://www.youtube.com/watch?v=ljRKhZ81aqY" target="_blank">Horus</a><i></i><br>'
-    
-
-    
-
-
-    , '<!--K-->'
-    , '<hr><b>K</b><br>'
-
-    , '<!--L-->'
-    , '<hr><b>L</b><br>'
-    
-
-    , '<!--M-->'
-    , '<hr><b>M</b><br>'
-
-    
-    , '<!--N-->'
-    , '<hr><b>N</b><br>'
-
-    , '<!--O-->'
-    , '<hr><b>O</b><br>'
-    
-
-    , '<!--P-->'
-    , '<hr><b>P</b><br>'
-
-
-
-    , '<!--Q-->'
-    , '<hr><b>Q</b><br>'
-
-
-    , '<!--R-->'
-    , '<hr><b>R</b><br>'
-    , '<a href="http://www.youtube.com/watch?v=-j8ZMMuu7MU" target="_blank">Rejection?</a><i></i><br>'
-    
-    
-    
-
-
-    , '<!--S-->'
-    , '<hr><b>S</b><br>'
-    
-
-
-
-    , '<!--T-->'
-    , '<hr><b>T</b><br>'
-
-
-
-    , '<!--U-->'
-    , '<hr><b>U</b><br>'
-
-    , '<!--V-->'
-    , '<hr><b>V</b><br>'
-
-    , '<!--W-->'
-    , '<hr><b>W</b><br>'
-    
-    , '<!--X-->'
-    , '<hr><b>X</b><br>'
-
-    , '<!--Y-->'
-    , '<hr><b>Y</b><br>'
-
-    , '<!--Z-->'
-    , '<hr><b>Z</b><br>'  
-
-
-
-
-    ];
-
-
-    var selfdefense = [
-
-    '<hr><b>A</b><br>'
-    , '<!--A-->'
-    , '<a href="http://www.youtube.com/watch?v=K6r8MkqeSMM&feature=relmfu" target="_blank">Americana Move mounting</a><br>'
-
-    , '<!--B-->'
-    , '<hr><b>B</b><br>'
-
-    , '<!--C-->'
-    , '<hr><b>C</b><br>'
-    , '<a href="http://www.youtube.com/watch?v=sS3iZ9rNaG8&feature=relmfu"target="_blank">Choke from above -> Arm Bar</a><br>'
-    , '<a href="http://www.youtube.com/watch?v=fro50KwBDjg" target="_blank">Choke from under -> Arm Bar</a><br>'
-    , '<a href="http://www.youtube.com/watch?v=XfSBGZz_6Mc&feature=relmfu" target="_blank">Clothes Grab -> Leg Sweep</a>'
-
-
-
-    , '<!--D-->'
-    , '<hr><b>D</b><br>'
-    , '<a href="http://www.youtube.com/watch?v=erQ7AVtcwec" target="_blank">Demo (Jiujitsu)</a><br>'
-    , '<a href="http://www.youtube.com/watch?v=g6sZSC66ul4&feature=relmfu" target="_blank">Demo (part 1)</a><br>'
-    , '<a href="http://www.youtube.com/watch?v=Y600l5UbR10&feature=relmfu" target="_blank">Demo (part 2)</a><br>'
-    , '<a href="http://www.youtube.com/watch?v=EzSdD22BqXM&feature=relmfu" target="_blank">Demo (part 3)</a><br>'
-
-    , '<!--E-->'
-    , '<hr><b>E</b><br>'
-
-    , '<!--F-->'
-    , '<hr><b>F</b><br>'
-
-    , '<!--G-->'
-    , '<hr><b>G</b><br>'
-
-    , '<!--H-->'
-    , '<hr><b>H</b><br>'
-
-    , '<!--I-->'
-    , '<hr><b>I</b><br>'
-
-    , '<!--J-->'
-    , '<hr><b>J</b><br>'
-
-    , '<!--K-->'
-    , '<hr><b>K</b><br>'
-    , '<a href="http://www.youtube.com/watch?v=HA-2NRuTLkw" target="_blank">Kimura</a><br>'
-    , '<a href="http://www.youtube.com/watch?v=san7xnrCAQc" target="_blank">Knock out</a><br>'
-    
-
-
-    , '<!--L-->'
-    , '<hr><b>L</b><br>'
-
-    , '<!--M-->'
-    , '<hr><b>M</b><br>'
-    , '<a href="http://www.youtube.com/watch?v=9nrYaxOqmaQ&feature=relmfu" target="_blank">Mounting -> Closed Guard</a><br>'
-    , '<a href="http://www.youtube.com/watch?v=Ed_BQaWtyck&feature=relmfu" target="_blank">Mounted -> Kimura</a><br>'
-
-
-    , '<!--N-->'
-    , '<hr><b>N</b><br>'
-
-    , '<!--O-->'
-    , '<hr><b>O</b><br>'
-    , '<!--P-->'
-    , '<hr><b>P</b><br>'
-
-    , '<!--Q-->'
-    , '<hr><b>Q</b><br>'
-
-
-    , '<!--R-->'
-    , '<hr><b>R</b><br>'
-
-
-    , '<!--S-->'
-    , '<hr><b>S</b><br>'
-
-    , '<a href="http://www.youtube.com/watch?feature=fvwp&v=CW5VpKC9ocU&NR=1" target="_blank">Shoulder grab -> Hiji Gaeshi</a> '
-
-    , '<!--T-->'
-    , '<hr><b>T</b><br>'
-    , '<a href="http://www.youtube.com/watch?v=mtAtWH8dh7o&feature=relmfu" target="_blank">Top Cross Choke mounting</a><br>'
-    , '<!--U-->'
-    , '<hr><b>U</b><br>'
-
-    , '<!--V-->'
-    , '<hr><b>V</b><br>'
-
-    , '<!--W-->'
-    , '<hr><b>W</b><br>'
-    , '<!--X-->'
-    , '<hr><b>X</b><br>'
-    , '<!--Y-->'
-    , '<hr><b>Y</b><br>'
-
-    , '<!--Z-->'
-    , '<hr><b>Z</b><br>'  
-
-
-
-    ];
-
-
-
-    var seneca = [
-    '<!--A-->'
-    , '<a href="https://acs.senecac.on.ca/pages/index.php" target="_blank"><abbr title="Academic Computing Systems">ACS</abbr> site </a> <br>'
-    , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=1738900" target="_blank">Alam, Tanvir rating</a><br>'
-
-    , '<!--B-->'
-    , '<hr><b>B</b><br>'
-
-
-
-
-    , '<a href="https://www2.senecacollege.ca/buyback/index.jsp" target="_blank">Book Buyback</a><i> Seneca</i><br>'
-    , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=13003" target="_blank">Boyczuk, Bob rating</a><br>'
-    , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=1613500" target="_blank">Buchner, Mark rating</a><br>'
-
-
-    , '<!--C-->'
-    , '<hr><b>C</b><br>'
-
-    , '<a href="https://inside.senecac.on.ca/clientservices" target="_blank">Client Services</a><i></i> <br>'
-    , '<a href="https://scs.senecac.on.ca/~nebojsa.conkic/dbs301_work.html" target="_blank">Conkic, Nebojsa</a><i> DBS301</i> <br>'
-    , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=13042" target="_blank">Conkic, Nebojsa rating</a><br>'
-    , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=17894" target="_blank">Czegel, Barb rating</a><br>'
-
-
-
-    , '<!--D-->'
-    , '<hr><b>D</b><br>'
-    , '<a href="https://scs.senecac.on.ca/~nebojsa.conkic/dbs301_work.html" target="_blank">DBS301</a><i> Conkic, Nebojsa</i> <br>' 
-    , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=50506" target="_blank">Douglas, Brian rating</a><br>'
-
-
-    , '<!--E-->'
-    , '<hr><b>E</b><br>'
-    , '<a href="https://my.senecacollege.ca/webapps/portal/frameset.jsp" target="_blank">EAC397: Blackboard </a><br>'
-    , '<a href="https://senepr.senecacollege.ca/Empath65/HrLogin.aspx" target="_blank">Empath</a> <i></i><br>'
-
-
-    , '<!--F-->'
-    , '<hr><b>F</b><br>'
-    , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=11374" target="_blank">Frey, Don rated</a><br>'
-
-    , '<!--G-->'
-    , '<hr><b>G</b><br>'
-
-    , '<!--H-->'
-    , '<hr><b>H</b><br>'
-    , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=33852" target="_blank">Heidenreich, Michal rating </a><br>'
-
-    , '<!--I-->'
-    , '<hr><b>I</b><br>'
-
-
-
-    , '<a href="https://zenit.senecac.on.ca/~int222_122b36/index.html" target="_blank">INT222: Zenit</a> <br>' 
-    , '<a href="http://zenit.senecac.on.ca/~int322_123a07/" target="_blank">INT322: zenit </a><br>'
-
-    , '<a href="http://igor01.azurewebsites.net/" target="_blank">igor01 </a><i> Azure</i><br>'
-
-
-
-
-    , '<!--J-->'
-    , '<hr><b>J</b><br>'
-
-
-    , '<!--K-->'
-    , '<hr><b>K</b><br>'
-    , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=13040" target="_blank">Kaduri, Harvey`s rating</a><br>'
-    , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=526261" target="_blank">Kawenka, John rating</a><br>'
-    , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=1607604" target="_blank">Korsantia, Olga rating</a><br>'
-
-    , '<!--L-->'
-    , '<hr><b>L</b><br>'
-    , '<a href="http://zenit.senecac.on.ca/wiki/index.php/BAC344_03_2012" target="_blank">Laurin, Cindy`s BAC344</a> <br>'
-    , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=12975" target="_blank">Laurin, Cindy`s rating</a><br>'
-
-
-
-
-
-    , '<!--M-->'
-    , '<hr><b>M</b><br>'
-    , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=1523999" target="_blank">Messinger, Gal rating</a><br>'
-    , '<a href="https://open.senecac.on.ca/cms/" target="_blank" ><b>Moodle</b></a> <br>'
-    , '<a href="https://my.senecacollege.ca/webapps/portal/frameset.jsp" target="_blank"><img alt="My Seneca" height="20" src="img/myseneca.gif"></a> <br>'
-
-
-    , '<!--N-->'
-    , '<hr><b>N</b><br>'
-
-    , '<!--O-->'
-    , '<hr><b>O</b><br>'
-    , '<a href="https://scs.senecac.on.ca/~emile.ohan/int222/index.html" target="_blank">Ohan, Emile`s INT222</a> <br>'
-    , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=13920" target="_blank">Ohan, Emile rated</a><br>'
-
-
-    , '<a href="https://cs.senecac.on.ca/~oop244/pages/practice/oldTests.html" target="_blank">OOP244: Old Tests</a> <br>'
-    , '<a href="https://scs.senecac.on.ca/~oop244/" target="_blank">OOP244: Site </a> <br>'
-    , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=1144727" target="_blank">Oslopov, Petr rating</a><br>'
-
-    , '<!--P-->'
-    , '<hr><b>P</b><br>'
-    , '<a href="https://scs.senecacollege.ca/~brian.perry/" target="_blank">Perry, Brian</a><i> at Seneca</i><br>'
-    , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=32480" target="_blank">Perry, Brian`s rating</a><br>'
-
-
-    , '<!--Q-->'
-    , '<hr><b>Q</b><br>'
-
-
-    , '<!--R-->'
-    , '<hr><b>R</b><br>'
-    , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=165590" target="_blank">Richards, Peter rating</a><br>'
-
-
-    , '<!--S-->'
-    , '<hr><b>S</b><br>'
-    , '<a href="http://www.senecacollege.ca/index.html" target="_blank"><img alt="Seneca College" height="15" src="img/seneca.png"></a><br>'
-
-    , '<a href="https://scs.senecac.on.ca/ " target="_blank">Seneca , <abbr title="School of Computer Studies">SCS</abbr></a> <br>'
-    , '<a href="https://inside.senecac.on.ca/clientservices " target="_blank">Seneca Client Services </a> <br>'
-
-
-
-
-
-    , '<a href="https://inside.senecac.on.ca/transportation/campusbuses.html" target="_blank">Seneca Campus Bus Schedule </a> <br>'
-    , '<a href="https://portal.microsoftonline.com/IWDefault.aspx" target="_blank">Seneca Email</a> <br>'
-    , '<a href="http://seneca.experience.com/experience/login" target="_blank">Seneca Experience</a> <br>'
-
-    , '<a href="https://scs.senecac.on.ca/staff-list" target="_blank">Seneca Staff List</a> <br>'
-    , '<a href="https://net1.senecac.on.ca/login.pl?action=paint;source=10.255.137.89;destination=http%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3Dsenenet;r=s0QwcIi7276" target="_blank"> SeneNET </a> <br>'
-    , '<a href="https://siris.senecac.on.ca/" target="_blank"><span class="blink"><mark><b>SIRIS</b></mark></span></a> <br>'
-    , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=52138" target="_blank">Surendra, Sam rating</a><br>'
-
-
-    , '<a href="https://open.senecac.on.ca/cms/" target="_blank" >SYS366: Moodle </a> <br>'
-    , '<a href="http://zenit.senecac.on.ca/~sys366_122b02/" target="_blank" >SYS366: Zenit</a> <br>' 
-
-
-    , '<!--T-->'
-    , '<hr><b>T</b><br>'
-    , '<a href="http://rome.proximity.on.ca/ts/index.php" target="_blank">Time-sheet</a> <i></i><br>'
-    , '<a href="http://warp.senecac.on.ca/ian.tipson/default.aspx" target="_blank">Tipson, Ian</a><i> at Seneca</i><br>'
-    , '<a href="http://iantipson.com/" target="_blank">Tipson, Ian`s site</a> <br>'
-    , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=12967" target="_blank">Tipson, Ian rating</a><i></i><br>'
-
-
-    , '<!--U-->'
-    , '<hr><b>U</b><br>'
-
-    , '<!--V-->'
-    , '<hr><b>V</b><br>'
-
-    , '<!--W-->'
-    , '<hr><b>W</b><br>'
-    , '<a href="https://www2.senecacollege.ca/wabs/" target="_blank"> <b>WABS</b></span></a><i> Seneca</i><br>'
-    , '<a href="https://cs.senecac.on.ca/~fac/win210/" target="_blank">WIN210 site </a> <br>'
-
-    , '<!--X-->'
-    , '<hr><b>X</b><br>'
-    , '<!--Y-->'
-    , '<hr><b>Y</b><br>'
-
-    , '<!--Z-->'
-    , '<hr><b>Z</b><br>' 
-
-
-
-    ];
-
-
-
-    var tolkiniana = [
-
-    '<hr><b>A</b><br>'
-    , '<!--A-->'
-    , '<a href="http://www.youtube.com/watch?v=Q6hJqI5BEW8" target="_blank">Aniron</a> <i> Enya</i><br>'
-    , '<a href="http://www.glyphweb.com/arda/default.asp"  target="_blank">Arda </a> <br>'
-
-    , '<!--B-->'
-    , '<hr><b>B</b><br>'
-    , '<a href="https://www.youtube.com/watch?v=suNT5m4_rYI" target="_blank">Battle for Middle Earth</a><i></i><br>'
-
-
-    , '<a href="http://www.youtube.com/watch?v=qINwCRM8acM" target="_blank">Born Of Hope</a> <br>' 
-
-    , '<!--C-->'
-    , '<hr><b>C</b><br>'
-    , '<a href="https://www.youtube.com/watch?v=HtoQWb0jMco" target="_blank">Children of Hurin</a><i> audio-book</i><br>' 
-
-
-
-
-    , '<!--D-->'
-    , '<hr><b>D</b><br>'
-
-
-    , '<!--E-->'
-    , '<hr><b>E</b><br>'
-    , '<a href="http://www.starchamber.com/paracelsus/elvish/elvish-in-ten-minutes.html" target="_blank">Elvish ABC </a><i></i><br>'
-
-    
-
-    , '<!--F-->'
-    , '<hr><b>F</b><br>'
-    , '<a href="https://www.youtube.com/watch?v=krqmf5oBDXk" target="_blank">Facts behind Fiction</a><i> docum.</i><br>'
-
-    , '<!--G-->'
-    , '<hr><b>G</b><br>'
-
-    , '<!--H-->'
-    , '<hr><b>H</b><br>'
-    , '<a href="http://www.jrrvf.com/hisweloke/sindar/online/sindarin.html" target="_blank">Hisweloke </a><i>Sindarin dictionary</i><br>'
-    , '<a href="https://www.youtube.com/watch?v=A7jYQFTV7EM" target="_blank">Hobbit, The</a><i> audio-book</i><br>'
-    , '<a href="http://www.youtube.com/watch?annotation_id=annotation_486943&feature=iv&src_vid=9H09xnhlCQU&v=VaakJk9vR7U" target="_blank">Hunt For Gollum, The</a><br>'
-
-    , '<!--I-->'
-    , '<hr><b>I</b><br>'
-
-    , '<!--J-->'
-    , '<hr><b>J</b><br>'
-
-    , '<!--K-->'
-    , '<hr><b>K</b><br>'
-
-    , '<!--L-->'
-    , '<hr><b>L</b><br>'
-
-    , '<a href="https://www.youtube.com/watch?v=iNhCMReS_M4" target="_blank">Lewis & Tolkien</a><br>'
-    , '<a href="https://www.youtube.com/watch?v=mfFQuhWaA_k" target="_blank">LOTR, The</a><i> simphony</i><br>'
-
-
-
-    , '<!--M-->'
-    , '<hr><b>M</b><br>'
-    , '<a href="https://www.youtube.com/watch?v=orhnSy4wkqE&list=PL5760D4D3699A3871" target="_blank">Master of the M. Earth</a><i> Doc`ry</i> <br>'
-    , '<a href="https://www.youtube.com/watch?v=Ew4bsGF0G8U" target="_blank">Middle Earth</a><i> Legacy</i> <br>'
-    , '<a href="https://www.youtube.com/watch?v=UlT1mRYlXZg" target="_blank">Middle Earth</a><i> Origins</i> <br>'
-    , '<a href="https://www.youtube.com/watch?v=27_OmRGPfZw" target="_blank">Monaghan Wood Interview</a><br>'
-    , '<a href="https://www.youtube.com/watch?v=NzBT39gx-TE" target="_blank">Myths</a><i> Lewis & Tolkien</i> <br>'
-
-
-    , '<!--N-->'
-    , '<hr><b>N</b><br>'
-
-    , '<!--O-->'
-    , '<hr><b>O</b><br>'
-    , '<!--P-->'
-    , '<hr><b>P</b><br>'
-
-
-    , '<!--Q-->'
-    , '<hr><b>Q</b><br>'
-
-    , '<a href="https://www.youtube.com/watch?v=G3gR0m2mCGs" target="_blank">Queen Gandalf </a> <br>'
-
-    , '<!--R-->'
-    , '<hr><b>R</b><br>'
-    , '<a href="http://www.youtube.com/watch?v=zf3Kit2V0CI" target="_blank">Ranger </a> <br>'
-
-    , '<!--S-->'
-    , '<hr><b>S</b><br>'
-
-    , '<a href="jezreel_porthope@yahoo.ca" target="_blank">Safety Sam</a><br>'
-    , '<a href="https://www.youtube.com/watch?v=0J1JSLzja7E" target="_blank">Silmarillion</a> <i>C.Tolkien</i><br>'
-    , '<a href="https://www.youtube.com/watch?v=HJLwB3zNY3Q" target="_blank">Silmarillion</a> <i>audio-book</i><br>'
-
-
-    , '<!--T-->'
-    , '<hr><b>T</b><br>'
-    , '<a href="http://tolkiengateway.net/wiki/Main_Page" target="_blank">Tolkien Gateway</a><br>'
-
-
-    , '<!--U-->'
-    , '<hr><b>U</b><br>'
-
-    , '<!--V-->'
-    , '<hr><b>V</b><br>'
-
-    , '<!--W-->'
-    , '<hr><b>W</b><br>'
-    , '<a href="https://www.youtube.com/watch?v=HYpjI8ht-K4" target="_blank">Wood Laughs</a><br>'
-
-    , '<!--X-->'
-    , '<hr><b>X</b><br>'
-    , '<!--Y-->'
-    , '<hr><b>Y</b><br>'
-
-    , '<!--Z-->'
-    , '<hr><b>Z</b><br>'
-
-    , '<a href="file:///D:/Personal/My Journal X/html/mj_index.html" target="_blank">777</a><br>'
-
-
-
-
-
-
-
-    ];
-
-
-
-    var transifex  = [
-    '<hr><b>A</b><br>'
-    , '<!--A-->'
-    
-
-
-
-    , '<!--B-->'
-    , '<hr><b>B</b><br>'
-    
-
-
-
-    , '<!--C-->'
-    , '<hr><b>C</b><br>'
-
-
-
-
-    , '<!--D-->'
-    , '<hr><b>D</b><br>'
-
-    , '<a href="http://requirejs.org/docs/api.html#i18n" target="_blank">Define an i18n bundle</a> <i></i><br>'    
-
-    
-    
-    
-    
-
-
-
-    , '<!--E-->'
-    , '<hr><b>E</b><br>'
-    
-    , '<!--F-->'
-    , '<hr><b>F</b><br>'
-    
-
-
-    , '<!--G-->'
-    , '<hr><b>G</b><br>'
-
-    , '<!--H-->'
-    , '<hr><b>H</b><br>'
-    
-
-
-
-    , '<!--I-->'
-    , '<hr><b>I</b><br>'
-
-
-
-    , '<!--J-->'
-    , '<hr><b>J</b><br>'
-    
-    
-
-    
-
-
-    , '<!--K-->'
-    , '<hr><b>K</b><br>'
-
-    , '<!--L-->'
-    , '<hr><b>L</b><br>'
-    
-
-    , '<!--M-->'
-    , '<hr><b>M</b><br>'
-    , '<a href="http://help.transifex.com/intro/projects.html#managing-your-project" target="_blank">Managing your project</a> <i></i><br>'
-
-    
-    , '<!--N-->'
-    , '<hr><b>N</b><br>'
-
-    , '<!--O-->'
-    , '<hr><b>O</b><br>'
-    
-
-    , '<!--P-->'
-    , '<hr><b>P</b><br>'
-    , '<a href="http://help.transifex.com/intro/projects.html#projects" target="_blank">Projects</a> <i></i><br>'
-
-
-
-    , '<!--Q-->'
-    , '<hr><b>Q</b><br>'
-
-
-    , '<!--R-->'
-    , '<hr><b>R</b><br>'
-    
-    
-    
-    
-
-
-    , '<!--S-->'
-    , '<hr><b>S</b><br>'
-    , '<a href="http://en.wikipedia.org/wiki/Single_sign-on" target="_blank">SSO</a> <i></i><br>'
-    
-
-
-
-    , '<!--T-->'
-    , '<hr><b>T</b><br>'
-    , '<a href="http://help.transifex.com/features/api/api-v2.html#translations" target="_blank">Translations</a> <i></i><br>'
-
-
-
-    , '<!--U-->'
-    , '<hr><b>U</b><br>'
-
-    , '<!--V-->'
-    , '<hr><b>V</b><br>'
-
-    , '<!--W-->'
-    , '<hr><b>W</b><br>'
-    
-    , '<!--X-->'
-    , '<hr><b>X</b><br>'
-
-    , '<!--Y-->'
-    , '<hr><b>Y</b><br>'
-
-    , '<!--Z-->'
-    , '<hr><b>Z</b><br>'  
-
-
-
-
-    ];
-
-
-
-    var video =[
-
-
-    '<hr><b>A</b><br>'
-    , '<!--A-->'
-    , '<a href="https://www.youtube.com/watch?v=vZ3gxKCgtEU">Aloisius, <a/><br>'
-
-
-
-
-    , '<!--B-->'
-    , '<hr><b>B</b><br>'
-    , '<a href="https://www.youtube.com/watch?v=LC1d_2lschs" target="_blank">Bubentsov before firing squad </a> <br>'
-    , '<a href="https://www.youtube.com/watch?v=XVsIeZW3OFU" target="_blank">Bubentsov`s story </a> <br>'
-
-
-
-
-
-    , '<!--C-->'
-    , '<hr><b>C</b><br>'
-    , '<a href="https://www.youtube.com/watch?v=WSpiVm6BkeA" target="_blank">Castle & Beckett</a><br>'
-
-
-
-
-    , '<!--D-->'
-    , '<hr><b>D</b><br>'
-
-    , '<a href="xxx" target="_blank">xxx</a><i> xxx</i><br>'
-
-
-
-
-
-
-
-
-
-    , '<!--E-->'
-    , '<hr><b>E</b><br>'
-    , '<a href="http://www.youtube.com/watch?v=3eiIMZQWkdQ" target="_blank">Eltsin & Clinton</a><i> 1995-10-23 (cons. trns)</i><br>'
-
-    , '<!--F-->'
-    , '<hr><b>F</b><br>'
-    , '<a href="http://vimeo.com/58385453" target="_blank">Moon-rise</a> <i></i><br>'
-
-
-
-    , '<!--G-->'
-    , '<hr><b>G</b><br>'
-    , '<a href="http://www.youtube.com/watch?v=pnIbwWEH4UA" target="_blank">Gun Control</a><i> Puchkov</i><br>'
-
-    , '<!--H-->'
-    , '<hr><b>H</b><br>'
-
-
-
-
-    , '<!--I-->'
-    , '<hr><b>I</b><br>'
-    , '<a href="https://www.youtube.com/watch?v=-o9-r26b--E" target="_blank">In the blue sea...</a><i> 1984</i> <br>'
-    , '<a href="http://www.youtube.com/watch?v=au9Aqd_-2hc" target="_blank">Inside Saudi Kingdom</a><i> BBC film</i> <br>'
-    , '<a href="http://www.youtube.com/watch?v=ua0anM-afY0" target="_blank">Is this your church</a><i> </i> <br>'
-    , '<a href="https://www.youtube.com/watch?v=r8jP8UJFWso" target="_blank">It`s Possible!</a><i> Inspirational</i> <br>'
-
-
-
-
-
-
-    , '<!--J-->'
-    , '<hr><b>J</b><br>'
-
-
-
-
-
-
-    , '<!--K-->'
-    , '<hr><b>K</b><br>'
-
-    , '<!--L-->'
-    , '<hr><b>L</b><br>'
-    , '<a href="http://www.youtube.com/watch?v=PwxwqVDnUmc" target="_blank">Last Year`s Snow was falling</a><i> 1983</i><br>'
-
-
-    , '<!--M-->'
-    , '<hr><b>M</b><br>'
-
-    , '<a href="https://www.youtube.com/watch?v=Wgprb0KcYmw" target="_blank">猛龍過江</a><i> Maang Lung Gwo Gong </i> <br>'
-    , '<a href="https://www.youtube.com/watch?v=Hyw8973Ql30" target="_blank">Magneto`s Revenge </a><i>X-Men First Class</i> <br>'
-
-    , '<a href="https://www.youtube.com/watch?v=x3giQCbs7SA" target="_blank">Minkova Milena Latine </a><i></i> <br>'
-    , '<a href="https://www.youtube.com/watch?v=eOfI88NKRzY&feature=endscreen&NR=1" target="_blank">Monty Python </a><i></i> <br>'
-
-
-
-
-    , '<!--N-->'
-    , '<hr><b>N</b><br>'
-
-    , '<!--O-->'
-    , '<hr><b>O</b><br>'
-    , '<a href="http://www.youtube.com/watch?v=7Wl-OZ3breE" target="_blank">Our Father</a><i> Anglo-Saxon</i><br>'
-
-
-    , '<!--P-->'
-    , '<hr><b>P</b><br>'
-    , '<a href="http://www.youtube.com/watch?v=GpEx7pdp2-Q" target="_blank">Prometheus Explained</a> <i></i><br>'
-
-
-
-    , '<!--Q-->'
-    , '<hr><b>Q</b><br>'
-
-
-    , '<!--R-->'
-    , '<hr><b>R</b><br>'
-    , '<a href="https://www.youtube.com/watch?v=yM_XkP6HMU4&list=PL1CE2A366DFCCCFB5" target="_blank">Russian guy speaking Latin<a/><br>'
-
-
-
-
-
-
-    , '<!--S-->'
-    , '<hr><b>S</b><br>'
-    , '<a href="http://www.youtube.com/watch?v=1r8zgU7wE8w" target="_blank">Saving Pr. Ryan</a> <i>Ending scene</i><br>'  
-
-    , '<a href="https://www.youtube.com/watch?v=5-ZpP4j09s0" target="_blank">Seven Seconds to Sell Yourself</a><br>'  
-
-
-
-    , '<!--T-->'
-    , '<hr><b>T</b><br>'
-
-    , '<a href="https://www.youtube.com/watch?v=mi_6LIPEP7M" target="_blank">Terentius et Milena </a> <br>'
-    , '<a href="https://www.youtube.com/watch?v=jdDlmb-lgXk" target="_blank">Three Killer Questions at Interview </a> <br>'
-
-
-
-    , '<!--U-->'
-    , '<hr><b>U</b><br>'
-
-    , '<!--V-->'
-    , '<hr><b>V</b><br>'
-
-    , '<!--W-->'
-    , '<hr><b>W</b><br>'
-
-    , '<!--X-->'
-    , '<hr><b>X</b><br>'
-
-    , '<!--Y-->'
-    , '<hr><b>Y</b><br>'
-
-    , '<!--Z-->'
-    , '<hr><b>Z</b><br>'  
-
-
-
-
-
-    ];
-
-
-
-    var webdev = [
-
-    '<hr><b>A</b><br>'
-    , '<!--A-->'
-    , '<a href="http://www.w3schools.com/tags/att_form_action.asp" target="_blank">action=</a><br>'
-    , '<a href="http://www.w3schools.com/tags/canvas_addcolorstop.asp" target="_blank">addColorStop()</a><br>'
-    , '<a href="http://www.w3schools.com/jsref/met_win_alert.asp" target="_blank">alert()</a><br>'
-    , '<a href="http://www.w3schools.com/tags/canvas_arc.asp" target="_blank">arc()</a><br>'
-
-
-
-
-    , '<!--B-->'
-    , '<hr><b>B</b><br>'
-    , '<a href="http://www.w3schools.com/jsref/met_his_back.asp" target="_blank">back()</a><br>'
-    , '<a href="http://www.w3schools.com/tags/canvas_beginpath.asp" target="_blank">beginPath()</a><br>'
-    , '<a href="http://www.w3schools.com/tags/att_body_bgcolor.asp" target="_blank">bgColor=</a><br>'
-
-
-
-
-    , '<!--C-->'
-    , '<hr><b>C</b><br>'
-    , '<a href="http://www.w3schools.com/html/html5_canvas.asp" target="_blank">canvas</a><br>'
-    , '<a href="http://www.w3schools.com/jsref/jsref_ceil.asp" target="_blank">ceil()</a><br>'
-    , '<a href="http://www.w3schools.com/jsref/prop_anchor_charset.asp" target="_blank">charset=</a><br>'
-    , '<a href="http://www.w3schools.com/jsref/met_win_confirm.asp" target="_blank">confirm()</a><br>'
-    , '<a href="http://www.w3schools.com/tags/canvas_createlineargradient.asp" target="_blank">createLinearGradient()</a><br>'
-    , '<a href="http://www.w3schools.com/tags/canvas_createradialgradient.asp" target="_blank">createRadialGradient()</a><br>'
-
-
-
-
-    , '<!--D-->'
-    , '<hr><b>D</b><br>'
-
-    , '<a href="xxx" target="_blank">xxx</a><i> xxx</i><br>'
-    , '<a href="http://www.w3schools.com/js/js_obj_date.asp" target="_blank">Date</a><i> object</i><br>'
-    , '<a href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock" target="_blank">display a clock</a><i></i><br>'
-    , '<a href="http://www.w3schools.com/tags/canvas_drawimage.asp" target="_blank">drawImage()</a><br>'
-
-
-
-
-
-
-
-
-
-    , '<!--E-->'
-    , '<hr><b>E</b><br>'
-    , '<a href="http://www.w3schools.com/jsref/coll_form_elements.asp" target="_blank">elements</a><br>'
-    , '<a href="http://www.w3schools.com/jsref/jsref_eval.asp" target="_blank">eval()</a><br>'
-
-    , '<!--F-->'
-    , '<hr><b>F</b><br>'
-    , '<a href="http://www.w3schools.com/tags/tag_fieldset.asp" target="_blank">fieldset</a><br>'
-    , '<a href="http://www.w3schools.com/tags/canvas_fillrect.asp" target="_blank">fillRect()</a><br>'
-    , '<a href="http://www.w3schools.com/tags/canvas_fillstyle.asp" target="_blank">fillStyle</a><br>'
-    , '<a href="http://www.w3schools.com/tags/canvas_filltext.asp" target="_blank">fillText()</a><br>'
-    , '<a href="http://www.w3schools.com/jsref/jsref_floor.asp" target="_blank">floor()</a><br>'
-    , '<a href="http://www.w3schools.com/tags/canvas_font.asp" target="_blank">font=</a><br>'
-    , '<a href="http://www.w3schools.com/jsref/coll_doc_forms.asp" target="_blank">forms</a><br>'
-    , '<a href="http://www.w3schools.com/jsref/met_his_forward.asp" target="_blank">forward()</a><br>'
-    , '<a href="http://www.w3schools.com/js/js_functions.asp" target="_blank">function</a><br>'
-
-
-
-
-    , '<!--G-->'
-    , '<hr><b>G</b><br>'
-    , '<a href="http://www.w3schools.com/jsref/met_doc_getelementbyid.asp" target="_blank">getElementById()</a><br>'
-    , '<a href="http://www.w3schools.com/jsref/jsref_getday.asp" target="_blank">getDay()</a><br>'
-    , '<a href="http://www.w3schools.com/jsref/jsref_getfullyear.asp" target="_blank">getFullYear()</a><br>'
-    , '<a href="http://www.w3schools.com/jsref/jsref_gettime.asp" target="_blank">getTime()</a><br>'
-    , '<a href="http://www.w3schools.com/jsref/met_his_go.asp" target="_blank">go()</a><br>'
-
-
-    , '<!--H-->'
-    , '<hr><b>H</b><br>'
-    , '<a href="http://www.w3schools.com/jsref/obj_history.asp" target="_blank">history</a><i> object</i><br>'
-    , '<a href="http://www.w3schools.com/jsref/prop_loc_host.asp" target="_blank">host</a><br>'
-    , '<a href="http://www.w3schools.com/jsref/prop_loc_hostname.asp" target="_blank">hostname</a><br>'
-
-
-
-
-    , '<!--I-->'
-    , '<hr><b>I</b><br>'
-    , '<a href="http://www.w3schools.com/jsref/prop_html_innerhtml.asp" target="_blank">innerHTML=</a><i> property</i><br>'
-
-
-    , '<!--J-->'
-    , '<hr><b>J</b><br>'
-
-
-
-
-
-
-    , '<!--K-->'
-    , '<hr><b>K</b><br>'
-
-    , '<!--L-->'
-    , '<hr><b>L</b><br>'
-    , '<a href="http://www.w3schools.com/jsref/prop_doc_lastmodified.asp" target="_blank">lastModified</a><br>'
-    , '<a href="http://www.w3schools.com/jsref/jsref_length_string.asp" target="_blank">length</a><br>'
-    , '<a href="http://www.w3schools.com/tags/canvas_lineto.asp" target="_blank">lineTo()</a><br>'
-    , '<a href="http://www.w3schools.com/jsref/coll_doc_links.asp" target="_blank">links</a><br>'
-    , '<a href="http://www.w3schools.com/jsref/obj_location.asp" target="_blank">location</a><i> object</i><br>'
-
-
-    , '<!--M-->'
-    , '<hr><b>M</b><br>'
-    , '<a href="http://www.w3schools.com/jsref/jsref_max.asp" target="_blank">max()</a><br>'
-    , '<a href="http://www.w3schools.com/jsref/jsref_min.asp" target="_blank">min()</a><br>'
-    , '<a href="http://www.w3schools.com/tags/canvas_moveto.asp" target="_blank">moveTo()</a><br>'
-    , '<a href="http://www.w3schools.com/tags/tag_meta.asp" target="_blank">meta</a><br>'
-
-
-    , '<!--N-->'
-    , '<hr><b>N</b><br>'
-    , '<a href="http://www.w3schools.com/jsref/prop_meta_name.asp" target="_blank">name</a><br>'
-
-    , '<!--O-->'
-    , '<hr><b>O</b><br>'
-    , '<a href="http://www.w3schools.com/jsref/event_onclick.asp" target="_blank">onclick=</a><i> event</i><br>'
-    , '<a href="http://www.w3schools.com/tags/ev_onsubmit.asp" target="_blank">onsubmit=</a><br>'
-
-
-    , '<!--P-->'
-    , '<hr><b>P</b><br>'
-    , '<a href="http://www.w3schools.com/jsref/prop_loc_port.asp" target="_blank">port</a><br>'
-    , '<a href="http://www.w3schools.com/jsref/jsref_pow.asp" target="_blank">pow()</a><br>'
-    , '<a href="http://www.w3schools.com/jsref/met_win_prompt.asp" target="_blank">prompt()</a><br>'
-    , '<a href="http://www.w3schools.com/jsref/prop_loc_protocol.asp" target="_blank">protocol</a><br>'
-
-
-
-    , '<!--Q-->'
-    , '<hr><b>Q</b><br>'
-
-
-    , '<!--R-->'
-    , '<hr><b>R</b><br>'
-    , '<a href="http://www.w3schools.com/jsref/jsref_random.asp" target="_blank">random()</a><br>'
-    , '<a href="http://www.w3schools.com/jsref/jsref_replace.asp" target="_blank">replace()</a><br>'
-    , '<a href="http://www.w3schools.com/jsref/jsref_round.asp" target="_blank">round()</a><br>'
-
-
-
-
-
-    , '<!--S-->'
-    , '<hr><b>S</b><br>'
-    , '<a href="http://www.w3schools.com/jsref/jsref_setfullyear.asp" target="_blank">setFullYear()</a><br>'
-    , '<a href="http://www.w3schools.com/jsref/jsref_split.asp" target="_blank">split()</a><br>'
-    , '<a href="http://www.w3schools.com/jsref/jsref_sqrt.asp" target="_blank">sqrt()</a><br>'
-    , '<a href="http://www.w3schools.com/jsref/prop_frame_src.asp" target="_blank">src</a><br>'
-    , '<a href="http://www.w3schools.com/tags/canvas_stroke.asp" target="_blank">stroke()</a><br>'
-    , '<a href="http://www.w3schools.com/tags/canvas_stroketext.asp" target="_blank">strokeText()</a><br>'
-    , '<a href="http://www.w3schools.com/js/js_switch.asp" target="_blank">switch()</a><br>'
-
-
-
-    , '<!--T-->'
-    , '<hr><b>T</b><br>'
-    , '<a href="http://www.w3schools.com/jsref/jsref_tolocalestring.asp" target="_blank">toLocaleString()</a><br>'
-    , '<a href="http://www.w3schools.com/jsref/jsref_toutcstring.asp" target="_blank">toUTCString()</a><br>'
-
-
-    , '<!--U-->'
-    , '<hr><b>U</b><br>'
-
-    , '<!--V-->'
-    , '<hr><b>V</b><br>'
-
-    , '<!--W-->'
-    , '<hr><b>W</b><br>'
-    , '<a href="http://www.w3schools.com/js/js_loop_while.asp" target="_blank">while loop</a><br>'
-    , '<a href="http://www.w3schools.com/jsref/met_doc_write.asp" target="_blank">write()</a><br>'
-    , '<a href="http://www.w3schools.com/jsref/met_doc_writeln.asp" target="_blank">writeln()</a><br>'
-
-    , '<!--X-->'
-    , '<hr><b>X</b><br>'
-
-    , '<!--Y-->'
-    , '<hr><b>Y</b><br>'
-
-    , '<!--Z-->'
-    , '<hr><b>Z</b><br>'  
-
-
-    ];
-
-
-    */
-  //});
 
 
 //----------------------------------------------------------------------------
@@ -3161,166 +1069,31 @@ function health(){
 
 var healthFun = function(){
 
-  var health_ = [
-  '<mark>Health</mark><br>'
-
-  , '<hr><b>A</b><br>'
-  , '<!--A-->'
-  , '<a href="http://www.absdiet.com/uof/absdiet/abospl/index.html" target="_blank">Abs Diet</a> <i></i><br>'
-  , '<a href="http://nutritiondata.self.com/facts/fruits-and-fruit-juices/1809/2" target="_blank">Apple</a> <i>raw</i><br>'
-
-
-
-
-  , '<!--B-->'
-  , '<hr><b>B</b><br>'
-  , '<a href="http://nutritiondata.self.com/facts/fruits-and-fruit-juices/1846/2" target="_blank">Banana</a> <i>raw</i><br>'
-  , '<Beef<br>'
-  , '<a href="http://nutritiondata.self.com/facts/beef-products/3482/2" target="_blank">tongue</a> <i>cooked</i><br>'
-  , '<a href="http://nutritiondata.self.com/facts/baked-products/4846/2" target="_blank">Bread, Multy-grain</a> <i></i><br>'
-
-
-
-
-  , '<!--C-->'
-  , '<hr><b>C</b><br>'
-  , 'Chicken<br>'
-  , '<a href="http://nutritiondata.self.com/facts/poultry-products/703/2" target="_blank">breast</a> <i>roasted</i><br>'
-  , '<a href="http://nutritiondata.self.com/facts/poultry-products/721/2" target="_blank">leg</a> <i>roasted</i><br>'
-
-
-
-
-  , '<!--D-->'
-  , '<hr><b>D</b><br>'
-
-  , '<a href="xxx" target="_blank">xxx</a><i> xxx</i><br>'
-
-
-
-
-
-
-
-
-
-  , '<!--E-->'
-  , '<hr><b>E</b><br>'
-  , '<a href="http://nutritiondata.self.com/facts/dairy-and-egg-products/117/2" target="_blank">Egg</a> <i>boiled</i><br>'
-
-  , '<!--F-->'
-  , '<hr><b>F</b><br>'
-
-
-
-  , '<!--G-->'
-  , '<hr><b>G</b><br>'
-  , '<a href="http://nutritiondata.self.com/facts/fruits-and-fruit-juices/1920/2" target="_blank">Grapes</a> <i>raw</i><br>'
-
-  , '<!--H-->'
-  , '<hr><b>H</b><br>'
-  , '<a href="http://lowcarbdiets.about.com/od/whattoeat/a/highproteinfood.htm" target="_blank">High-Protein Foods</a> <i></i><br>'
-
-
-
-
-  , '<!--I-->'
-  , '<hr><b>I</b><br>'
-
-
-
-  , '<!--J-->'
-  , '<hr><b>J</b><br>'
-
-
-
-
-
-
-  , '<!--K-->'
-  , '<hr><b>K</b><br>'
-
-  , '<!--L-->'
-  , '<hr><b>L</b><br>'
-  , '<a href="http://www.lifefitness.com/index.html" target="_blank">Life Fitness</a> <i></i><br>'
-
-
-  , '<!--M-->'
-  , '<hr><b>M</b><br>'
-
-
-  , '<!--N-->'
-  , '<hr><b>N</b><br>'
-  , '<a href="http://nutritiondata.self.com/" target="_blank">Nutrition Data</a> <i></i><br>'
-  , '<a href="http://www.fda.gov/food/resourcesforyou/consumers/nflpm/ucm274593.htm" target="_blank">Nutrition Facts Label</a> <i></i><br>'
-  , '<a href="http://www.nutritionvalue.org/" target="_blank">Nutrition Value</a> <i></i><br>'
-
-  , '<!--O-->'
-  , '<hr><b>O</b><br>'
-
-
-  , '<!--P-->'
-  , '<hr><b>P</b><br>'
-  , '<a href="http://nutritiondata.self.com/facts/vegetables-and-vegetable-products/2908/2" target="_blank">Potato</a> <i>boiled</i><br>'
-  , '<a href="http://www.healthaliciousness.com/articles/foods-highest-in-protein.php" target="_blank">Protein-full Foods</a> <i></i><br>'
-  , '<a href="http://www.fitday.com/fitness-articles/fitness/body-building/the-best-protein-foods-for-building-muscle.html" target="_blank">Protein Foods</a> <i></i><br>'
-
-
-
-
-  , '<!--Q-->'
-  , '<hr><b>Q</b><br>'
-
-
-  , '<!--R-->'
-  , '<hr><b>R</b><br>'
-  , '<a href="http://nutritiondata.self.com/facts/fruits-and-fruit-juices/2053/2" target="_blank">Raspberry</a> <i>raw</i><br>'
-
-
-
-
-
-
-  , '<!--S-->'
-  , '<hr><b>S</b><br>'
-  , '<a href="http://nutritiondata.self.com/facts/fruits-and-fruit-juices/2064/2" target="_blank">Strawberry</a> <i>raw</i><br>'
-
-
-
-
-  , '<!--T-->'
-  , '<hr><b>T</b><br>'
-
-
-
-  , '<!--U-->'
-  , '<hr><b>U</b><br>'
-
-  , '<!--V-->'
-  , '<hr><b>V</b><br>'
-
-  , '<!--W-->'
-  , '<hr><b>W</b><br>'
-
-  , '<!--X-->'
-  , '<hr><b>X</b><br>'
-
-  , '<!--Y-->'
-  , '<hr><b>Y</b><br>'
-
-  , '<!--Z-->'
-  , '<hr><b>Z</b><br>'  
-
-
-  ];
-
-  var arr = health_;
-
-  var retval ="";
-  retval += "<hr>";
-  for (var i in arr)  {retval += arr[i];}
-    retval += "<hr>";
-  return retval;
+  var healthObj = {
+    "Abs Diet":"http://www.absdiet.com/uof/absdiet/abospl/index.html"
+    , "Apple":"http://nutritiondata.self.com/facts/fruits-and-fruit-juices/1809/2"
+    , "Banana":"http://nutritiondata.self.com/facts/fruits-and-fruit-juices/1846/2"
+    , "tongue":"http://nutritiondata.self.com/facts/beef-products/3482/2"
+    , "Bread, Multy-grain":"http://nutritiondata.self.com/facts/baked-products/4846/2"
+    , "breast":"http://nutritiondata.self.com/facts/poultry-products/703/2"
+    , "leg":"http://nutritiondata.self.com/facts/poultry-products/721/2"
+    , "Egg":"http://nutritiondata.self.com/facts/dairy-and-egg-products/117/2"
+    , "Grapes":"http://nutritiondata.self.com/facts/fruits-and-fruit-juices/1920/2"
+    , "High-Protein Foods":"http://lowcarbdiets.about.com/od/whattoeat/a/highproteinfood.htm"
+    , "Life Fitness":"http://www.lifefitness.com/index.html"
+    , "Nutrition Data":"http://nutritiondata.self.com/"
+    , "Nutrition Facts Label":"http://www.fda.gov/food/resourcesforyou/consumers/nflpm/ucm274593.htm"
+    , "Nutrition Value":"http://www.nutritionvalue.org/"
+    , "Potato":"http://nutritiondata.self.com/facts/vegetables-and-vegetable-products/2908/2"
+    , "Protein-full Foods":"http://www.healthaliciousness.com/articles/foods-highest-in-protein.php"
+    , "Protein Foods":"http://www.fitday.com/fitness-articles/fitness/body-building/the-best-protein-foods-for-building-muscle.html"
+    , "Raspberry":"http://nutritiondata.self.com/facts/fruits-and-fruit-juices/2053/2"
+    , "Strawberry":"http://nutritiondata.self.com/facts/fruits-and-fruit-juices/2064/2"
+
+  };
+
+  
+  return printObj(healthObj);
 };
 
 //----------------------------------------------------------------------------
@@ -3330,157 +1103,29 @@ function html5(){
 }
 var html5Fun = function(){
 
-  var html5Arr = [
-  '<mark>HTML5</mark><br>'
-
-  , '<b>A</b><br>'
-  , '<!--A-->'
-  , '<a href="http://www.w3schools.com/tags/canvas_addcolorstop.asp" target="_blank">addColorStop()</a><br>'
-  , '<a href="http://www.w3schools.com/tags/canvas_arc.asp" target="_blank">arc()</a><br>'
-
-
-
-
-  , '<!--B-->'
-  , '<hr><b>B</b><br>'
-  , '<a href="http://www.w3schools.com/tags/canvas_beginpath.asp" target="_blank">beginPath()</a><br>'
-
-
-
-
-  , '<!--C-->'
-  , '<hr><b>C</b><br>'
-  , '<a href="http://www.w3schools.com/html/html5_canvas.asp" target="_blank">canvas</a><br>'
-  , '<a href="http://www.w3schools.com/tags/canvas_createlineargradient.asp" target="_blank">createLinearGradient()</a><br>'
-  , '<a href="http://www.w3schools.com/tags/canvas_createradialgradient.asp" target="_blank">createRadialGradient()</a><br>'
-
-
-
-
-  , '<!--D-->'
-  , '<hr><b>D</b><br>'
-
-  , '<a href="xxx" target="_blank">xxx</a><i> xxx</i><br>'
-
-
-
-
-
-
-
-
-
-  , '<!--E-->'
-  , '<hr><b>E</b><br>'
-
-  , '<!--F-->'
-  , '<hr><b>F</b><br>'
-  , '<a href="http://www.w3schools.com/tags/canvas_fillrect.asp" target="_blank">fillRect()</a><br>'
-  , '<a href="http://www.w3schools.com/tags/canvas_fillstyle.asp" target="_blank">fillStyle</a><br>'
-  , '<a href="http://www.w3schools.com/tags/canvas_filltext.asp" target="_blank">fillText()</a><br>'
-  , '<a href="http://www.w3schools.com/tags/canvas_font.asp" target="_blank">font=</a><br>'
-
-
-
-  , '<!--G-->'
-  , '<hr><b>G</b><br>'
-  , '<a href="http://www.w3schools.com/jsref/met_doc_getelementbyid.asp" target="_blank">getElementById()</a><br>'
-  , '<a href="http://www.w3schools.com/tags/canvas_drawimage.asp" target="_blank">drawImage()</a><br>'
-  , '<!--H-->'
-  , '<hr><b>H</b><br>'
-
-
-
-
-  , '<!--I-->'
-  , '<hr><b>I</b><br>'
-
-
-
-  , '<!--J-->'
-  , '<hr><b>J</b><br>'
-
-
-
-
-
-
-  , '<!--K-->'
-  , '<hr><b>K</b><br>'
-
-  , '<!--L-->'
-  , '<hr><b>L</b><br>'
-  , '<a href="http://www.w3schools.com/tags/canvas_lineto.asp" target="_blank">lineTo()</a><br>'
-
-
-  , '<!--M-->'
-  , '<hr><b>M</b><br>'
-  , '<a href="http://www.w3schools.com/tags/canvas_moveto.asp" target="_blank">moveTo()</a><br>'
-
-
-  , '<!--N-->'
-  , '<hr><b>N</b><br>'
-
-  , '<!--O-->'
-  , '<hr><b>O</b><br>'
-
-
-  , '<!--P-->'
-  , '<hr><b>P</b><br>'
-
-
-
-  , '<!--Q-->'
-  , '<hr><b>Q</b><br>'
-
-
-  , '<!--R-->'
-  , '<hr><b>R</b><br>'
-
-
-
-
-
-
-  , '<!--S-->'
-  , '<hr><b>S</b><br>'
-  , '<a href="http://www.w3schools.com/tags/canvas_stroke.asp" target="_blank">stroke()</a><br>'
-  , '<a href="http://www.w3schools.com/tags/canvas_stroketext.asp" target="_blank">strokeText()</a><br>'
-
-
-
-  , '<!--T-->'
-  , '<hr><b>T</b><br>'
-
-
-
-  , '<!--U-->'
-  , '<hr><b>U</b><br>'
-
-  , '<!--V-->'
-  , '<hr><b>V</b><br>'
-
-  , '<!--W-->'
-  , '<hr><b>W</b><br>'
-
-  , '<!--X-->'
-  , '<hr><b>X</b><br>'
-
-  , '<!--Y-->'
-  , '<hr><b>Y</b><br>'
-  
-
-  , '<!--Z-->'
-  , '<hr><b>Z</b><br>'  
-
-  ];
-
-  var arr = html5Arr;
-  var retval ="";
-  retval += "<hr>";
-  for (var i in arr)  {retval += arr[i];}
-    retval += "<hr>";
-  return retval;
+  var html5Obj = {
+   "addColorStop()":"http://www.w3schools.com/tags/canvas_addcolorstop.asp"
+   , "arc()":"http://www.w3schools.com/tags/canvas_arc.asp"
+   , "beginPath()":"http://www.w3schools.com/tags/canvas_beginpath.asp"
+   , "canvas":"http://www.w3schools.com/html/html5_canvas.asp"
+   , "createLinearGradient()":"http://www.w3schools.com/tags/canvas_createlineargradient.asp"
+   , "createRadialGradient()":"http://www.w3schools.com/tags/canvas_createradialgradient.asp"
+   , "fillRect()":"http://www.w3schools.com/tags/canvas_fillrect.asp"
+   , "fillStyle":"http://www.w3schools.com/tags/canvas_fillstyle.asp"
+   , "fillText()":"http://www.w3schools.com/tags/canvas_filltext.asp"
+   , "font=":"http://www.w3schools.com/tags/canvas_font.asp"
+   , "getElementById()":"http://www.w3schools.com/jsref/met_doc_getelementbyid.asp"
+   , "drawImage()":"http://www.w3schools.com/tags/canvas_drawimage.asp"
+   , "input tag" : "http://www.w3schools.com/tags/tag_input.asp"
+   , "lineTo()":"http://www.w3schools.com/tags/canvas_lineto.asp"
+   , "moveTo()":"http://www.w3schools.com/tags/canvas_moveto.asp"
+   , "onclick" : "http://www.w3schools.com/jsref/event_onclick.asp"
+   , "stroke()":"http://www.w3schools.com/tags/canvas_stroke.asp"
+   , "strokeText()":"http://www.w3schools.com/tags/canvas_stroketext.asp"
+ };
+
+
+ return printObj(html5Obj);
 
 };
 
@@ -3493,263 +1138,110 @@ function its(){
 
 var its2 = function (){
 
-  var itstuff = [
-  '<mark>IT stuff</mark><br>'
+  var itstuffObj = {
+    "12-factor app":"http://www.12factor.net/"
+    , "Allhands 2013":"https://wiki.mozilla.org/Allhands2013"
+    , "Allhands 2013 agenda":"https://etherpad.mozilla.org/allhandsmay2013agenda"
+    , "ARM":"http://www.arm.com/"
+    , "ASP.NET":"http://www.asp.net/"
+    , "Bin/Deci/Hex Convertor ":"http://www.mathsisfun.com/binary-decimal-hexadecimal-converter.html"
+    , "Blog 001":"http://igoryen.wordpress.com/2013/05/10/my-first-blog-about-my-first-week-at-seneca-cdot/"
+    , "Blog 002":"http://igoryen.wordpress.com/2013/05/17/cdot-week-2/"
+    , "Blog 003":"http://igoryen.wordpress.com/2013/05/26/cdot-week-3-and-mozilla-allhands/"
+    , "Blog 004":"http://igoryen.wordpress.com/2013/05/31/week-22-week-4-at-cdot/"
+    , "Blog 005":"http://igoryen.wordpress.com/2013/06/09/cdot-week-5/"
+    , "Blog 006":"http://igoryen.wordpress.com/2013/06/14/mocha-unit-testing-the-simplest-example-var-assert/"
+    , "Blog 007":"http://igoryen.wordpress.com/2013/06/23/setting-up-servers-to-run-locally/"
+    , "Branching model, a":"http://nvie.com/posts/a-successful-git-branching-model/"
+    , "Bugzilla":"https://bugzilla.mozilla.org/"
+    , "Bugzilla: work with bugs":"http://sedgestuff.wordpress.com/2013/05/09/howto-working-with-open-bugs-on-bugzilla/"
+    , "Cloud9 IDE" : "https://c9.io/"
+    , "Config":"http://www.12factor.net/config"
+    , "CSS Validator":"http://jigsaw.w3.org/css-validator/"
+    , "cURL":"http://curl.haxx.se/"
+    , "Curly braces position":"http://programmers.stackexchange.com/questions/2715/should-curly-braces-appear-on-their-own-line"
+    , "Currant":"http://currant.herokuapp.com/"
+    , "Dashboard":"https://wiki.mozilla.org/Webmaker/Communications/Dashboard"
+    , "Debuggable":"http://debuggable.com/"
+    , "Easy open source workflow":"http://www.thecssdiv.co.uk/2013/04/easy-open-source-workflow/"
+    , "Eloquent JavaScript":"http://eloquentjavascript.net/contents.html"
+    , "Etherpad 1":"https://etherpad.mozilla.org/cdotsupplies"
+    , "Etherpad 2":"https://etherpad.mozilla.org/0GXDuRZRWL"
+    , "Express.js":"http://expressjs.com/"
+    , "guide":"http://expressjs.com/guide.html"
+    , "API":"http://expressjs.com/api.html"
+    , "Fedora":"http://fedoraproject.org/wiki/Fedora_Project_Wiki"
+    , "Frictionless Context switching":"http://git-scm.com/about#Frictionless_Context_Switching"
+    , "GetFireBug":"http://getfirebug.com/"
+    , "gettext":"http://www.gnu.org/software/gettext/"
+    , "Glassfish":"http://glassfish.java.net/"
+    , "GoDaddy":"https://ca.godaddy.com/"
+    , "Grunt js":"http://gruntjs.com/"
+    , "Hacks":"https://hacks.mozilla.org/"
+    , "Heroku":"https://www.heroku.com/"
+    , "HTML5 on w3schools":"http://www.w3schools.com/html/html5_intro.asp"
+    , "HTML color names ":"http://www.w3schools.com/html/html_colorvalues.asp"
+    , "HTML color wheel ":"http://www.ficml.org/jemimap/style/color/wheel.html"
+    , "HTML Validator":"http://validator.w3.org/"
+    , "HTTP headers":"http://net.tutsplus.com/tutorials/other/http-headers-for-dummies/"
+    , "HomeBrew":"http://mxcl.github.io/homebrew/"
+    , "i18n":"http://www.lingotek.com/images/pdf/Lingotek_Internationalization_101_Webinar_07_31_12.pdf"
+    , "IRC ref":"http://www.ircbeginner.com/ircinfo/ircc-commands.html"
+    , "iTerm2" : "http://www.iterm2.com/#/section/home"
+    , "JASON":"http://json.org/"
+    , "JASOLint":"http://jsonlint.com/"
+    , "API":"http://docs.oracle.com/javase/6/docs/api/"
+    , "Java Samples":"http://www.java-samples.com/java/"
+    , "Java World ":"http://www.javaworld.com/?attr=ifw_jwlogo"
+    , "Kieran`s Blog":"http://sedgestuff.wordpress.com/"
+    , "Lynda.com":"http://www.lynda.com/"
+    , "Mac Essentials":"https://etherpad.mozilla.org/macessentials"
+    , "Mongo DB":"http://www.mongodb.org/"
+    , "Mozilla Developer Network":"https://developer.mozilla.org/en-US/"
+    , "Mozilla Foundation":"http://www.mozilla.org/foundation/"
+    , "Mozilla Wiki":"https://wiki.mozilla.org/Main_Page"
+    , "Mozilla/login.webmaker.org":"https://github.com/mozilla/login.webmaker.org"
+    , "mine":"https://github.com/mozilla/login.webmaker.org"
+    , "MSDN Library ":"http://msdn.microsoft.com/library/default.aspx"
+    , "NetBeans.org":"http://netbeans.org/index.html"
+    , "npm: intro":"http://howtonode.org/introduction-to-npm"
+    , "Open Source @ Seneca":"http://zenit.senecac.on.ca/wiki/index.php/Main_Page"
+    , "Open source development":"https://sedgestuff.wordpress.com/2013/04/23/welcome-to-open-source-development-a-students-perspective/comment-page-1/#comment-14"
+    , "Open Source Workflow":"http://www.thecssdiv.co.uk/2013/04/easy-open-source-workflow/"
+    , "PasteBin.Mozilla.org":"http://pastebin.mozilla.org/"
+    , "Persona":"https://login.persona.org/"
+    , "PHP functions ":"http://php.net/quickref.php"
+    , "PHP manual ":"http://php.net/manual/en/index.php"
+    , "PO files format":"http://www.gnu.org/software/gettext/manual/html_node/PO-Files.html"
+    , "popcorn":"http://popcornjs.org/"
+    , "popcorn maker":"https://popcorn.webmaker.org/"
+    , "Processing.js ":"http://processingjs.org/"
+    , "Profile backup":"http://kb.mozillazine.org/Profile_backup"
+    , "Redis":"http://redis.io/"
+    , "RegEx calculator ":"http://www.homemarketeer.com/sbs/regular_expression.html"
+    , "RegEx pal":"http://regexpal.com/"
+    , "Require.js":"http://requirejs.org/"
+    , "Require.js I18N bundle":"http://requirejs.org/docs/api.html#i18n"
+    , "Solarized":"http://ethanschoonover.com/solarized"
+    , "Stack Overflow ":"http://stackoverflow.com/"
+    , "Sublime Text":"http://www.sublimetext.com/"
+    , "Sublime Text Tut":"https://tutsplus.com/course/improve-workflow-in-sublime-text-2/"
+    , "Sublime Text on Fedora":"https://gist.github.com/dantoncancella/4977978"
+    , "Tech On The Net ":"http://www.techonthenet.com/index.php"
+    , "ToDo list":"http://zenit.senecac.on.ca/wiki/index.php/Webmaker_Summer_2013_TODO"
+    , "Tracking for CDOT":"https://etherpad.mozilla.org/trackingForCDOT"
+    , "tree on Mac":"http://shaunchapman.me/post/329270449/how-to-install-the-tree-command-on-mac-os-x"
+    , "Tutorial`s Point":"http://www.tutorialspoint.com/java/index.htm"
+    , "VLSM subnet calculator":"http://www.vlsm-calc.net/"
+    , "VM on Linux":"http://senecacd.wordpress.com/2012/11/07/creating-a-virtual-machine-on-linux-with-kvm-qemu-and-virt/"
+    , "w3schools":"http://www.w3schools.com/"
+    , "WebMaker":"https://webmaker.org/en-US/"
+    , "Wiki":"https://wiki.mozilla.org/Webmaker"
+    , "Website with SQL db ":"http://www.windowsazure.com/en-us/develop/net/tutorials/web-site-with-sql-database/"
+
+  };
 
-  , '<a href="http://www.12factor.net/" target="_blank">12-factor app</a> <i></i><br>'
-
-
-  , '<hr><b>A</b><br>'
-  , '<!--A-->'
-  , '<a href="https://wiki.mozilla.org/Allhands2013" target="_blank">Allhands 2013</a> <i>MozillaWiki</i><br>'  
-  , '<a href="https://etherpad.mozilla.org/allhandsmay2013agenda" target="_blank">Allhands 2013 agenda</a> <i>Etherpad</i><br>'
-  , '<a href="http://www.arm.com/" target="_blank">ARM</a> <i></i><br>'
-  , '<a href="http://www.asp.net/" target="_blank">ASP.NET</a><br>'
-
-
-
-
-
-  , '<!--B-->'
-  , '<hr><b>B</b><br>'
-  , '<a href="http://www.mathsisfun.com/binary-decimal-hexadecimal-converter.html" target="_blank">Bin/Deci/Hex Convertor </a> <br>'
-  , '<a href="http://nvie.com/posts/a-successful-git-branching-model/" target="_blank">Branching model, a</a> <i></i><br>'
-  , '<a href="https://bugzilla.mozilla.org/" target="_blank">Bugzilla</a> <i></i><br>' 
-  , '<a href="http://sedgestuff.wordpress.com/2013/05/09/howto-working-with-open-bugs-on-bugzilla/" target="_blank">Bugzilla: work with bugs</a> <i>sedge</i><br>'
-
-
-
-  , '<!--C-->'
-  , '<hr><b>C</b><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Cloud_Foundry" target="_blank">Cloud Foundry</a> <i></i><br>'
-  , '<a href="http://www.12factor.net/config" target="_blank">Config</a> <i></i><br>'
-  , '<a href="http://jigsaw.w3.org/css-validator/" target="_blank">CSS Validator</a> <br>'
-  , '<a href="http://curl.haxx.se/" target="_blank">cURL</a> <i></i><br>'
-  , '<a href="http://programmers.stackexchange.com/questions/2715/should-curly-braces-appear-on-their-own-line" target="_blank">Curly braces position</a> <i></i><br>'
-  , '<a href="http://currant.herokuapp.com/" target="_blank">Currant</a> <i>I love you @ Heroku</i><br>'
-
-
-
-
-
-  , '<!--D-->'
-  , '<hr><b>D</b><br>'
-
-  , '<a href="https://wiki.mozilla.org/Webmaker/Communications/Dashboard" target="_blank">Dashboard</a> <i>Mozilla</i><br>'
-  , '<a href="http://debuggable.com/" target="_blank">Debuggable</a> <i></i><br>'
-
-
-
-
-
-
-
-
-
-  , '<!--E-->'
-  , '<hr><b>E</b><br>'
-  , '<a href="http://www.thecssdiv.co.uk/2013/04/easy-open-source-workflow/" target="_blank">Easy open source workflow</a> <i>Ross</i><br>'
-  , '<a href="http://eloquentjavascript.net/contents.html" target="_blank">Eloquent JavaScript</a> <i></i><br>'
-  , '<a href="https://etherpad.mozilla.org/cdotsupplies" target="_blank">Etherpad</a> <i>supplies</i><br>'
-  , '<a href="https://etherpad.mozilla.org/0GXDuRZRWL" target="_blank">Etherpad</a> <i>mine</i><br>'
-  , '<a href="http://expressjs.com/" target="_blank">Express.js</a> | '
-  , '<a href="http://expressjs.com/guide.html" target="_blank">guide</a> | '
-  , '<a href="http://expressjs.com/api.html" target="_blank">API</a> <i></i><br>'
-
-  , '<!--F-->'
-  , '<hr><b>F</b><br>'
-  , '<a href="http://fedoraproject.org/wiki/Fedora_Project_Wiki" target="_blank">Fedora</a> <i>wiki</i><br>'
-  , '<a href="http://git-scm.com/about#Frictionless_Context_Switching" target="_blank">Frictionless Context switching</a> <i></i><br>'
-
-
-
-  , '<!--G-->'
-  , '<hr><b>G</b><br>'
-  , '<a href="http://getfirebug.com/" target="_blank">GetFireBug</a> <i></i><br>'
-  , '<a href="http://www.gnu.org/software/gettext/" target="_blank">gettext</a> <i></i><br>'
-  , '<a href="http://glassfish.java.net/" target="_blank">Glassfish</a><br>'
-
-  , '<a href="https://ca.godaddy.com/" target="_blank">GoDaddy</a> <i></i><br>'
-  , '<a href="http://gruntjs.com/" target="_blank">Grunt js</a> <i></i><br>'
-
-
-  , '<!--H-->'
-  , '<hr><b>H</b><br>'
-  , '<a href="https://hacks.mozilla.org/" target="_blank">Hacks</a> <i>Mozilla</i><br>'
-  , '<a href="https://www.heroku.com/" target="_blank">Heroku</a> <i></i><br>'
-  , '<a href="http://www.w3schools.com/html/html5_intro.asp" target="_blank">HTML5 on w3schools</a><br>'
-  , '<a href="http://www.w3schools.com/html/html_colorvalues.asp" target="_blank">HTML color names </a> <br>'
-  , '<a href="http://www.ficml.org/jemimap/style/color/wheel.html" target="_blank">HTML color wheel </a> <br>'
-  , '<a href="http://validator.w3.org/" target="_blank">HTML Validator</a> <br>'
-  , '<a href="http://net.tutsplus.com/tutorials/other/http-headers-for-dummies/" target="_blank">HTTP headers</a> <i>tuts+</i><br>'
-  , '<a href="http://mxcl.github.io/homebrew/" target="_blank">HomeBrew</a> <i></i><br>'
-
-
-
-
-  , '<!--I-->'
-  , '<hr><b>I</b><br>'
-  , '<a href="http://www.lingotek.com/images/pdf/Lingotek_Internationalization_101_Webinar_07_31_12.pdf" target="_blank"><abbr title="Internationalization">i18n</abbr></a> <i></i><br>'
-  , '<a href="irc.freenode.net" target="_blank">IRC free node</a> <i></i><br>'
-  , '<a href="http://www.ircbeginner.com/ircinfo/ircc-commands.html" target="_blank">IRC ref</a> <i></i><br>'
-
-
-
-  , '<!--J-->'
-  , '<hr><b>J</b><br>'
-  , '<a href="http://json.org/" target="_blank">JASON</a> <i></i><br>'
-  , '<a href="http://jsonlint.com/" target="_blank">JASOLint</a> <i></i><br>'
-  , '<a href="java.html" target="_blank">Java</a><i> >>></i><br>'
-  , '<a href="http://docs.oracle.com/javase/6/docs/api/" target="_blank">Java , <abbr title="Application Programming Interface">API</abbr></a><br>'
-  , '<a href="http://www.java-samples.com/java/" target="_blank">Java Samples</a><br>'
-  , '<a href="javascript.html" target="_blank">JavaScript</a> >>><i></i><br>'
-  , '<a href="http://www.javaworld.com/?attr=ifw_jwlogo" target="_blank">Java World </a><i> Info World</i><br>'
-
-
-
-
-
-
-  , '<!--K-->'
-  , '<hr><b>K</b><br>'
-  , '<a href="http://sedgestuff.wordpress.com/" target="_blank">Kieran`s Blog</a> <i></i><br>'
-
-  , '<!--L-->'
-  , '<hr><b>L</b><br>'
-  , '<a href="http://www.lynda.com/" target="_blank">Lynda.com</a> <i>paid website</i><br>'
-
-
-  , '<!--M-->'
-  , '<hr><b>M</b><br>'
-  , '<a href="https://etherpad.mozilla.org/macessentials" target="_blank">Mac Essentials</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Memory_footprint" target="_blank">Memory footprint</a> <i></i><br>'
-  , '<a href="http://www.mongodb.org/" target="_blank">Mongo DB</a> <i></i><br>'
-  , '<a href="https://developer.mozilla.org/en-US/" target="_blank">Mozilla Developer Network</a> <i></i><br>'
-  , '<a href="http://www.mozilla.org/foundation/" target="_blank">Mozilla Foundation</a> <i>MoFo</i><br>'
-  , '<a href="https://wiki.mozilla.org/Main_Page" target="_blank">Mozilla Wiki</a> <i></i><br>'
-  , '<a href="https://github.com/mozilla/login.webmaker.org" target="_blank">Mozilla/login.webmaker.org</a> <i></i><br>'
-  , '<a href="https://github.com/mozilla/login.webmaker.org" target="_blank">mine</a> <i></i><br>'
-  , '<a href="http://msdn.microsoft.com/library/default.aspx" target="_blank">MSDN Library </a><i> for MS developer</i> <br>'
-
-
-
-  , '<!--N-->'
-  , '<hr><b>N</b><br>'
-  , '<a href="http://netbeans.org/index.html" target="_blank">NetBeans.org</a> <br>'
-  , '<a href="http://howtonode.org/introduction-to-npm" target="_blank">npm: intro</a> <i></i><br>'
-  , '<a href="http://nunjucks.jlongster.com/" target="_blank">Nunjucks</a> <i></i><br>'
-
-  , '<!--O-->'
-  , '<hr><b>O</b><br>'
-  , '<a href="http://zenit.senecac.on.ca/wiki/index.php/Main_Page" target="_blank">Open Source @ Seneca</a> <i></i><br>'
-  , '<a href="https://sedgestuff.wordpress.com/2013/04/23/welcome-to-open-source-development-a-students-perspective/comment-page-1/#comment-14" target="_blank">Open source development</a> <i>Kieran</i><br>'
-  , '<a href="http://www.thecssdiv.co.uk/2013/04/easy-open-source-workflow/" target="_blank">Open Source Workflow</a> <i></i><br>'
-
-
-  , '<!--P-->'
-  , '<hr><b>P</b><br>'
-  , '<a href="http://pastebin.mozilla.org/" target="_blank">PasteBin.Mozilla.org</a> <i></i><br>'
-  , '<a href="https://login.persona.org/" target="_blank">Persona</a> <i>Mozilla</i><br>'
-  , '<a href="phpcodes.html" target="_blank">PHP Codes</a> >><br>'
-  , '<a href="http://php.net/quickref.php" target="_blank">PHP functions </a> <br>'
-  , '<a href="http://php.net/manual/en/index.php" target="_blank">PHP manual </a> <br>'
-  , '<a href="http://www.gnu.org/software/gettext/manual/html_node/PO-Files.html" target="_blank">PO files format</a> <i></i><br>'
-  , '<a href="http://popcornjs.org/" target="_blank">popcorn</a><br>'
-  , '<a href="https://popcorn.webmaker.org/" target="_blank">popcorn maker</a><br>'
-  , '<a href="http://processingjs.org/" target="_blank">Processing.js </a><br>'
-  , '<a href="http://kb.mozillazine.org/Profile_backup" target="_blank">Profile backup</a> <i>Mozilla</i><br>'
-
-
-
-  , '<!--Q-->'
-  , '<hr><b>Q</b><br>'
-
-
-  , '<!--R-->'
-  , '<hr><b>R</b><br>'
-  , '<a href="http://redis.io/" target="_blank">Redis</a> <i></i><br>'
-  , '<a href="http://www.homemarketeer.com/sbs/regular_expression.html" target="_blank">RegEx calculator </a> <br>'
-  , '<a href="http://regexpal.com/" target="_blank">RegEx pal</a> <i></i><br>'
-  , '<a href="http://requirejs.org/" target="_blank">Require.js</a> <i></i><br>'
-  , '<a href="http://requirejs.org/docs/api.html#i18n" target="_blank">Require.js I18N bundle</a> <i></i><br>'
-
-
-
-
-
-
-
-  , '<!--S-->'
-  , '<hr><b>S</b><br>'
-  , '<a href="http://ethanschoonover.com/solarized" target="_blank">Solarized</a> <i></i><br>'
-  , '<a href="http://stackoverflow.com/" target="_blank">Stack Overflow </a><i> used by profies</i><br>'
-  , '<a href="http://www.sublimetext.com/" target="_blank">Sublime Text</a> <i></i><br>'
-  , '<a href="https://tutsplus.com/course/improve-workflow-in-sublime-text-2/" target="_blank">Sublime Text Tut</a> <i>tutsplus</i><br>'
-  , '<a href="https://gist.github.com/dantoncancella/4977978" target="_blank">Sublime Text on Fedora</a> <i></i><br>'
-
-
-
-
-  , '<!--T-->'
-  , '<hr><b>T</b><br>'
-  , '<a href="http://www.techonthenet.com/index.php" target="_blank">Tech On The Net </a> <br>'            
-  , '<a href="http://zenit.senecac.on.ca/wiki/index.php/Webmaker_Summer_2013_TODO" target="_blank">ToDo list</a> <i></i><br>'
-  , '<a href="https://etherpad.mozilla.org/trackingForCDOT" target="_blank">Tracking for CDOT</a> <i>MoPad</i><br>'
-  , '<a href="http://shaunchapman.me/post/329270449/how-to-install-the-tree-command-on-mac-os-x" target="_blank">tree on Mac</a> <i></i><br>'
-  , '<a href="http://www.tutorialspoint.com/java/index.htm" target="_blank">Tutorial`s Point</a><i> Java</i><br>'
-
-
-
-
-  , '<!--U-->'
-  , '<hr><b>U</b><br>'
-
-  , '<!--V-->'
-  , '<hr><b>V</b><br>'
-  , '<a href="http://www.vlsm-calc.net/" target="_blank">VLSM subnet calculator</a>'
-  , '<a href="http://senecacd.wordpress.com/2012/11/07/creating-a-virtual-machine-on-linux-with-kvm-qemu-and-virt/" target="_blank">VM on Linux</a> <i></i><br>'
-
-  , '<!--W-->'
-  , '<hr><b>W</b><br>'
-  , '<a href="http://www.w3schools.com/" target="_blank">w3schools</a> <br>'
-  , '<a href="webdev.html" target="_blank">WebDev</a><br>'
-  , '<a href="https://webmaker.org/en-US/" target="_blank">WebMaker</a> | '
-  , '<a href="https://wiki.mozilla.org/Webmaker" target="_blank">Wiki</a><br>'
-  , '<a href="http://www.windowsazure.com/en-us/develop/net/tutorials/web-site-with-sql-database/" target="_blank">Website with SQL db </a> <i>Azure Tutorial</i><br>'
-
-
-  , '<!--X-->'
-  , '<hr><b>X</b><br>'
-
-  , '<!--Y-->'
-  , '<hr><b>Y</b><br>'
-
-  , '<!--Z-->'
-  , '<hr><b>Z</b><br>'
-
-
-  , '<hr>'
-  , 'My blogs on WordPress:<br>'
-  , '<a href="http://igoryen.wordpress.com/2013/05/10/my-first-blog-about-my-first-week-at-seneca-cdot/" target="_blank">1</a> | '
-  , '<a href="http://igoryen.wordpress.com/2013/05/17/cdot-week-2/" target="_blank">2</a> | '
-  , '<a href="http://igoryen.wordpress.com/2013/05/26/cdot-week-3-and-mozilla-allhands/" target="_blank">3</a> | '
-  , '<a href="http://igoryen.wordpress.com/2013/05/31/week-22-week-4-at-cdot/" target="_blank">4</a> | '
-  , '<a href="http://igoryen.wordpress.com/2013/06/09/cdot-week-5/" target="_blank">5 </a> <br>'
-  , 
-
-
-
-  ];
-
-  var arr = itstuff;
-
-  var retval ="";
-  retval += "<hr>";
-  for (var i in arr){
-    retval += arr[i];
-  }
-  retval += "<hr>";
-  return retval;
+  return printObj(itstuffObj);
 };
 
 //----------------------------------------------------------------------------
@@ -3760,382 +1252,252 @@ function itt(){
 
 var itt2 = function (){
 
-  var itterms = [
-  '<mark>IT terms</mark><br><hr>'
-
-  , '<a href="http://en.wikipedia.org/wiki/Library_%28computing%29" target="_blank">Library</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Include_directive" target="_blank">Include_directive</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/500_Internal_Server_Error#5xx_Server_Error" target="_blank">500</a> <i>error</i><br>'
-  , '<!--A-->'
-  , '<hr><b>A</b><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Augmented_Backus%E2%80%93Naur_Form" target="_blank"><abbr title="Augmented Backus–Naur Form">ABNF</abbr></a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Abstraction_%28computer_science%29" target="_blank">Abstraction</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Abstraction_layer" target="_blank">Abstraction layer</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Android_%28operating_system%29" target="_blank">Android</a> <i>OS</i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/ApacheBench" target="_blank">Apache bench</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Apache_HTTP_Server" target="_blank">Apache HTTP server</a> <i></i><br>'
-  , '<a href="https://en.wikipedia.org/wiki/Application_programming_interface" target="_blank">API</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Application_layer" target="_blank">Application layer</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Distributed_application#Applications" target="_blank">Applications</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Application_programming_interface" target="_blank"><abbr title="Application programming interface">API</abbr></a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Software_application" target="_blank">Application software</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/ARM_architecture" target="_blank">ARM architecture</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Asynchronous_I/O" target="_blank">Asynchronous I/O</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Audio_Video_Interleave" target="_blank"><abbr title="Audio video interleave">AVI</abbr></a> <i></i><br>'
-
-
-
-
-  , '<!--B-->'
-  , '<hr><b>B</b><br>'
-  , '<a href="https://en.wikipedia.org/wiki/Base64" target="_blank">Base64</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Booting" target="_blank">Booting (up)</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Bootstrapping_%28compilers%29" target="_blank">Bootstrapping</a> <i></i><br>'
-  , '<a href="https://en.wikipedia.org/wiki/Branching_(revision_control)" target="_blank">Branching</a> <i>(revision control)</i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Bug_tracking_system" target="_blank">Bug tracking system</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Bundle_%28software_distribution%29" target="_blank">Bundled software</a> aka <i>bundle</i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Computer_bus" target="_blank">Bus</a> <i></i><br>'
-
-
-
-
-  , '<!--C-->'
-  , '<hr><b>C</b><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Callback_%28computer_programming%29" target="_blank">Callback</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Call_stack" target="_blank">Call stack</a> <i></i><br>'
-  , '<a href="https://en.wikipedia.org/wiki/Content_delivery_network" target="_blank"><abbr title="Content delivery network">CDN</abbr></a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Changeset" target="_blank">Changeset</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Checksum" target="_blank">Checksum</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Command-line_interface" target="_blank"><abbr title="Command-line interface">CLI</abbr></a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Client_%28computing%29" target="_blank">Client</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Client-server_model" target="_blank">Client-server model</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Client-side" target="_blank">Client-side</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Clock_cycle" target="_blank">Clock signal</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Closure_%28computer_science%29" target="_blank">Closure</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Cloud_computing" target="_blank">Cloud computing</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Content_management_system" target="_blank"><abbr title="Content Mnagement System">CMS</abbr></a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Computing_platform" target="_blank">Computing platform </a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Concatenation" target="_blank">Concatenation</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Concern_%28computer_science%29" target="_blank">Concern</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Configuration_file" target="_blank">Configuration file</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Program_flow" target="_blank">Control flow</a> aka <i>program flow</i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Dependency_%28computer_science%29" target="_blank">Coupling</a> <i>aka Dependency</i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Central_processing_unit" target="_blank">CPU</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/CPU_design" target="_blank">CPU design</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Crowdsourcing" target="_blank">Crowdsourcing</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/CSS_stylesheet" target="_blank"><abbr title="Cascading Style Sheets">CSS</abbr></a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/CURL" target="_blank">CURL</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Concurrent_Versions_System" target="_blank"><abbr title="Concurrent Versions System">CVS</abbr></a> <i></i><br>'
-
-
-
-
-  , '<!--D-->'
-  , '<hr><b>D</b><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Database_management_system" target="_blank">Database</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Database_schema" target="_blank">Database schema</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Data_differencing" target="_blank">Delta differencing</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Delta_encoding" target="_blank">Delta encoding</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Design_engineer" target="_blank">Design Engineer</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Device_driver" target="_blank">Device driver</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Directory_structure" target="_blank">Directory structure</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Document_Object_Model" target="_blank">< abbr title="Document Object Model">DOM</abbr></a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Digital_rights_management" target="_blank"><abbr title="Digital rights management">DRM</abbr></a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Document_Type_Definition" target="_blank"><abbr title="Document Type Definition">DTD</abbr></a> <i></i><br>'
-
-
-
-
-
-
-
-
-
-
-  , '<!--E-->'
-  , '<hr><b>E</b><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Event-driven_architecture" target="_blank"><abbr title="Event-driven architecture">EDA</abbr></a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Event-driven_programming" target="_blank"><abbr title="Event-driven programming">EDP</abbr></a> <i></i><br>'
-  , '<a href="https://en.wikipedia.org/wiki/EJS" target="_blank">EJS</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/ElasticSearch" target="_blank">Elasticsearch</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Environment_variable" target="_blank">Environment variable</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Etherpad" target="_blank">Etherpad</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Event_%28computing%29" target="_blank">Event</a> et <i>event handler</i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Main_loop" target="_blank">Event loop</a> <i></i><br>'
-  , '<a href="https://en.wikipedia.org/wiki/Executable" target="_blank">Executable</a> <i></i><br>'
-
-  , '<!--F-->'
-  , '<hr><b>F</b><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Full-duplex#Full-duplex" target="_blank"><abbr title="Full-duplex">FDX</abbr></a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Feature_phone" target="_blank">Feature phone</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/File_archiver" target="_blank">File archiver</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/File_descriptor" target="_blank">File descriptor</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Filename" target="_blank">File name</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Firmware" target="_blank">Firmware</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Flag_%28computing%29" target="_blank">Flag</a> <i></i><br>'
-  , '<a href="https://en.wikipedia.org/wiki/Flame_war#Flame_wars" target="_blank">Flame war</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Flash_of_unstyled_content" target="_blank"><abbr title="Flash of unstyled content">FOUC</abbr></a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Front_and_back_ends" target="_blank">Front and back ends</a> <i></i><br>'
-
-
-
-
-  , '<!--G-->'
-  , '<hr><b>G</b><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Gettext" target="_blank">gettext</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Git_%28software%29" target="_blank">Git</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Globalization_Management_System" target="_blank"><abbr title="Globalization management system">GMS</abbr></a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Gpl" target="_blank"><abbr title="GNU General Public License">GPL</abbr></a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Graphical_user_interface" target="_blank"><abbr title="Graphical user interface">GUI</abbr></a> <i></i><br>'
-
-  , '<!--H-->'
-  , '<hr><b>H</b><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Human-computer_interaction" target="_blank"><abbr title="Human-computer interaction">HCI</abbr></a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Hdmi" target="_blank">HDMI</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Header_%28computing%29" target="_blank">Header</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Heroku" target="_blank">Heroku</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/HTTP_header" target="_blank">HTTP header</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/HTTP_pipelining" target="_blank">HTTP pipelining</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes" target="_blank">HTTP status code</a> <i></i><br>'
-
-
-
-
-  , '<!--I-->'
-  , '<hr><b>I</b><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Integrated_Development_Environment" target="_blank"><abbr title="Integrated development environment">IDE</abbr></a> <i>Apple</i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Information_processing_system" target="_blank">Information processor</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Information_system" target="_blank">Information system</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Input/output" target="_blank">Input/output</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Installer_%28OS_X%29" target="_blank">Installer</a> <i>OS X</i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Integrated_circuits" target="_blank">Integrated circuit</a> <i>(micro)chip</i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Intel" target="_blank">Intel</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Interface_%28computing%29" target="_blank">Interface</a> <i></i><br>'
-  , '<a href="https://en.wikipedia.org/wiki/Internationalization_and_localization" target="_blank">Internationalization and Localization</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Internet_hosting_service" target="_blank">Internet hosting service</a> e.g. <i>web hosting</i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Interpreter_%28computing%29" target="_blank">Interpreter</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Inter-process_communication" target="_blank">Inter-process communication</a> <i>aka IPC</i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Interrupt" target="_blank">Interrupt</a> <i></i><br>'
-  , '<a href="en.wikipedia.org/wiki/IETF_language_tag" target="_blank"><abbr title="Internet Engineering Task Force">IETF</abbr> language tag</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/IPsec" target="_blank"><abbr title="Internet security">IP</abbr>sec</a> <i></i><br>'
-
-
-
-  , '<!--J-->'
-  , '<hr><b>J</b><br>'
-  , '<a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Jquery" target="_blank">jQuery</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/JSON" target="_blank">JSON</a> <i></i><br>'
-
-
-
-
-
-
-
-  , '<!--K-->'
-  , '<hr><b>K</b><br>'
-  , '<a href="http://en.wikipedia.org/wiki/User_space" target="_blank">Kernel</a> <i></i><br>'
-
-  , '<!--L-->'
-  , '<hr><b>L</b><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Light-weight_process" target="_blank">Light-weight process</a> <i>LWP</i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Lint_%28software%29" target="_blank">Lint</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Linux_distribution" target="_blank">Linux distribution</a> <i>AKA distro</i><br>'
-  , '<a href="https://en.wikipedia.org/wiki/Locale" target="_blank">Locale</a> <i></i><br>'
-  , '<a href="https://en.wikipedia.org/wiki/Localization" target="_blank">Localization</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Look_and_feel" target="_blank">Look and feel</a> <i></i><br>'
-
-
-  , '<!--M-->'
-  , '<hr><b>M</b><br>'
-  , '<a href="http://en.wikipedia.org/wiki/MAMP" target="_blank">MAMP</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Markup_language" target="_blank">Markup language</a> e.g. <i>HTML</i><br>'
-  , '<a href="https://en.wikipedia.org/wiki/Merge_(revision_control)" target="_blank">Merge</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Microcontrollers" target="_blank">Microcontroller</a> <i>MC</i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Microprocessor" target="_blank">Microprocessor</a> <i>(micro)chip</i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Middleware" target="_blank">Middleware</a> <i>"software glue"</i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Mobile_phone" target="_blank">Mobile phone</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Module_%28programming%29" target="_blank">Modular programming</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/MongoDB" target="_blank">Mongo DB</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Mootools" target="_blank">MooTools</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Mozilla" target="_blank">Mozilla</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Mozilla_Persona" target="_blank">Mozilla Persona</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Mv" target="_blank">mv</a> <i></i><br>'
-
-
-  , '<!--N-->'
-  , '<hr><b>N</b><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Netcat" target="_blank">Netcat</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Network_interface" target="_blank">Network interface</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Network_service" target="_blank">Network service</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Internet_socket" target="_blank">Network socket</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/News_aggregator" target="_blank">News aggregator</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Nginx" target="_blank">nginx</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Node_js" target="_blank">Node.js</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Npm_%28software%29" target="_blank">npm</a> <i></i><br>'
-
-  , '<!--O-->'
-  , '<hr><b>O</b><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Operating_environment" target="_blank">Operating environment</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Operating_system" target="_blank">Operating system</a> <i>aka OS</i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Overhead_%28computing%29" target="_blank">Overhead</a> <i></i><br>'
-
-
-  , '<!--P-->'
-  , '<hr><b>P</b><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Package_%28package_management_system%29" target="_blank">Package</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Package_management_system" target="_blank">Package management system</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Parse" target="_blank">Parsing</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Patch_%28computing%29" target="_blank">Patch</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Process_identifier" target="_blank">PID</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Platform_as_a_service" target="_blank">Platform as a service</a> <i>PaaS</i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Plug-in_%28computing%29" target="_blank">Plug-in</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Portable_object_%28computing%29" target="_blank">Portable object</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/POSIX" target="_blank"><abbr title="Portable Operating System Interface">POSIX</abbr></a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Presentation_semantics" target="_blank">Presentation semantics</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Processor_core" target="_blank">Processor core</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Programming_paradigm" target="_blank">Programming paradigm</a> e.g. <i>OOP</i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Property_list" target="_blank">Property list</a> aka <i>plist</i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Proxy_server" target="_blank">Proxy server</a> <i></i><br>'
-
-
-
-  , '<!--Q-->'
-  , '<hr><b>Q</b><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Database_language" target="_blank">Query language</a> aka <i>database language</i><br>'
-
-
-  , '<!--R-->'
-  , '<hr><b>R</b><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Reactor_pattern" target="_blank">Reactor pattern</a> <i></i><br>'
-  , '<a href="https://en.wikipedia.org/wiki/Rebasing" target="_blank">Rebasing</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Redis" target="_blank">Redis</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Rendering_engine" target="_blank">Rendering engine</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Request-response" target="_blank">Request-response</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Representational_state_transfer" target="_blank"><abbr title="Representational state transfer">REST</abbr></a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Reduced_instruction_set_computing" target="_blank">RISC</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Rm_%28Unix%29" target="_blank">rm</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/RPM_Package_Manager" target="_blank">RPM package manager</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/RSA_%28algorithm%29" target="_blank">RSA: what is it?</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/RSS" target="_blank"><abbr title="Rich Site Summary">RSS</abbr></a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Ruby_%28programming_language%29" target="_blank">Ruby</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Ruby_on_Rails" target="_blank">Ruby on Rails</a> aka <i>Rails</i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Run-time_system" target="_blank">Run-time (system)</a> <i></i><br>'
-
-
-
-
-
-  , '<!--S-->'
-  , '<hr><b>S</b><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Software_as_a_service" target="_blank"><abbr title="Software as a service">SaaS</abbr></a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Screencast" target="_blank">Screen cast</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Self-hosting" target="_blank">Self-hosting</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Separation_of_concerns" target="_blank">Separation of concerns</a> <i>SoC</i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Search_engine_results_pages" target="_blank"><abbr title="Search engine results page">SERP</abbr></a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Server_%28computing%29" target="_blank">Server</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Server-side" target="_blank">Server-side</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Server_Side_Includes" target="_blank"><abbr title="Server Side Includes">SSI</abbr></a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Cloud_computing#Service_models" target="_blank">Service Models</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/SGML" target="_blank"><abbr title="Standard Generalized Markup Language">SGML</abbr></a> e.g. <i>HTML, XML</i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/SHA-1" target="_blank">SHA-1</a> <i>secure hash algorithm</i><br>'
-  , '<a href="https://en.wikipedia.org/wiki/Shared_library#Shared_libraries" target="_blank">Shared library</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/System_shell" target="_blank">Shell</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Shell_%28computing%29" target="_blank">Shell</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Slug_%28web_publishing%29#Slug" target="_blank">Slug</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Smartphone" target="_blank">Smartphone</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Socket.io" target="_blank">Socket.IO</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Computer_software" target="_blank">Software</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Software_as_a_service" target="_blank">Software as a service</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Software_agent" target="_blank">Software agent</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Software_architecture" target="_blank">Software architecture</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Software_component#Software_component" target="_blank">Software component</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Software_engine" target="_blank">Software engine</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Software_framework" target="_blank">Software Framework</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Software_package_%28installation%29" target="_blank">Software package</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Software_suite" target="_blank">Software suite</a> aka <i>Office suite</i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Software_system" target="_blank">Software system</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Solution_stack" target="_blank">Solution stack</a> aka <i>Web stack</i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Source_code" target="_blank">Source code</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Single_sign-on" target="_blank">SSO</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Standard_streams" target="_blank">Standard streams</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/State_%28computer_science%29" target="_blank">State</a> <i></i><br>'
-  , '<a href="https://en.wikipedia.org/wiki/Subdomain" target="_blank"></a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Style_sheet_language" target="_blank">Style sheet language</a> e.g. <i>CSS</i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Stylus_%28stylesheet_language%29" target="_blank">Stylus</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Su_%28Unix%29" target="_blank">su</a> <i>Unix</i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/System_software" target="_blank">System(s) software</a> <i></i><br>'
-
-
-
-  , '<!--T-->'
-  , '<hr><b>T</b><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Tar_%28file_format%29" target="_blank">tar</a> <i>e.g. tarball</i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Transmission_Control_Protocol" target="_blank">TCP</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Technical_documentation" target="_blank">Technical documentation</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Telnet" target="_blank">Telnet</a> <i></i><br>'
-  , '<a href="https://en.wikipedia.org/wiki/Template_engine_%28web%29" target="_blank">Template Engine</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Text_terminal#Text_terminals" target="_blank">Text terminals</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Thread_%28computer_science%29" target="_blank">Thread (of execution)</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Thread_pool" target="_blank">Thread pool</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Wikipedia:Too_long;_didn%27t_read" target="_blank">tl;dr</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Toolchain" target="_blank">Toolchain</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Touchpad" target="_blank">Touchpad</a> aka <i>trackpad</i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Transifex" target="_blank">Transifex</a> <i></i><br>'
-
-
-
-  , '<!--U-->'
-  , '<hr><b>U</b><br>'
-  , '<a href="http://en.wikipedia.org/wiki/User_interface" target="_blank"><abbr title="User interface">UI</abbr></a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Uname" target="_blank">Uname</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Uniform_resource_identifier" target="_blank">URI</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/User_agent" target="_blank">User agent</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/User_space" target="_blank">User space</a> <i></i><br>'
-
-  , '<!--V-->'
-  , '<hr><b>V</b><br>'
-  , '<a href="http://en.wikipedia.org/wiki/V8_%28JavaScript_engine%29" target="_blank">V8</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Vga" target="_blank">VGA</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Virtual_machine" target="_blank"><abbr title="Virtual machine">VM</abbr></a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Virtual_private_server" target="_blank"><abbr title="Virtual private server">VPS</abbr></a> <i></i><br>'
-
-  , '<!--W-->'
-  , '<hr><b>W</b><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Web_application" target="_blank">Web application</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Web_application_framework" target="_blank">Web application framework</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Web_browser" target="_blank">Web browser</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Web_browser_engine" target="_blank">Web browser engine</a> aka <i>layout engine, rendering engine</i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Web_feed" target="_blank">Web feed</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Webhook" target="_blank">Web hook</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Search_engine" target="_blank">Web search engine</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Web_server" target="_blank">Web server</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Web_service" target="_blank">Web service</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/WebSocket" target="_blank">WebSocket</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Web_syndication" target="_blank">Web syndication</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Wrapper_library" target="_blank">Wrapper library</a> <i></i><br>'
-
-  , '<!--X-->'
-  , '<hr><b>X</b><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Xcode" target="_blank">Xcode</a> <i></i><br>'
-  , '<a href="http://en.wikipedia.org/wiki/Xml" target="_blank">XML</a> <i></i><br>'
-
-  , '<!--Y-->'
-  , '<hr><b>Y</b><br>'
-
-  , '<!--Z-->'
-  , '<hr><b>Z</b><br>' 
-  ];
-
-  var arr = itterms;
-
-
-  var retval ="";
-  retval += "<hr>";
-  for (var i in arr){retval += arr[i];}
-    retval += "<hr>";
-  return retval;
+  var ittermsObj = {
+   "Library":"http://en.wikipedia.org/wiki/Library_%28computing%29"
+   , "Include_directive":"http://en.wikipedia.org/wiki/Include_directive"
+   , "500":"http://en.wikipedia.org/wiki/500_Internal_Server_Error#5xx_Server_Error"
+   , "ABNF":"http://en.wikipedia.org/wiki/Augmented_Backus%E2%80%93Naur_Form"
+   , "Abstraction":"http://en.wikipedia.org/wiki/Abstraction_%28computer_science%29"
+   , "Abstraction layer":"http://en.wikipedia.org/wiki/Abstraction_layer"
+   , "Android":"http://en.wikipedia.org/wiki/Android_%28operating_system%29"
+   , "Apache bench":"http://en.wikipedia.org/wiki/ApacheBench"
+   , "Apache HTTP server":"http://en.wikipedia.org/wiki/Apache_HTTP_Server"
+   , "API":"https://en.wikipedia.org/wiki/Application_programming_interface"
+   , "Application layer":"http://en.wikipedia.org/wiki/Application_layer"
+   , "Applications":"http://en.wikipedia.org/wiki/Distributed_application#Applications"
+   , "API":"http://en.wikipedia.org/wiki/Application_programming_interface"
+   , "Application software":"http://en.wikipedia.org/wiki/Software_application"
+   , "ARM architecture":"http://en.wikipedia.org/wiki/ARM_architecture"
+   , "Asynchronous I/O":"http://en.wikipedia.org/wiki/Asynchronous_I/O"
+   , "AVI":"http://en.wikipedia.org/wiki/Audio_Video_Interleave"
+   , "Base64":"https://en.wikipedia.org/wiki/Base64"
+   , "Booting (up)":"http://en.wikipedia.org/wiki/Booting"
+   , "Bootstrapping":"http://en.wikipedia.org/wiki/Bootstrapping_%28compilers%29"
+   , "Branching":"https://en.wikipedia.org/wiki/Branching_(revision_control)"
+   , "Bug tracking system":"http://en.wikipedia.org/wiki/Bug_tracking_system"
+   , "Bundled software":"http://en.wikipedia.org/wiki/Bundle_%28software_distribution%29"
+   , "Bus":"http://en.wikipedia.org/wiki/Computer_bus"
+   , "Callback":"http://en.wikipedia.org/wiki/Callback_%28computer_programming%29"
+   , "Call stack":"http://en.wikipedia.org/wiki/Call_stack"
+   , "CDN":"https://en.wikipedia.org/wiki/Content_delivery_network"
+   , "Changeset":"http://en.wikipedia.org/wiki/Changeset"
+   , "Checksum":"http://en.wikipedia.org/wiki/Checksum"
+   , "CLI":"http://en.wikipedia.org/wiki/Command-line_interface"
+   , "Client":"http://en.wikipedia.org/wiki/Client_%28computing%29"
+   , "Client-server model":"http://en.wikipedia.org/wiki/Client-server_model"
+   , "Client-side":"http://en.wikipedia.org/wiki/Client-side"
+   , "Clock signal":"http://en.wikipedia.org/wiki/Clock_cycle"
+   , "Closure":"http://en.wikipedia.org/wiki/Closure_%28computer_science%29"
+   , "Cloud computing":"http://en.wikipedia.org/wiki/Cloud_computing"
+   , "Cloud Foundry":"http://en.wikipedia.org/wiki/Cloud_Foundry"
+   , "CMS":"http://en.wikipedia.org/wiki/Content_management_system"
+   , "Computing platform ":"http://en.wikipedia.org/wiki/Computing_platform"
+   , "Concatenation":"http://en.wikipedia.org/wiki/Concatenation"
+   , "Concern":"http://en.wikipedia.org/wiki/Concern_%28computer_science%29"
+   , "Configuration file":"http://en.wikipedia.org/wiki/Configuration_file"
+   , "Control flow":"http://en.wikipedia.org/wiki/Program_flow"
+   , "Coupling":"http://en.wikipedia.org/wiki/Dependency_%28computer_science%29"
+   , "CPU":"http://en.wikipedia.org/wiki/Central_processing_unit"
+   , "CPU design":"http://en.wikipedia.org/wiki/CPU_design"
+   , "Crowdsourcing":"http://en.wikipedia.org/wiki/Crowdsourcing"
+   , "CSS":"http://en.wikipedia.org/wiki/CSS_stylesheet"
+   , "CURL":"http://en.wikipedia.org/wiki/CURL"
+   , "CVS":"http://en.wikipedia.org/wiki/Concurrent_Versions_System"
+   , "Database":"http://en.wikipedia.org/wiki/Database_management_system"
+   , "Database schema":"http://en.wikipedia.org/wiki/Database_schema"
+   , "Delta differencing":"http://en.wikipedia.org/wiki/Data_differencing"
+   , "Delta encoding":"http://en.wikipedia.org/wiki/Delta_encoding"
+   , "Design Engineer":"http://en.wikipedia.org/wiki/Design_engineer"
+   , "Device driver":"http://en.wikipedia.org/wiki/Device_driver"
+   , "Directory structure":"http://en.wikipedia.org/wiki/Directory_structure"
+   , "DOM":"http://en.wikipedia.org/wiki/Document_Object_Model"
+   , "DRM":"http://en.wikipedia.org/wiki/Digital_rights_management"
+   , "DTD":"http://en.wikipedia.org/wiki/Document_Type_Definition"
+   , "EDA":"http://en.wikipedia.org/wiki/Event-driven_architecture"
+   , "EDP":"http://en.wikipedia.org/wiki/Event-driven_programming"
+   , "EJS":"https://en.wikipedia.org/wiki/EJS"
+   , "Elasticsearch":"http://en.wikipedia.org/wiki/ElasticSearch"
+   , "Environment variable":"http://en.wikipedia.org/wiki/Environment_variable"
+   , "Etherpad":"http://en.wikipedia.org/wiki/Etherpad"
+   , "Event":"http://en.wikipedia.org/wiki/Event_%28computing%29"
+   , "Event loop":"http://en.wikipedia.org/wiki/Main_loop"
+   , "Executable":"https://en.wikipedia.org/wiki/Executable"
+   , "FDX":"http://en.wikipedia.org/wiki/Full-duplex#Full-duplex"
+   , "Feature phone":"http://en.wikipedia.org/wiki/Feature_phone"
+   , "File archiver":"http://en.wikipedia.org/wiki/File_archiver"
+   , "File descriptor":"http://en.wikipedia.org/wiki/File_descriptor"
+   , "File name":"http://en.wikipedia.org/wiki/Filename"
+   , "Firmware":"http://en.wikipedia.org/wiki/Firmware"
+   , "Flag":"http://en.wikipedia.org/wiki/Flag_%28computing%29"
+   , "Flame war":"https://en.wikipedia.org/wiki/Flame_war#Flame_wars"
+   , "FOUC":"http://en.wikipedia.org/wiki/Flash_of_unstyled_content"
+   , "Front and back ends":"http://en.wikipedia.org/wiki/Front_and_back_ends"
+   , "gettext":"http://en.wikipedia.org/wiki/Gettext"
+   , "Git":"http://en.wikipedia.org/wiki/Git_%28software%29"
+   , "GMS":"http://en.wikipedia.org/wiki/Globalization_Management_System"
+   , "GPL":"http://en.wikipedia.org/wiki/Gpl"
+   , "GUI":"http://en.wikipedia.org/wiki/Graphical_user_interface"
+   , "HCI":"http://en.wikipedia.org/wiki/Human-computer_interaction"
+   , "HDMI":"http://en.wikipedia.org/wiki/Hdmi"
+   , "Header":"http://en.wikipedia.org/wiki/Header_%28computing%29"
+   , "Heroku":"http://en.wikipedia.org/wiki/Heroku"
+   , "HTTP header":"http://en.wikipedia.org/wiki/HTTP_header"
+   , "HTTP pipelining":"http://en.wikipedia.org/wiki/HTTP_pipelining"
+   , "HTTP status code":"http://en.wikipedia.org/wiki/List_of_HTTP_status_codes"
+   , "IDE":"http://en.wikipedia.org/wiki/Integrated_Development_Environment"
+   , "Information processor":"http://en.wikipedia.org/wiki/Information_processing_system"
+   , "Information system":"http://en.wikipedia.org/wiki/Information_system"
+   , "Input/output":"http://en.wikipedia.org/wiki/Input/output"
+   , "Installer":"http://en.wikipedia.org/wiki/Installer_%28OS_X%29"
+   , "Integrated circuit":"http://en.wikipedia.org/wiki/Integrated_circuits"
+   , "Intel":"http://en.wikipedia.org/wiki/Intel"
+   , "Interface":"http://en.wikipedia.org/wiki/Interface_%28computing%29"
+   , "Internationalization and Localization":"https://en.wikipedia.org/wiki/Internationalization_and_localization"
+   , "Internet hosting service":"http://en.wikipedia.org/wiki/Internet_hosting_service"
+   , "Interpreter":"http://en.wikipedia.org/wiki/Interpreter_%28computing%29"
+   , "Inter-process communication":"http://en.wikipedia.org/wiki/Inter-process_communication"
+   , "Interrupt":"http://en.wikipedia.org/wiki/Interrupt"
+   , "IPsec":"http://en.wikipedia.org/wiki/IPsec"
+   , "JavaScript":"http://en.wikipedia.org/wiki/JavaScript"
+   , "jQuery":"http://en.wikipedia.org/wiki/Jquery"
+   , "JSON":"http://en.wikipedia.org/wiki/JSON"
+   , "Kernel":"http://en.wikipedia.org/wiki/User_space"
+   , "Light-weight process":"http://en.wikipedia.org/wiki/Light-weight_process"
+   , "Lint":"http://en.wikipedia.org/wiki/Lint_%28software%29"
+   , "Linux distribution":"http://en.wikipedia.org/wiki/Linux_distribution"
+   , "Locale":"https://en.wikipedia.org/wiki/Locale"
+   , "Localization":"https://en.wikipedia.org/wiki/Localization"
+   , "Look and feel":"http://en.wikipedia.org/wiki/Look_and_feel"
+   , "MAMP":"http://en.wikipedia.org/wiki/MAMP"
+   , "Memory footprint":"http://en.wikipedia.org/wiki/Memory_footprint"
+   , "Markup language":"http://en.wikipedia.org/wiki/Markup_language"
+   , "Merge":"https://en.wikipedia.org/wiki/Merge_(revision_control)"
+   , "Microcontroller":"http://en.wikipedia.org/wiki/Microcontrollers"
+   , "Microprocessor":"http://en.wikipedia.org/wiki/Microprocessor"
+   , "Middleware":"http://en.wikipedia.org/wiki/Middleware"
+   , "Mobile phone":"http://en.wikipedia.org/wiki/Mobile_phone"
+   , "Modular programming":"http://en.wikipedia.org/wiki/Module_%28programming%29"
+   , "Mongo DB":"http://en.wikipedia.org/wiki/MongoDB"
+   , "MooTools":"http://en.wikipedia.org/wiki/Mootools"
+   , "Mozilla":"http://en.wikipedia.org/wiki/Mozilla"
+   , "Mozilla Persona":"http://en.wikipedia.org/wiki/Mozilla_Persona"
+   , "mv":"http://en.wikipedia.org/wiki/Mv"
+   , "Netcat":"http://en.wikipedia.org/wiki/Netcat"
+   , "Network interface":"http://en.wikipedia.org/wiki/Network_interface"
+   , "Network service":"http://en.wikipedia.org/wiki/Network_service"
+   , "Network socket":"http://en.wikipedia.org/wiki/Internet_socket"
+   , "News aggregator":"http://en.wikipedia.org/wiki/News_aggregator"
+   , "nginx":"http://en.wikipedia.org/wiki/Nginx"
+   , "Node.js":"http://en.wikipedia.org/wiki/Node_js"
+   , "npm":"http://en.wikipedia.org/wiki/Npm_%28software%29"
+   , "Operating environment":"http://en.wikipedia.org/wiki/Operating_environment"
+   , "Operating system":"http://en.wikipedia.org/wiki/Operating_system"
+   , "Overhead":"http://en.wikipedia.org/wiki/Overhead_%28computing%29"
+   , "Package":"http://en.wikipedia.org/wiki/Package_%28package_management_system%29"
+   , "Package management system":"http://en.wikipedia.org/wiki/Package_management_system"
+   , "Parsing":"http://en.wikipedia.org/wiki/Parse"
+   , "Patch":"http://en.wikipedia.org/wiki/Patch_%28computing%29"
+   , "PID":"http://en.wikipedia.org/wiki/Process_identifier"
+   , "Platform as a service":"http://en.wikipedia.org/wiki/Platform_as_a_service"
+   , "Plug-in":"http://en.wikipedia.org/wiki/Plug-in_%28computing%29"
+   , "Portable object":"http://en.wikipedia.org/wiki/Portable_object_%28computing%29"
+   , "POSIX":"http://en.wikipedia.org/wiki/POSIX"
+   , "Presentation semantics":"http://en.wikipedia.org/wiki/Presentation_semantics"
+   , "Processor core":"http://en.wikipedia.org/wiki/Processor_core"
+   , "Programming paradigm":"http://en.wikipedia.org/wiki/Programming_paradigm"
+   , "Property list":"http://en.wikipedia.org/wiki/Property_list"
+   , "Proxy server":"http://en.wikipedia.org/wiki/Proxy_server"
+   , "Query language":"http://en.wikipedia.org/wiki/Database_language"
+   , "Reactor pattern":"http://en.wikipedia.org/wiki/Reactor_pattern"
+   , "Rebasing":"https://en.wikipedia.org/wiki/Rebasing"
+   , "Redis":"http://en.wikipedia.org/wiki/Redis"
+   , "Rendering engine":"http://en.wikipedia.org/wiki/Rendering_engine"
+   , "Request-response":"http://en.wikipedia.org/wiki/Request-response"
+   , "REST":"http://en.wikipedia.org/wiki/Representational_state_transfer"
+   , "RISC":"http://en.wikipedia.org/wiki/Reduced_instruction_set_computing"
+   , "rm":"http://en.wikipedia.org/wiki/Rm_%28Unix%29"
+   , "RPM package manager":"http://en.wikipedia.org/wiki/RPM_Package_Manager"
+   , "RSA: what is it?":"http://en.wikipedia.org/wiki/RSA_%28algorithm%29"
+   , "RSS":"http://en.wikipedia.org/wiki/RSS"
+   , "Ruby":"http://en.wikipedia.org/wiki/Ruby_%28programming_language%29"
+   , "Ruby on Rails":"http://en.wikipedia.org/wiki/Ruby_on_Rails"
+   , "Run-time (system)":"http://en.wikipedia.org/wiki/Run-time_system"
+   , "SaaS":"http://en.wikipedia.org/wiki/Software_as_a_service"
+   , "Screen cast":"http://en.wikipedia.org/wiki/Screencast"
+   , "Self-hosting":"http://en.wikipedia.org/wiki/Self-hosting"
+   , "Separation of concerns":"http://en.wikipedia.org/wiki/Separation_of_concerns"
+   , "SERP":"http://en.wikipedia.org/wiki/Search_engine_results_pages"
+   , "Server":"http://en.wikipedia.org/wiki/Server_%28computing%29"
+   , "Server-side":"http://en.wikipedia.org/wiki/Server-side"
+   , "SSI":"http://en.wikipedia.org/wiki/Server_Side_Includes"
+   , "Service Models":"http://en.wikipedia.org/wiki/Cloud_computing#Service_models"
+   , "SGML":"http://en.wikipedia.org/wiki/SGML"
+   , "SHA-1":"http://en.wikipedia.org/wiki/SHA-1"
+   , "Shared library":"https://en.wikipedia.org/wiki/Shared_library#Shared_libraries"
+   , "Shell":"http://en.wikipedia.org/wiki/System_shell"
+   , "Shell":"http://en.wikipedia.org/wiki/Shell_%28computing%29"
+   , "Slug":"http://en.wikipedia.org/wiki/Slug_%28web_publishing%29#Slug"
+   , "Smartphone":"http://en.wikipedia.org/wiki/Smartphone"
+   , "Socket.IO":"http://en.wikipedia.org/wiki/Socket.io"
+   , "Software":"http://en.wikipedia.org/wiki/Computer_software"
+   , "Software as a service":"http://en.wikipedia.org/wiki/Software_as_a_service"
+   , "Software agent":"http://en.wikipedia.org/wiki/Software_agent"
+   , "Software architecture":"http://en.wikipedia.org/wiki/Software_architecture"
+   , "Software component":"http://en.wikipedia.org/wiki/Software_component#Software_component"
+   , "Software engine":"http://en.wikipedia.org/wiki/Software_engine"
+   , "Software Framework":"http://en.wikipedia.org/wiki/Software_framework"
+   , "Software package":"http://en.wikipedia.org/wiki/Software_package_%28installation%29"
+   , "Software suite":"http://en.wikipedia.org/wiki/Software_suite"
+   , "Software system":"http://en.wikipedia.org/wiki/Software_system"
+   , "Solution stack":"http://en.wikipedia.org/wiki/Solution_stack"
+   , "Source code":"http://en.wikipedia.org/wiki/Source_code"
+   , "SSO":"http://en.wikipedia.org/wiki/Single_sign-on"
+   , "Standard streams":"http://en.wikipedia.org/wiki/Standard_streams"
+   , "State":"http://en.wikipedia.org/wiki/State_%28computer_science%29"
+   , "Subdomain 2" : "https://en.wikipedia.org/wiki/Subdomain"
+   , "Style sheet language":"http://en.wikipedia.org/wiki/Style_sheet_language"
+   , "Stylus":"http://en.wikipedia.org/wiki/Stylus_%28stylesheet_language%29"
+   , "su":"http://en.wikipedia.org/wiki/Su_%28Unix%29"
+   , "System(s) software":"http://en.wikipedia.org/wiki/System_software"
+   , "tar":"http://en.wikipedia.org/wiki/Tar_%28file_format%29"
+   , "TCP":"http://en.wikipedia.org/wiki/Transmission_Control_Protocol"
+   , "Technical documentation":"http://en.wikipedia.org/wiki/Technical_documentation"
+   , "Telnet":"http://en.wikipedia.org/wiki/Telnet"
+   , "Template Engine":"https://en.wikipedia.org/wiki/Template_engine_%28web%29"
+   , "Text terminals":"http://en.wikipedia.org/wiki/Text_terminal#Text_terminals"
+   , "Thread (of execution)":"http://en.wikipedia.org/wiki/Thread_%28computer_science%29"
+   , "Thread pool":"http://en.wikipedia.org/wiki/Thread_pool"
+   , "tl;dr":"http://en.wikipedia.org/wiki/Wikipedia:Too_long;_didn%27t_read"
+   , "Toolchain":"http://en.wikipedia.org/wiki/Toolchain"
+   , "Touchpad":"http://en.wikipedia.org/wiki/Touchpad"
+   , "Transifex":"http://en.wikipedia.org/wiki/Transifex"
+   , "UI":"http://en.wikipedia.org/wiki/User_interface"
+   , "Uname":"http://en.wikipedia.org/wiki/Uname"
+   , "URI":"http://en.wikipedia.org/wiki/Uniform_resource_identifier"
+   , "User agent":"http://en.wikipedia.org/wiki/User_agent"
+   , "User space":"http://en.wikipedia.org/wiki/User_space"
+   , "V8":"http://en.wikipedia.org/wiki/V8_%28JavaScript_engine%29"
+   , "VGA":"http://en.wikipedia.org/wiki/Vga"
+   , "VM":"http://en.wikipedia.org/wiki/Virtual_machine"
+   , "VPS":"http://en.wikipedia.org/wiki/Virtual_private_server"
+   , "Web application":"http://en.wikipedia.org/wiki/Web_application"
+   , "Web application framework":"http://en.wikipedia.org/wiki/Web_application_framework"
+   , "Web browser":"http://en.wikipedia.org/wiki/Web_browser"
+   , "Web browser engine":"http://en.wikipedia.org/wiki/Web_browser_engine"
+   , "Web feed":"http://en.wikipedia.org/wiki/Web_feed"
+   , "Web hook":"http://en.wikipedia.org/wiki/Webhook"
+   , "Web search engine":"http://en.wikipedia.org/wiki/Search_engine"
+   , "Web server":"http://en.wikipedia.org/wiki/Web_server"
+   , "Web service":"http://en.wikipedia.org/wiki/Web_service"
+   , "WebSocket":"http://en.wikipedia.org/wiki/WebSocket"
+   , "Web syndication":"http://en.wikipedia.org/wiki/Web_syndication"
+   , "Wrapper library":"http://en.wikipedia.org/wiki/Wrapper_library"
+   , "Xcode":"http://en.wikipedia.org/wiki/Xcode"
+   , "XML":"http://en.wikipedia.org/wiki/Xml"
+ };
+
+
+ return printObj(ittermsObj);
 };
 
 //----------------------------------------------------------------------------
@@ -4170,87 +1532,23 @@ var javaFunc = function(){
 // end of VERSION 1
 //----------------------------------------------------------------------------
 
-// VERSION 2: object of links
-/*
-var javaArr = {
-"append()":"http://docs.oracle.com/javase/6/docs/api/java/lang/StringBuffer.html#append(boolean)" 
-,"length()":"http://docs.oracle.com/javase/6/docs/api/java/lang/String.html#length()" 
-  , '<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/StringBuffer.html#length()" target="_blank">length()</a><i> StringBuffer</i><br>'
+function jobsearch(){
+  document.getElementById("demo").innerHTML=jobsearchFunc();
+};
 
+var jobsearchFunc = function(){
+  var jobsearchObj = {
 
-  , '<!--M-->'
-  , '<hr><b>M</b><br>'
-
-
-  , '<!--N-->'
-  , '<hr><b>N</b><br>'
-
-  , '<!--O-->'
-  , '<hr><b>O</b><br>'
-
-
-  , '<!--P-->'
-  , '<hr><b>P</b><br>'
-
-
-
-  , '<!--Q-->'
-  , '<hr><b>Q</b><br>'
-
-
-  , '<!--R-->'
-  , '<hr><b>R</b><br>'
-
-
-
-
-
-
-  , '<!--S-->'
-  , '<hr><b>S</b><br>'
-  , '<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/StringBuffer.html" target="_blank">StringBuffer</a><br>'
-  , '<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/StringBuffer.html#substring(int)" target="_blank">substring()</a><i> StringBuffer</i><br>'
-
-
-
-
-  , '<!--T-->'
-  , '<hr><b>T</b><br>'
-
-
-
-  , '<!--U-->'
-  , '<hr><b>U</b><br>'
-
-  , '<!--V-->'
-  , '<hr><b>V</b><br>'
-
-  , '<!--W-->'
-  , '<hr><b>W</b><br>'
-
-  , '<!--X-->'
-  , '<hr><b>X</b><br>'
-
-  , '<!--Y-->'
-  , '<hr><b>Y</b><br>'
-s
-  , '<!--Z-->'
-  , '<hr><b>Z</b><br>'  
-
-
+    "10 Qualities of Exceptional Interviewers" : "http://www.linkedin.com/today/post/article/20130618124448-20017018-10-qualities-of-exceptional-interviewers?goback=.gde_50512_member_252151575"
 
 
   };
-  var arr = javaArr;
-  var retval ="";
-  retval += "<hr>";
-  for (var i in arr)  {retval += arr[i];}
-    retval += "<hr>";
-  return retval;
+  
+  return printObj(jobsearchObj);
 
 };
-*/
-// end of VERSION 2
+
+
 
 //----------------------------------------------------------------------------
 
@@ -4259,178 +1557,39 @@ function js(){
 };
 
 var jsFunc = function(){
-  var jsArr = [
-
-  '<mark>JavaScript</mark><br>'
-
-
-  , '<hr><b>A</b><br>'
-  , '<!--A-->'
-
-
-
-
-  , '<!--B-->'
-  , '<hr><b>B</b><br>'
-
-
-
-
-  , '<!--C-->'
-  , '<hr><b>C</b><br>'
-
-
-
-
-  , '<!--D-->'
-  , '<hr><b>D</b><br>'
-
-  , '<a href="http://www.w3schools.com/js/js_obj_date.asp" target="_blank">Date</a><i> object</i><br>'
-  , '<a href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock" target="_blank">display a clock</a><br>'
-
-
-
-
-
-
-
-
-
-  , '<!--E-->'
-  , '<hr><b>E</b><br>'
-  , '<a href="http://www.lynda.com/JavaScript-tutorials/Essential-Training-2011/81266-2.html" target="_blank">Essential trainiung</a> <i></i><br>'
-
-  , '<!--F-->'
-  , '<hr><b>F</b><br>'
-
-
-
-  , '<!--G-->'
-  , '<hr><b>G</b><br>'
-  , '<a href="http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_date_weekday" target="_blank">getDay()</a><br>'
-  , '<a href="http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_getfullyear" target="_blank">getFullYear()</a><br>'
-  , '<a href="http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_gettime" target="_blank">getTime()</a><br>'
-
-
-
-  , '<!--H-->'
-  , '<hr><b>H</b><br>'
-
-
-
-
-  , '<!--I-->'
-  , '<hr><b>I</b><br>'
-  , '<a href="http://www.w3schools.com/jsref/prop_html_innerhtml.asp" target="_blank">innerHTML=</a><i> property</i><br>'
-
-
-
-  , '<!--J-->'
-  , '<hr><b>J</b><br>'
-  , '<a href="http://learn.jquery.com/" target="_blank">jQuery</a> <i></i><br>'
-  , '<a href="http://www.w3schools.com/js/default.asp" target="_blank">JavaScript</a> <i>w3schools</i><br>'
-  , '<a href="http://jsfiddle.net/" target="_blank">JS Fiddle</a> <i></i><br>'
-  , '<a href="http://doc.jsfiddle.net/tutorial.html" target="_blank">JS Fiddle Tutorial</a> <i></i><br>'
-  , '<a href="http://www.jshint.com/" target="_blank">JS hint</a> <i>error detection</i><br>'
-  , '<a href="http://eleventyone.done.hu/OReilly.JavaScript.The.Good.Parts.May.2008.pdf" target="_blank">JS the Good Parts</a> <i></i><br>'
-
-
-
-
-
-
-
-
-  , '<!--K-->'
-  , '<hr><b>K</b><br>'
-
-  , '<!--L-->'
-  , '<hr><b>L</b><br>'
-
-
-  , '<!--M-->'
-  , '<hr><b>M</b><br>'
-
-
-  , '<!--N-->'
-  , '<hr><b>N</b><br>'
-
-  , '<!--O-->'
-  , '<hr><b>O</b><br>'
-  , '<a href="http://www.w3schools.com/jsref/event_onclick.asp" target="_blank">onclick=</a><i> event</i><br>'
-
-
-  , '<!--P-->'
-  , '<hr><b>P</b><br>'
-
-
-
-  , '<!--Q-->'
-  , '<hr><b>Q</b><br>'
-
-
-  , '<!--R-->'
-  , '<hr><b>R</b><br>'
-
-
-
-
-
-
-  , '<!--S-->'
-  , '<hr><b>S</b><br>'
-  , '<a href="http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_setfullyear2" target="_blank">setFullYear()</a><br>'
-  , '<a href="http://www.w3schools.com/js/js_timing.asp" target="_blank">setInterval()</a> <i></i><br>'
-  , '<a href="http://www.w3schools.com/js/js_timing.asp" target="_blank">setTimeOut()</a> <i></i><br>'
-
-
-
-
-  , '<!--T-->'
-  , '<hr><b>T</b><br>'
-  , '<a href="http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_toutcstring" target="_blank">toUTCString()</a><br>'
-
-
-
-  , '<!--U-->'
-  , '<hr><b>U</b><br>'
-
-  , '<!--V-->'
-  , '<hr><b>V</b><br>'
-
-  , '<!--W-->'
-  , '<hr><b>W</b><br>'
-
-  , '<!--X-->'
-  , '<hr><b>X</b><br>'
-
-  , '<!--Y-->'
-  , '<hr><b>Y</b><br>'
-
-  , '<!--Z-->'
-  , '<hr><b>Z</b><br>' 
-
-
-  , '<hr>'
-  , 'JS Fiddle examples:<br>'
-  , '-------------------<br>'
-  , '<a href="http://jsfiddle.net/igoryen/3pEyA/" target="_blank">Hello World!</a> <i></i><br>'
-  , '<a href="http://jsfiddle.net/igoryen/3pEyA/1/" target="_blank">Hello World!</a> <i></i><br>'
-  , '<a href="http://jsfiddle.net/igoryen/3pEyA/2/" target="_blank">Hello World!</a> <i></i><br>'
-  , '<a href="http://jsfiddle.net/praveen_prasad/XNJxT/14/" target="_blank">Hello World!</a> <i></i><br>'
-  , '<a href="http://jsfiddle.net/rniemeyer/bxfXd/" target="_blank">List</a> <i></i><br>'
-  , '<a href="http://jsfiddle.net/rwaldron/xhXE6/" target="_blank">Popcorn</a> <i></i><br>'
-  , '-------------------<br>'
-
-
-
-  ];
-  var arr = jsArr;
-  var retval ="";
-  retval += "<hr>";
-  for (var i in arr){retval += arr[i];}
-    retval += "<hr>";
-  return retval;
+  var jsObj = {
+
+    "Case insensitive sort" : "http://stackoverflow.com/questions/14308786/custom-case-insensitive-sort-function-that-retains-original-casing"
+    , "Date":"http://www.w3schools.com/js/js_obj_date.asp"
+    , "display a clock":"http://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock"
+    , "Essential trainiung":"http://www.lynda.com/JavaScript-tutorials/Essential-Training-2011/81266-2.html"
+    , "getDay()":"http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_date_weekday"
+    , "getFullYear()":"http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_getfullyear"
+    , "getTime()":"http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_gettime"
+    , "Google Hosted Libraries" : "https://developers.google.com/speed/libraries/devguide"
+    , "innerHTML=":"http://www.w3schools.com/jsref/prop_html_innerhtml.asp"
+    , "jQuery":"http://learn.jquery.com/"
+    , "JavaScript":"http://www.w3schools.com/js/default.asp"
+    , "JS Fiddle":"http://jsfiddle.net/"
+    , "JS Fiddle Tutorial":"http://doc.jsfiddle.net/tutorial.html"
+    , "JS hint":"http://www.jshint.com/"
+    , "JS the Good Parts":"http://eleventyone.done.hu/OReilly.JavaScript.The.Good.Parts.May.2008.pdf"
+    , "Nunjucks" : "http://nunjucks.jlongster.com/"
+    , "onclick=":"http://www.w3schools.com/jsref/event_onclick.asp"
+    , "setFullYear()":"http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_setfullyear2"
+    , "setInterval()":"http://www.w3schools.com/js/js_timing.asp"
+    , "setTimeOut()":"http://www.w3schools.com/js/js_timing.asp"
+    , "toUTCString()":"http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_toutcstring"
+    , "Hello World!":"http://jsfiddle.net/igoryen/3pEyA/"
+    , "Hello World!":"http://jsfiddle.net/igoryen/3pEyA/1/"
+    , "Hello World!":"http://jsfiddle.net/igoryen/3pEyA/2/"
+    , "Hello World!":"http://jsfiddle.net/praveen_prasad/XNJxT/14/"
+    , "List":"http://jsfiddle.net/rniemeyer/bxfXd/"
+    , "Popcorn":"http://jsfiddle.net/rwaldron/xhXE6/"
+
+  };
+  
+  return printObj(jsObj);
 
 };
 
@@ -4439,152 +1598,17 @@ function latina(){
   document.getElementById("demo").innerHTML=latinaFunc();
 };
 var latinaFunc = function(){
-  var latinaArr = [
-  '<mark>Latina</mark><br>'
-
-
-
-  , '<hr><b>A</b><br>'
-  , '<!--A-->'
-
-
-
-
-  , '<!--B-->'
-  , '<hr><b>B</b><br>'
-
-
-
-
-  , '<!--C-->'
-  , '<hr><b>C</b><br>'
-
-
-
-
-  , '<!--D-->'
-  , '<hr><b>D</b><br>'
-
-  , '<a href="xxx" target="_blank">xxx</a><i> xxx</i><br>'
-
-
-
-
-
-
-
-
-
-  , '<!--E-->'
-  , '<hr><b>E</b><br>'
-
-  , '<!--F-->'
-  , '<hr><b>F</b><br>'
-
-
-
-  , '<!--G-->'
-  , '<hr><b>G</b><br>'
-
-  , '<!--H-->'
-  , '<hr><b>H</b><br>'
-
-
-
-
-  , '<!--I-->'
-  , '<hr><b>I</b><br>'
-
-
-
-  , '<!--J-->'
-  , '<hr><b>J</b><br>'
-
-
-
-
-
-
-  , '<!--K-->'
-  , '<hr><b>K</b><br>'
-
-  , '<!--L-->'
-  , '<hr><b>L</b><br>'
-  , '<a href="http://www.frcoulter.com/latin/links.html" target="_blank">Latin Links</a> >><br>'
-  , '<a href="https://sites.google.com/site/janualinguae/latin" target="_blank">Latinum</a> <i></i><br>'
-
-  , '<!--M-->'
-  , '<hr><b>M</b><br>'
-
-
-  , '<!--N-->'
-  , '<hr><b>N</b><br>'
-  , '<a href="http://yle.fi/radio1/tiede/nuntii_latini/" target="_blank">Nuntii Latini</a> <i></i><br>'
-
-  , '<!--O-->'
-  , '<hr><b>O</b><br>'
-  , '<a href="http://www.orbilat.com/" target="_blank">Orbilat</a><br>'
-
-
-  , '<!--P-->'
-  , '<hr><b>P</b><br>'
-
-
-
-  , '<!--Q-->'
-  , '<hr><b>Q</b><br>'
-
-
-  , '<!--R-->'
-  , '<hr><b>R</b><br>'
-  , '<a href="file:///D:/Language/Latina/html/latinitas_recens_latine.html" target="_blank">Recens Latinitas </a> <i> c. 2350 words</i><br>'
-  , '<a href="http://www.antimoon.com/forum/t2129-0.htm" target="_blank">Romanian closest to Classical Latin</a> <i></i><br>'
-
-
-
-
-
-
-  , '<!--S-->'
-  , '<hr><b>S</b><br>'
-
-
-
-
-  , '<!--T-->'
-  , '<hr><b>T</b><br>'
-
-
-
-  , '<!--U-->'
-  , '<hr><b>U</b><br>'
-
-  , '<!--V-->'
-  , '<hr><b>V</b><br>'
-
-  , '<!--W-->'
-  , '<hr><b>W</b><br>'
-
-  , '<!--X-->'
-  , '<hr><b>X</b><br>'
-
-  , '<!--Y-->'
-  , '<hr><b>Y</b><br>'
-
-  , '<!--Z-->'
-  , '<hr><b>Z</b><br>'  
-
-
-
-
-
-  ];
-  var arr = latinaArr;
-  var retval ="";
-  retval += "<hr>";
-  for (var i in arr)  {retval += arr[i];}
-    retval += "<hr>";
-  return retval;
+  var latinaObj = {
+    "Latin Links":"http://www.frcoulter.com/latin/links.html"
+    , "Latinum":"https://sites.google.com/site/janualinguae/latin"
+    , "Nuntii Latini":"http://yle.fi/radio1/tiede/nuntii_latini/"
+    , "Orbilat":"http://www.orbilat.com/"
+    , "Romanian closest to Classical Latin":"http://www.antimoon.com/forum/t2129-0.htm"
+    , "Recens Latinitas ":"file:///D:/Language/Latina/html/latinitas_recens_latine.html"
+
+  };
+
+  return printObj(latinaObj);
 
 };
 //////////////////////////
@@ -4593,171 +1617,40 @@ function l10n(){
 
 };
 var l10nFunc = function(){
-  var l10nArr = [
-  '<mark>Localization</mark><br>'
-
-
-  , '<hr><b>A</b><br>'
-  , '<!--A-->'
-
-
-
-
-  , '<!--B-->'
-  , '<hr><b>B</b><br>'
-
-
-
-
-  , '<!--C-->'
-  , '<hr><b>C</b><br>'
-
-
-
-
-  , '<!--D-->'
-  , '<hr><b>D</b><br>'
-
-
-
-
-
-
-
-
-
-
-  , '<!--E-->'
-  , '<hr><b>E</b><br>'
-
-
-  , '<!--F-->'
-  , '<hr><b>F</b><br>'
-
-
-
-  , '<!--G-->'
-  , '<hr><b>G</b><br>'
-
-  , '<!--H-->'
-  , '<hr><b>H</b><br>'
-  , '<a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html" target="_blank">Header field definitions</a> <i></i><br>'
-
-
-
-
-  , '<!--I-->'
-  , '<hr><b>I</b><br>'
-  , '<a href="http://en.wikipedia.org/wiki/IETF_language_tag" target="_blank"> <abbr title="Internet engineering task force">IETF</abbr> language tag</a> <i></i><br>'
-  , '<a href="http://www.i18nguy.com/" target="_blank">i18n guy</a> <i></i><br>'
-  , '<a href="http://ejohn.org/blog/a-strategy-for-i18n-and-node/" target="_blank">i18n in Node</a> <i></i><br>'
-  , '<a href="http://iloveyou-localized.herokuapp.com/" target="_blank">I love you</a> <i>localized</i><br>'
-
-
-
-  , '<!--J-->'
-  , '<hr><b>J</b><br>'
-
-
-
-
-
-
-  , '<!--K-->'
-  , '<hr><b>K</b><br>'
-
-  , '<!--L-->'
-  , '<hr><b>L</b><br>'
-  , '<a href="https://github.com/mozilla/i18n-abide" target="_blank">l10n-abide</a> <i></i><br>'
-  , '<a href="https://hacks.mozilla.org/2013/04/localization-community-tools-process-part-2-of-3-a-node-js-holiday-season-part-10/" target="_blank">l10n community</a> <i></i><br>'
-  , '<a href="http://www.i18nguy.com/unicode/language-identifiers.html" target="_blank">Language identifiers</a> <i></i><br>'
-
-
-
-  , '<!--M-->'
-  , '<hr><b>M</b><br>'
-
-
-  , '<!--N-->'
-  , '<hr><b>N</b><br>'
-
-  , '<!--O-->'
-  , '<hr><b>O</b><br>'
-
-
-  , '<!--P-->'
-  , '<hr><b>P</b><br>'
-
-
-
-  , '<!--Q-->'
-  , '<hr><b>Q</b><br>'
-
-
-  , '<!--R-->'
-  , '<hr><b>R</b><br>'
-
-
-
-
-
-
-  , '<!--S-->'
-  , '<hr><b>S</b><br>'
-
-
-
-
-  , '<!--T-->'
-  , '<hr><b>T</b><br>'
-  , '<a href="https://www.transifex.com/" target="_blank">Transifex</a> <i></i><br>'
-  , '<a href="http://help.transifex.com/contents.html" target="_blank">Transifex</a> <i>documentation</i><br>'
-
-
-
-
-  , '<!--U-->'
-  , '<hr><b>U</b><br>'
-
-  , '<!--V-->'
-  , '<hr><b>V</b><br>'
-
-  , '<!--W-->'
-  , '<hr><b>W</b><br>'
-
-  , '<!--X-->'
-  , '<hr><b>X</b><br>'
-
-  , '<!--Y-->'
-  , '<hr><b>Y</b><br>'
-
-  , '<!--Z-->'
-  , '<hr><b>Z</b><br>'  
-
-
-
-
-
-
-
-
-  ];
-  var arr = l10nArr;
-  var retval ="";
-  retval += "<hr>";
-  for (var i in arr)  {retval += arr[i];}
-    retval += "<hr>";
-  return retval;
+  var l10nObj = {
+    "Header field definitions":"http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html"
+    , "IETF language tag":"http://en.wikipedia.org/wiki/IETF_language_tag"
+    , "i18n guy":"http://www.i18nguy.com/"
+    , "i18n in Node":"http://ejohn.org/blog/a-strategy-for-i18n-and-node/"
+    , "I love you":"http://iloveyou-localized.herokuapp.com/"
+    , "l10n-abide":"https://github.com/mozilla/i18n-abide"
+    , "l10n community":"https://hacks.mozilla.org/2013/04/localization-community-tools-process-part-2-of-3-a-node-js-holiday-season-part-10/"
+    , "Language identifiers":"http://www.i18nguy.com/unicode/language-identifiers.html"
+    , "Transifex":"https://www.transifex.com/"
+    , "Transifex":"http://help.transifex.com/contents.html"
+
+  };
+
+  return printObj(l10nObj);
 
 };
 //-------------------------------------------------------
+function mozilla(){
+  document.getElementById("demo").innerHTML = mozillaFunc();
 
+};
+var mozillaFunc = function(){
+  var mozillaObj = {
+    "Webmaker Meetings 13/06/25-27" : "https://etherpad.mozilla.org/webmaker-post15th-meetings"
+  ,  "Wiki Mizilla": "https://wiki.mozilla.org/Main_Page"
+  };
+  return printObj(mozillaObj);
+};
+//-----------------------------------------------------------
 function mus(){
   document.getElementById("demo").innerHTML= mus2();
 };
-
 var mus2 = function (){
-
   var musicObj ={
 
    "A Beautiful Exchange":"https://www.youtube.com/watch?v=r-bUZj1bkoE"
@@ -4861,6 +1754,7 @@ var mus2 = function (){
    , "Life":"https://www.youtube.com/watch?v=rzI3AdpA9e4"
    , "Live to tell":"https://www.youtube.com/watch?v=IzAO9A9GjgI"
    , "Look after yourself ":"http://www.youtube.com/watch?v=8ki69Vcb_-E"
+   , "Lose your Love" : "http://www.youtube.com/watch?v=N81UChK78WY"
    , "Love songs, non stop":"http://www.youtube.com/watch?v=5eT0ZbunLGY"
    , "Lullaby":"http://www.youtube.com/watch?v=0_W7fMSBeJg"
    , "Magneto Theme":"https://www.youtube.com/watch?v=frqYK1EZ3O0"
@@ -4877,6 +1771,7 @@ var mus2 = function (){
    , "Mom we are all severely ill":"http://www.youtube.com/watch?v=pLE2ngmVqZY"
    , "Mom bought me a horsey":"http://www.youtube.com/watch?v=ds635sBc59I"
    , "Money Shmoney":"http://www.youtube.com/watch?v=NWTEhkG73yU"
+   , "Movement and Location" : "https://www.youtube.com/watch?v=SxaPbOEm070"
    , "Music 4vi":"http://www.youtube.com/watch?v=MhWv1bn6SM4&playnext=1&list=PLC4BE809C8B229989&feature=results_main"
    , "My Crush is On the 5th Floor":"http://www.youtube.com/watch?v=1q95rkKtq6I"
    , "My Jesus I love Thee":"http://www.youtube.com/watch?v=EYfBZnMve_E"
@@ -4953,8 +1848,6 @@ var mus2 = function (){
    , "You raise me up 1":"http://www.youtube.com/watch?v=7jfMoa912fY"
    , "You raise me up 2":"https://www.youtube.com/watch?v=aJxrX42WcjQ"
  };
-
-
  return printObj(musicObj);
 };
 
@@ -4967,198 +1860,60 @@ function nodejs(){
 
 var node = function (){
 
-  var _node = [
-  '<mark>Node.js</mark><br>'
-
-  , '<hr><b>A</b><br>'
-  , '<!--A-->'
-  , '<a href="http://nodejs.org/api/all.html" target="_blank">API</a> <i></i><br>'
-  , '<a href="http://localhost:8005/index.html" target="_blank">Avocado</a> <i>s. 2013-05-27</i><br>'
-
-
-
-
-  , '<!--B-->'
-  , '<hr><b>B</b><br>'
-  , '<a href="http://www.nodebeginner.org/" target="_blank">Beginner Book</a> <i></i><br>'
-  , '<a href="http://project70.com/nodejs/beginners-tutorial-node-js/" target="_blank">Beginner`s Tutorial</a> <i>Project 70</i><br>'
-  , '<a href="https://github.com/coolaj86/browser-buffer" target="_blank">Buffer</a> <i></i><br>'
-
-
-
-
-  , '<!--C-->'
-  , '<hr><b>C</b><br>'
-  , '<a href="https://npmjs.org/package/commander" target="_blank">commander</a> <i></i><br>'
-  , '<a href="https://npmjs.org/doc/config.html" target="_blank">config</a> <i></i><br>'
-
-
-
-
-  , '<!--D-->'
-  , '<hr><b>D</b><br>'
-
-  , '<a href="http://readwrite.com/2011/01/25/wait-whats-nodejs-good-for-aga" target="_blank">What is it good for?</a> <i></i><br>'    
-
-
-
-
-
-
-
-
-  , '<!--E-->'
-  , '<hr><b>E</b><br>'
-  , '<a href="http://code.danyork.com/2011/01/25/node-js-doctors-offices-and-fast-food-restaurants-understanding-event-driven-programming/" target="_blank">Event-driven programming</a> <i></i><br>'
-  , '<a href="http://mashable.com/2011/03/10/node-js/" target="_blank">Everyone`s talking about it</a> <i></i><br>'
-  , '<a href="https://github.com/vesln/exports" target="_blank">exports</a> <i></i><br>'
-  , '<a href="https://npmjs.org/package/express" target="_blank">express</a> <i></i><br>'
-  , '<a href="http://expressjs.com/guide.html" target="_blank">Express Guide</a> <i></i><br>'
-
-  , '<!--F-->'
-  , '<hr><b>F</b><br>'
-  , '<a href="http://www.lynda.com/Nodejs-tutorials/Nodejs-First-Look/101554-2.html" target="_blank">First Look</a> <i>Joseph leBlanc</i><br>'
-  , '<a href="http://nodejs.org/api/fs.html#fs_file_system" target="_blank">fs</a> <i>file system</i><br>'
-  , '<a href="http://net.tutsplus.com/tutorials/javascript-ajax/node-js-for-beginners/" target="_blank">for beginners</a> <i></i><br>'
-  , '<a href="http://nodejs.org/api/fs.html#fs_fs_writefile_filename_data_options_callback" target="_blank">fs.writeFile()</a> <i></i><br>'
-
-
-  , '<!--G-->'
-  , '<hr><b>G</b><br>'
-  , '<a href="http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js" target="_blank">Get started</a> <i></i><br>'
-  , '<a href="https://npmjs.org/package/gobbledygook" target="_blank">gobbledygook</a> <i></i><br>'
-
-
-  , '<!--H-->'
-  , '<hr><b>H</b><br>'
-  , '<a href="alicoding.com/node-js-write-a-hello-world-from-easy-to-localized-method/?utm_source=rss&utm_medium=rss&utm_campaign=node-js-write-a-hello-world-from-easy-to-localized-method" target="_blank">Hello World!</a> <i>Ali</i><br>'
-  , '<a href="http://howtonode.org/streams-explained" target="_blank">How to Node</a> <i>Tim Caswell</i><br>'
-
-
-
-
-  , '<!--I-->'
-  , '<hr><b>I</b><br>'
-  , '<a href="http://www.youtube.com/watch?v=jo_B4LTHi3I" target="_blank">Intro by Ryan Dahl</a> <i>YT</i><br>'
-
-
-
-
-  , '<!--J-->'
-  , '<hr><b>J</b><br>'
-  , '<a href="https://github.com/joyent/node/wiki/modules" target="_blank">joyent/node</a> <i></i><br>'
-
-
-
-
-
-
-  , '<!--K-->'
-  , '<hr><b>K</b><br>'
-
-  , '<!--L-->'
-  , '<hr><b>L</b><br>'
-
-
-  , '<!--M-->'
-  , '<hr><b>M</b><br>'
-  , '<a href="https://groups.google.com/forum/?fromgroups#!forum/nodejs" target="_blank">Mailing list</a> <i></i><br>'
-  , '<a href="http://book.mixu.net/ch1.html" target="_blank">Mixu`s Node book</a> <i></i><br>'
-  , '<a href="https://npmjs.org/package/mkpath" target="_blank">mkpath</a> <i></i><br>'
-
-
-  , '<!--N-->'
-  , '<hr><b>N</b><br>'
-  , '<a href="http://blog.osbutler.com/categories/node-by-example/?page=3" target="_blank">Node by Example</a> <i></i><br>'
-  , '<a href="http://nodecasts.net/" target="_blank">Nodecasts</a> <i>free screencasts</i><br>'
-  , '<a href="https://github.com/joyent/node/wiki/node-core-vs-userland" target="_blank">Nodecore vs Userland</a> <i></i><br>'
-  , '<a href="http://nodeguide.com/" target="_blank">Nodeguide</a> <i></i><br>'
-  , '<a href="http://fedoraproject.org/wiki/Features/NodeJS" target="_blank">NodeJS on Fedora</a> <i></i><br>'
-  , '<a href="http://nodetuts.com/" target="_blank">Node Tuts</a> <i></i><br>'
-  , '<a href="https://github.com/joyent/node/wiki" target="_blank">Node wiki</a> <i></i><br>'
-  , '<a href="http://blog.nodejitsu.com/npm-cheatsheet" target="_blank">npm cheatsheet</a> <i>nodejitsu</i><br>'
-  , '<a href="https://npmjs.org/" target="_blank">NPMjs</a> <i></i><br>'
-
-
-
-
-  , '<!--O-->'
-  , '<hr><b>O</b><br>'
-
-
-  , '<!--P-->'
-  , '<hr><b>P</b><br>'
-  , '<a href="https://npmjs.org/doc/json.html" target="_blank">package.json</a> <i></i><br>'
-  , '<a href="http://package.json.nodejitsu.com/" target="_blank"></a> <i>cheatsheet</i><br>'
-  , '<a href="http://nodejs.org/docs/v0.4.9/api/path.html" target="_blank">path</a> <i></i><br>'
-  , '<a href="http://nodejs.org/api/path.html#path_path_join_path1_path2" target="_blank">path.join()</a> <i></i><br>'
-  , '<a href="http://readwrite.com/2010/10/20/why-developers-should-pay-atte" target="_blank">Pay attention to Node.js</a> <i></i><br>'
-  , '<a href="http://www.infoq.com/presentations/nodejs" target="_blank">Presented by Ryan Dahl</a> <i>InfoQ</i><br>'
-
-
-
-  , '<!--Q-->'
-  , '<hr><b>Q</b><br>'
-
-
-  , '<!--R-->'
-  , '<hr><b>R</b><br>'
-  , '<a href="https://github.com/mikeal/request" target="_blank">request</a> <i>github</i><br>'
-  , '<a href="https://npmjs.org/package/require" target="_blank">require()</a> <i></i><br>'
-  , '<a href="https://npmjs.org/package/request" target="_blank"></a> <i>npm.js</i><br>'
-
-
-
-
-
-
-  , '<!--S-->'
-  , '<hr><b>S</b><br>'
-  , '<a href="http://nodeguide.com/style.html" target="_blank">Style guide</a> <i>Felix Geisendörfer</i><br>'
-
-
-
-
-  , '<!--T-->'
-  , '<hr><b>T</b><br>'
-  , '<a href="http://nodejs.org/jsconf-eu-2010.pdf" target="_blank">20 challenges in Node.js</a> <i></i><br>'
-  , '<a href="https://npmjs.org/package/typeof" target="_blank">typeof</a> <i></i><br>'
-
-
-
-  , '<!--U-->'
-  , '<hr><b>U</b><br>'
-  , '<a href="http://debuggable.com/posts/understanding-node-js:4bd98440-45e4-4a9a-8ef7-0f7ecbdd56cb" target="_blank">understanding ~</a> <i></i><br>'
-
-  , '<!--V-->'
-  , '<hr><b>V</b><br>'
-
-  , '<!--W-->'
-  , '<hr><b>W</b><br>'
-
-  , '<!--X-->'
-  , '<hr><b>X</b><br>'
-
-  , '<!--Y-->'
-  , '<hr><b>Y</b><br>'
-
-  , '<!--Z-->'
-  , '<hr><b>Z</b><br>'  
-
-
-
-
-
-
-  ];
-
-
-  var arr = _node;
-  var retval ="";
-  retval += "<hr>";
-  for (var i in arr)  {retval += arr[i];}
-    retval += "<hr>";
-  return retval;
+  var nodeObj = {
+
+   "API":"http://nodejs.org/api/all.html"
+   , "Avocado":"http://localhost:8005/index.html"
+   , "Beginner Book":"http://www.nodebeginner.org/"
+   , "Beginner`s Tutorial":"http://project70.com/nodejs/beginners-tutorial-node-js/"
+   , "Buffer":"https://github.com/coolaj86/browser-buffer"
+   , "commander":"https://npmjs.org/package/commander"
+   , "config":"https://npmjs.org/doc/config.html"
+   , "What is it good for?":"http://readwrite.com/2011/01/25/wait-whats-nodejs-good-for-aga"
+   , "Event-driven programming":"http://code.danyork.com/2011/01/25/node-js-doctors-offices-and-fast-food-restaurants-understanding-event-driven-programming/"
+   , "Everyone`s talking about it":"http://mashable.com/2011/03/10/node-js/"
+   , "exports (github)" :"https://github.com/vesln/exports"
+   , "express (npm.js)":"https://npmjs.org/package/express"
+   , "express js" : "http://expressjs.com/"
+   , "Express Guide":"http://expressjs.com/guide.html"
+   , "First Look":"http://www.lynda.com/Nodejs-tutorials/Nodejs-First-Look/101554-2.html"
+   , "fs":"http://nodejs.org/api/fs.html#fs_file_system"
+   , "for beginners":"http://net.tutsplus.com/tutorials/javascript-ajax/node-js-for-beginners/"
+   , "fs.writeFile()":"http://nodejs.org/api/fs.html#fs_fs_writefile_filename_data_options_callback"
+   , "Get started":"http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js"
+   , "gobbledygook":"https://npmjs.org/package/gobbledygook"
+   , "How to Node":"http://howtonode.org/streams-explained"
+   , "Intro by Ryan Dahl":"http://www.youtube.com/watch?v=jo_B4LTHi3I"
+   , "joyent/node":"https://github.com/joyent/node/wiki/modules"
+   , "Mailing list":"https://groups.google.com/forum/?fromgroups#!forum/nodejs"
+   , "Mixu`s Node book":"http://book.mixu.net/ch1.html"
+   , "mkpath":"https://npmjs.org/package/mkpath"
+   , "Node by Example":"http://blog.osbutler.com/categories/node-by-example/?page=3"
+   , "Nodecasts":"http://nodecasts.net/"
+   , "Nodecore vs Userland":"https://github.com/joyent/node/wiki/node-core-vs-userland"
+   , "Nodeguide":"http://nodeguide.com/"
+   , "NodeJS on Fedora":"http://fedoraproject.org/wiki/Features/NodeJS"
+   , "Node Tuts":"http://nodetuts.com/"
+   , "Node wiki":"https://github.com/joyent/node/wiki"
+   , "npm cheatsheet":"http://blog.nodejitsu.com/npm-cheatsheet"
+   , "NPMjs":"https://npmjs.org/"
+   , "package.json":"https://npmjs.org/doc/json.html"
+   , "nodejitsu":"http://package.json.nodejitsu.com/"
+   , "path":"http://nodejs.org/docs/v0.4.9/api/path.html"
+   , "path.join()":"http://nodejs.org/api/path.html#path_path_join_path1_path2"
+   , "Pay attention to Node.js":"http://readwrite.com/2010/10/20/why-developers-should-pay-atte"
+   , "Presented by Ryan Dahl":"http://www.infoq.com/presentations/nodejs"
+   , "request":"https://github.com/mikeal/request"
+   , "require()":"https://npmjs.org/package/require"
+   , "request":"https://npmjs.org/package/request"
+   , "Style guide":"http://nodeguide.com/style.html"
+   , "20 challenges in Node.js":"http://nodejs.org/jsconf-eu-2010.pdf"
+   , "typeof":"https://npmjs.org/package/typeof"
+   , "understanding ~":"http://debuggable.com/posts/understanding-node-js:4bd98440-45e4-4a9a-8ef7-0f7ecbdd56cb"
+ };
+
+
+ return printObj(nodeObj);
 };
 
 //----------------------------------------------------------------------------
@@ -5169,132 +1924,49 @@ function php(){
 };
 
 var phpFunc = function(){
-  var phpArr = [
-  '<mark>PHP</mark><br><hr>'
-
-  , '<!--A-->'
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/practice/121025_arrays.php" target="_blank">Arrays</a><br>'
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/assign1/add.php" target="_blank">Asgmt 1 </a> <br>'
-  , '<a href="https://zenit.senecac.on.ca/~int322_123a07/assign2/login.php" target="_blank">Asgmt 2 </a> <br>'
-
-  , '<!--B-->'
-  , '<hr><b>B</b><br>'
-
-  , '<!--C-->'
-  , '<hr><b>C</b><br>'
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/practice/caseless.php" target="_blank">Caseless</a><br>'
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/practice/121110_classes_01.php" target="_blank">Classes 01</a><br>'
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/practice/121110_classes_02.php" target="_blank">Classes 02</a><br>'
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/lab5/cookies.php" target="_blank">Lab 5-1</a><i> cookies.php</i><br>'
-
-  , '<!--D-->'
-  , '<hr><b>D</b><br>'
-
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/practice/121110_class_db_01.php" target="_blank">DB thru classes</a><br>'
-
-  , '<!--E-->'
-  , '<hr><b>E</b><br>'
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/practice/121120_encrypting.php" target="_blank">Encrypting</a><br>'
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/practice/121024_advanced_escaping_001.php" target="_blank">Escaping (advanced)</a><br>'
-  , '<!--F-->'
-  , '<hr><b>F</b><br>'
-
-  , '<!--G-->'
-  , '<hr><b>G</b><br>'
-
-  , '<!--H-->'
-  , '<hr><b>H</b><br>'
-
-  , '<!--I-->'
-  , '<hr><b>I</b><br>'
-
-  , '<!--J-->'
-  , '<hr><b>J</b><br>'
-
-  , '<!--K-->'
-  , '<hr><b>K</b><br>'
-
-  , '<!--L-->'
-  , '<hr><b>L</b><br>'
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/lab1/lab1.php" target="_blank">Lab 1 </a> <br>'  
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/lab2/forms-part3.php" target="_blank">Lab 2 </a> <br>'   
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/lab3/mysqlform.php" target="_blank">Lab 3 </a> <br>'  
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/lab4/pcv.php" target="_blank">Lab 4-1 </a> <br>' 
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/lab4/pcv2.php" target="_blank">Lab 4-2 </a> <br>' 
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/lab4/pcv3.php" target="_blank">Lab 4-3 </a> <br>' 
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/lab4/lab4_4.php" target="_blank">Lab 4-4 </a> <br>' 
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/lab4/lab4_5.php" target="_blank">Lab 4-5 </a> <br>' 
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/lab4/lab4_6.php" target="_blank">Lab 4-6 </a> <br>'
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/lab5/login.php" target="_blank">Lab 5-2a</a><i> login.php</i><br>'
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/lab5/login.php" target="_blank">Lab 5-2b</a><i> loginStatus.php</i><br>'
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/lab6/myClasses.php" target="_blank">Lab 6</a><i> myClasses.php</i><br>'
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/lab6/testMenu.php" target="_blank">Lab6</a> testmenu.php<br>'
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/lab6/oo-login.php" target="_blank">oo-login.php</a> Lab 6<br>'
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/lab6/testMenu.php" target="_blank">testMenu.php</a> Lab 6<br>'
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/practice/login_prx.php" target="_blank">login prx</a><br>'
-
-  , '<!--M-->'
-  , '<hr><b>M</b><br>'
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/practice/121110_destructor_01.php" target="_blank">My_class</a><br>'
-
-  , '<!--N-->'
-  , '<hr><b>N</b><br>'
-
-  , '<!--O-->'
-  , '<hr><b>O</b><br>'
-  , '<!--P-->'
-  , '<hr><b>P</b><br>'
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/practice/121028_regex.php" target="_blank">Reg Ex</a><br>'
-
-  , '<!--Q-->'
-  , '<hr><b>Q</b><br>'
+  var phpObj = {
+    "Arrays":"http://zenit.senecac.on.ca/~int322_123a07/practice/121025_arrays.php"
+    , "Asgmt 1 ":"http://zenit.senecac.on.ca/~int322_123a07/assign1/add.php"
+    , "Asgmt 2 ":"https://zenit.senecac.on.ca/~int322_123a07/assign2/login.php"
+    , "Caseless":"http://zenit.senecac.on.ca/~int322_123a07/practice/caseless.php"
+    , "Classes 01":"http://zenit.senecac.on.ca/~int322_123a07/practice/121110_classes_01.php"
+    , "Classes 02":"http://zenit.senecac.on.ca/~int322_123a07/practice/121110_classes_02.php"
+    , "Lab 5-1":"http://zenit.senecac.on.ca/~int322_123a07/lab5/cookies.php"
+    , "DB thru classes":"http://zenit.senecac.on.ca/~int322_123a07/practice/121110_class_db_01.php"
+    , "Encrypting":"http://zenit.senecac.on.ca/~int322_123a07/practice/121120_encrypting.php"
+    , "Escaping (advanced)":"http://zenit.senecac.on.ca/~int322_123a07/practice/121024_advanced_escaping_001.php"
+    , "Lab 1 ":"http://zenit.senecac.on.ca/~int322_123a07/lab1/lab1.php"
+    , "Lab 2 ":"http://zenit.senecac.on.ca/~int322_123a07/lab2/forms-part3.php"
+    , "Lab 3 ":"http://zenit.senecac.on.ca/~int322_123a07/lab3/mysqlform.php"
+    , "Lab 4-1 ":"http://zenit.senecac.on.ca/~int322_123a07/lab4/pcv.php"
+    , "Lab 4-2 ":"http://zenit.senecac.on.ca/~int322_123a07/lab4/pcv2.php"
+    , "Lab 4-3 ":"http://zenit.senecac.on.ca/~int322_123a07/lab4/pcv3.php"
+    , "Lab 4-4 ":"http://zenit.senecac.on.ca/~int322_123a07/lab4/lab4_4.php"
+    , "Lab 4-5 ":"http://zenit.senecac.on.ca/~int322_123a07/lab4/lab4_5.php"
+    , "Lab 4-6 ":"http://zenit.senecac.on.ca/~int322_123a07/lab4/lab4_6.php"
+    , "Lab 5-2a":"http://zenit.senecac.on.ca/~int322_123a07/lab5/login.php"
+    , "Lab 5-2b":"http://zenit.senecac.on.ca/~int322_123a07/lab5/login.php"
+    , "Lab 6":"http://zenit.senecac.on.ca/~int322_123a07/lab6/myClasses.php"
+    , "Lab6":"http://zenit.senecac.on.ca/~int322_123a07/lab6/testMenu.php"
+    , "oo-login.php":"http://zenit.senecac.on.ca/~int322_123a07/lab6/oo-login.php"
+    , "testMenu.php":"http://zenit.senecac.on.ca/~int322_123a07/lab6/testMenu.php"
+    , "login prx":"http://zenit.senecac.on.ca/~int322_123a07/practice/login_prx.php"
+    , "My_class":"http://zenit.senecac.on.ca/~int322_123a07/practice/121110_destructor_01.php"
+    , "Reg Ex":"http://zenit.senecac.on.ca/~int322_123a07/practice/121028_regex.php"
+    , "Salve!":"http://zenit.senecac.on.ca/~int322_123a07/practice/121110_specialMethodsPHP5_test.php"
+    , "Strings":"http://zenit.senecac.on.ca/~int322_123a07/practice/121028_strings.php"
+    , "a.php":"http://zenit.senecac.on.ca/~int322_123a07/practice/templating/a.php"
+    , "cc.html":"http://zenit.senecac.on.ca/~int322_123a07/practice/templating/cc.html"
+    , "dd.php":"http://zenit.senecac.on.ca/~int322_123a07/practice/templating/dd.php"
+    , "ff.php":"http://zenit.senecac.on.ca/~int322_123a07/ff.php"
+    , "gg.php":"http://zenit.senecac.on.ca/~int322_123a07/gg.php"
+    , "hh.php":"http://zenit.senecac.on.ca/~int322_123a07/hh.php"
+    , "test1.php":"http://zenit.senecac.on.ca/~int322_123a07/practice/test1.php"
 
 
-  , '<!--R-->'
-  , '<hr><b>R</b><br>'
+  };
 
-  , '<!--S-->'
-  , '<hr><b>S</b><br>'
-
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/practice/121110_specialMethodsPHP5_test.php" target="_blank">Salve!</a><br>'
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/practice/121028_strings.php" target="_blank">Strings</a><br>'
-
-  , '<!--T-->'
-  , '<hr><b>T</b><br>'
-  , ' Templating: '
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/practice/templating/a.php" target="_blank">a.php</a> | '
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/practice/templating/cc.html" target="_blank">cc.html</a> | '
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/practice/templating/dd.php" target="_blank">dd.php</a> | '
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/ff.php" target="_blank">ff.php</a> | '
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/gg.php" target="_blank">gg.php</a> |'
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/hh.php" target="_blank">hh.php</a> |'
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/practice/test1.php" target="_blank">test1.php</a> | '
-  , '<!--U-->'
-  , '<hr><b>U</b><br>'
-
-  , '<!--V-->'
-  , '<hr><b>V</b><br>'
-
-  , '<!--W-->'
-  , '<hr><b>W</b><br>'
-  , '<!--X-->'
-  , '<hr><b>X</b><br>'
-  , '<!--Y-->'
-  , '<hr><b>Y</b><br>'
-
-  , '<!--Z-->'
-  , '<hr><b>Z</b><br>'  
-
-
-
-
-  ];
-  var arr = phpArr;
-  var retval ="";
-  retval += "<hr>";
-  for (var i in arr)  {retval += arr[i];}
-    retval += "<hr>";
-  return retval;
+  return printObj(phpObj);
 
 
 
@@ -5308,158 +1980,22 @@ function p_w(){
 };
 
 var p_wFunc = function(){
-  var p_wArr = [
-  '<mark>Praise and Worship</mark><br>'
-
-
-  , '<!--A-->'
-  , '<hr><b>A</b><br>'
-
-
-
-
-  , '<!--B-->'
-  , '<hr><b>B</b><br>'
-
-
-
-
-  , '<!--C-->'
-  , '<hr><b>C</b><br>'
-
-
-
-
-  , '<!--D-->'
-  , '<hr><b>D</b><br>'
-
-  , '<a href="xxx" target="_blank">xxx</a><i> xxx</i><br>'
-
-
-
-
-
-
-
-
-
-  , '<!--E-->'
-  , '<hr><b>E</b><br>'
-  , '<a href="http://www.youtube.com/watch?v=WUJSElja3d4" target="_blank">Eighth Wonder</a> <i>WhiteHeart</i><br>'
-
-  , '<!--F-->'
-  , '<hr><b>F</b><br>'
-
-
-
-  , '<!--G-->'
-  , '<hr><b>G</b><br>'
-
-  , '<!--H-->'
-  , '<hr><b>H</b><br>'
-
-
-
-
-  , '<!--I-->'
-  , '<hr><b>I</b><br>'
-  , '<a href="https://www.youtube.com/watch?v=aLcpLD5DHDU" target="_blank">I will enter His Gates</a> <i>Maranatha</i><br>'
-  , '<a href="https://www.youtube.com/watch?v=nr_YiSZ8KBc" target="_blank">I will enter His Gates</a> <i></i><br>'
-
-
-  , '<!--J-->'
-  , '<hr><b>J</b><br>'
-
-
-
-
-
-
-  , '<!--K-->'
-  , '<hr><b>K</b><br>'
-
-  , '<!--L-->'
-  , '<hr><b>L</b><br>'
-
-
-  , '<!--M-->'
-  , '<hr><b>M</b><br>'
-  , '<a href="https://www.youtube.com/watch?v=F3X0KhvJwsQ" target="_blank">Maranatha Double Praise 1</a> <i></i><br>'
-  , '<a href="https://www.youtube.com/watch?v=jfAbAOI-aj0" target="_blank">Maranatha Double Praise 2</a> <i></i><br>'
-  , '<a href="https://www.youtube.com/watch?v=Z_Sg93io5c4" target="_blank">Maranatha Double Praise 3</a> <i></i><br>'
-  , '<a href="https://www.youtube.com/watch?v=dd0O7GPR6QE" target="_blank">Maranatha Double Praise 4</a><br>'
-  , '<a href="" target="_blank">Maranatha Double Praise 5</a> <i></i><br>'
-  , '<a href="" target="_blank">Maranatha Double Praise 6</a> <i></i><br>'
-  , '<a href="" target="_blank">Maranatha Double Praise 7</a> <i></i><br>'
-  , '<a href="https://www.youtube.com/watch?v=Bl0R9AT0lPk" target="_blank">Maranatha Double Praise 8</a> <i></i><br>'
-  , '<a href="" target="_blank">Maranatha Double Praise 9</a> <i></i><br>'
-  , '<a href="" target="_blank">Maranatha Double Praise 10</a> <i></i><br>'
-  , '<a href="https://www.youtube.com/watch?NR=1&feature=endscreen&v=uyrxmG1Ctio" target="_blank">Maranatha Double Praise 11</a> <i></i><br>'
-  , '<a href="" target="_blank">Maranatha Double Praise 12</a> <i></i><br>'
-  , '<a href="" target="_blank">Maranatha Double Praise 13</a> <i></i><br>'
-  , '<a href="https://www.youtube.com/watch?v=Pce_M-XT8Jc" target="_blank">Maranathe Double Praise 14</a> <i></i><br>'
-
-  , '<!--N-->'
-  , '<hr><b>N</b><br>'
-
-  , '<!--O-->'
-  , '<hr><b>O</b><br>'
-
-
-  , '<!--P-->'
-  , '<hr><b>P</b><br>'
-
-
-
-  , '<!--Q-->'
-  , '<hr><b>Q</b><br>'
-
-
-  , '<!--R-->'
-  , '<hr><b>R</b><br>'
-
-
-
-
-
-
-  , '<!--S-->'
-  , '<hr><b>S</b><br>'
-
-
-
-
-  , '<!--T-->'
-  , '<hr><b>T</b><br>'
-
-
-
-  , '<!--U-->'
-  , '<hr><b>U</b><br>'
-
-  , '<!--V-->'
-  , '<hr><b>V</b><br>'
-
-  , '<!--W-->'
-  , '<hr><b>W</b><br>'
-
-  , '<!--X-->'
-  , '<hr><b>X</b><br>'
-
-  , '<!--Y-->'
-  , '<hr><b>Y</b><br>'
-
-  , '<!--Z-->'
-  , '<hr><b>Z</b><br>'  
-
-
-  ];
-  var arr = p_wArr;
-  var retval ="";
-  retval += "<hr>";
-  for (var i in arr)  {retval += arr[i];}
-    retval += "<hr>";
-  return retval;
+  var p_wObj = {
+    "Eighth Wonder":"http://www.youtube.com/watch?v=WUJSElja3d4"
+    , "I will enter His Gates":"https://www.youtube.com/watch?v=aLcpLD5DHDU"
+    , "I will enter His Gates":"https://www.youtube.com/watch?v=nr_YiSZ8KBc"
+    , "Maranatha Double Praise 01":"https://www.youtube.com/watch?v=F3X0KhvJwsQ"
+    , "Lord`s Prayer, the (M.W.Smith)":"http://www.youtube.com/watch?v=tZFqlYLGoGY"
+    , "Maranatha Double Praise 02":"https://www.youtube.com/watch?v=jfAbAOI-aj0"
+    , "Maranatha Double Praise 03":"https://www.youtube.com/watch?v=Z_Sg93io5c4"
+    , "Maranatha Double Praise 04":"https://www.youtube.com/watch?v=dd0O7GPR6QE"
+    , "Maranatha Double Praise 08":"https://www.youtube.com/watch?v=Bl0R9AT0lPk"
+    , "Maranatha Double Praise 11":"https://www.youtube.com/watch?NR=1&feature=endscreen&v=uyrxmG1Ctio"
+    , "Maranathe Double Praise 14":"https://www.youtube.com/watch?v=Pce_M-XT8Jc"
+  };
+
+  
+  return printObj(p_wObj);
 
 
 }; 
@@ -5469,147 +2005,18 @@ function p_t(){
   document.getElementById("demo").innerHTML = p_tFunc();
 };
 var p_tFunc = function(){
-  var p_tArr =  [
-  '<mark>Preach and Teach</mark><br>'
+  var p_tObj =  {
+    "Devil`s under my feet":"http://www.youtube.com/watch?v=D_TXYEmqn6U"
+    , "Doubt, Fear, and Unbelief":"http://www.youtube.com/watch?v=NomZHolreBk"
+    , "God`s Medicine":"http://www.youtube.com/watch?v=d2Wp5_bL338"
+    , "Hagin":"http://www.youtube.com/playlist?list=PL4C095CACCE805213"
+    , "Horus":"https://www.youtube.com/watch?v=ljRKhZ81aqY"
+    , "Rejection?":"http://www.youtube.com/watch?v=-j8ZMMuu7MU"
 
-  , '<hr><b>A</b><br>'
-  , '<!--A-->'
+  };
 
 
-
-
-  , '<!--B-->'
-  , '<hr><b>B</b><br>'
-
-
-
-
-  , '<!--C-->'
-  , '<hr><b>C</b><br>'
-
-
-
-
-  , '<!--D-->'
-  , '<hr><b>D</b><br>'
-
-  , '<a href="http://www.youtube.com/watch?v=D_TXYEmqn6U" target="_blank">Devil`s under my feet</a><i> Hagin</i><br>'
-  , '<a href="http://www.youtube.com/watch?v=NomZHolreBk" target="_blank">Doubt, Fear, and Unbelief</a><i> Hagin 1982</i><br>'
-
-
-
-
-
-
-
-
-  , '<!--E-->'
-  , '<hr><b>E</b><br>'
-
-  , '<!--F-->'
-  , '<hr><b>F</b><br>'
-
-
-
-  , '<!--G-->'
-  , '<hr><b>G</b><br>'
-  , '<a href="http://www.youtube.com/watch?v=d2Wp5_bL338" target="_blank">God`s Medicine</a> <i>KH</i><br>'
-
-  , '<!--H-->'
-  , '<hr><b>H</b><br>'
-  , '<a href="http://www.youtube.com/playlist?list=PL4C095CACCE805213" target="_blank">Hagin</a><i></i><br>'
-
-
-
-  , '<!--I-->'
-  , '<hr><b>I</b><br>'
-
-
-
-  , '<!--J-->'
-  , '<hr><b>J</b><br>'
-  , '<a href="https://www.youtube.com/watch?v=ljRKhZ81aqY" target="_blank">Horus</a><i></i><br>'
-
-
-
-
-
-  , '<!--K-->'
-  , '<hr><b>K</b><br>'
-
-  , '<!--L-->'
-  , '<hr><b>L</b><br>'
-
-
-  , '<!--M-->'
-  , '<hr><b>M</b><br>'
-
-
-  , '<!--N-->'
-  , '<hr><b>N</b><br>'
-
-  , '<!--O-->'
-  , '<hr><b>O</b><br>'
-
-
-  , '<!--P-->'
-  , '<hr><b>P</b><br>'
-
-
-
-  , '<!--Q-->'
-  , '<hr><b>Q</b><br>'
-
-
-  , '<!--R-->'
-  , '<hr><b>R</b><br>'
-  , '<a href="http://www.youtube.com/watch?v=-j8ZMMuu7MU" target="_blank">Rejection?</a><i></i><br>'
-
-
-
-
-
-  , '<!--S-->'
-  , '<hr><b>S</b><br>'
-
-
-
-
-  , '<!--T-->'
-  , '<hr><b>T</b><br>'
-
-
-
-  , '<!--U-->'
-  , '<hr><b>U</b><br>'
-
-  , '<!--V-->'
-  , '<hr><b>V</b><br>'
-
-  , '<!--W-->'
-  , '<hr><b>W</b><br>'
-
-  , '<!--X-->'
-  , '<hr><b>X</b><br>'
-
-  , '<!--Y-->'
-  , '<hr><b>Y</b><br>'
-
-  , '<!--Z-->'
-  , '<hr><b>Z</b><br>'  
-
-
-
-
-  ];
-
-
-  var arr = p_tArr;
-  var retval ="";
-  retval += "<hr>";
-  for (var i in arr)  {retval += arr[i];}
-    retval += "<hr>";
-  return retval;
+  return printObj(p_tObj);
 };
 
 //----------------------------------------------------------------------------
@@ -5620,117 +2027,26 @@ function selfdefense(){
 
 var selfdefenseFunc = function(){
 
-  var selfdefenseArr = [
-  '<mark>Self-Defense</mark><br>'
+  var selfdefenseObj = {
+   "Americana Move mounting":"http://www.youtube.com/watch?v=K6r8MkqeSMM&feature=relmfu"
+   , "Chokefrom above -> Arm Bar":"http://www.youtube.com/watch?v=sS3iZ9rNaG8&feature=relmfu"
+   , "Choke from under -> Arm Bar":"http://www.youtube.com/watch?v=fro50KwBDjg"
+   , "Clothes Grab -> Leg Sweep":"http://www.youtube.com/watch?v=XfSBGZz_6Mc&feature=relmfu"
+   , "Demo (Jiujitsu)":"http://www.youtube.com/watch?v=erQ7AVtcwec"
+   , "Demo (part 1)":"http://www.youtube.com/watch?v=g6sZSC66ul4&feature=relmfu"
+   , "Demo (part 2)":"http://www.youtube.com/watch?v=Y600l5UbR10&feature=relmfu"
+   , "Demo (part 3)":"http://www.youtube.com/watch?v=EzSdD22BqXM&feature=relmfu"
+   , "Kimura":"http://www.youtube.com/watch?v=HA-2NRuTLkw"
+   , "Knock out":"http://www.youtube.com/watch?v=san7xnrCAQc"
+   , "Mounting -> Closed Guard":"http://www.youtube.com/watch?v=9nrYaxOqmaQ&feature=relmfu"
+   , "Mounted -> Kimura":"http://www.youtube.com/watch?v=Ed_BQaWtyck&feature=relmfu"
+   , "Shoulder grab -> Hiji Gaeshi":"http://www.youtube.com/watch?feature=fvwp&v=CW5VpKC9ocU&NR=1"
+   , "Top Cross Choke mounting":"http://www.youtube.com/watch?v=mtAtWH8dh7o&feature=relmfu"
+
+ };
 
 
-  , '<hr><b>A</b><br>'
-  , '<!--A-->'
-  , '<a href="http://www.youtube.com/watch?v=K6r8MkqeSMM&feature=relmfu" target="_blank">Americana Move mounting</a><br>'
-
-  , '<!--B-->'
-  , '<hr><b>B</b><br>'
-
-  , '<!--C-->'
-  , '<hr><b>C</b><br>'
-  , '<a href="http://www.youtube.com/watch?v=sS3iZ9rNaG8&feature=relmfu"target="_blank">Choke from above -> Arm Bar</a><br>'
-  , '<a href="http://www.youtube.com/watch?v=fro50KwBDjg" target="_blank">Choke from under -> Arm Bar</a><br>'
-  , '<a href="http://www.youtube.com/watch?v=XfSBGZz_6Mc&feature=relmfu" target="_blank">Clothes Grab -> Leg Sweep</a>'
-
-
-
-  , '<!--D-->'
-  , '<hr><b>D</b><br>'
-  , '<a href="http://www.youtube.com/watch?v=erQ7AVtcwec" target="_blank">Demo (Jiujitsu)</a><br>'
-  , '<a href="http://www.youtube.com/watch?v=g6sZSC66ul4&feature=relmfu" target="_blank">Demo (part 1)</a><br>'
-  , '<a href="http://www.youtube.com/watch?v=Y600l5UbR10&feature=relmfu" target="_blank">Demo (part 2)</a><br>'
-  , '<a href="http://www.youtube.com/watch?v=EzSdD22BqXM&feature=relmfu" target="_blank">Demo (part 3)</a><br>'
-
-  , '<!--E-->'
-  , '<hr><b>E</b><br>'
-
-  , '<!--F-->'
-  , '<hr><b>F</b><br>'
-
-  , '<!--G-->'
-  , '<hr><b>G</b><br>'
-
-  , '<!--H-->'
-  , '<hr><b>H</b><br>'
-
-  , '<!--I-->'
-  , '<hr><b>I</b><br>'
-
-  , '<!--J-->'
-  , '<hr><b>J</b><br>'
-
-  , '<!--K-->'
-  , '<hr><b>K</b><br>'
-  , '<a href="http://www.youtube.com/watch?v=HA-2NRuTLkw" target="_blank">Kimura</a><br>'
-  , '<a href="http://www.youtube.com/watch?v=san7xnrCAQc" target="_blank">Knock out</a><br>'
-
-
-
-  , '<!--L-->'
-  , '<hr><b>L</b><br>'
-
-  , '<!--M-->'
-  , '<hr><b>M</b><br>'
-  , '<a href="http://www.youtube.com/watch?v=9nrYaxOqmaQ&feature=relmfu" target="_blank">Mounting -> Closed Guard</a><br>'
-  , '<a href="http://www.youtube.com/watch?v=Ed_BQaWtyck&feature=relmfu" target="_blank">Mounted -> Kimura</a><br>'
-
-
-  , '<!--N-->'
-  , '<hr><b>N</b><br>'
-
-  , '<!--O-->'
-  , '<hr><b>O</b><br>'
-  , '<!--P-->'
-  , '<hr><b>P</b><br>'
-
-  , '<!--Q-->'
-  , '<hr><b>Q</b><br>'
-
-
-  , '<!--R-->'
-  , '<hr><b>R</b><br>'
-
-
-  , '<!--S-->'
-  , '<hr><b>S</b><br>'
-
-  , '<a href="http://www.youtube.com/watch?feature=fvwp&v=CW5VpKC9ocU&NR=1" target="_blank">Shoulder grab -> Hiji Gaeshi</a> '
-
-  , '<!--T-->'
-  , '<hr><b>T</b><br>'
-  , '<a href="http://www.youtube.com/watch?v=mtAtWH8dh7o&feature=relmfu" target="_blank">Top Cross Choke mounting</a><br>'
-  , '<!--U-->'
-  , '<hr><b>U</b><br>'
-
-  , '<!--V-->'
-  , '<hr><b>V</b><br>'
-
-  , '<!--W-->'
-  , '<hr><b>W</b><br>'
-  , '<!--X-->'
-  , '<hr><b>X</b><br>'
-  , '<!--Y-->'
-  , '<hr><b>Y</b><br>'
-
-  , '<!--Z-->'
-  , '<hr><b>Z</b><br>'  
-
-
-
-  ];
-
-
-  var arr = selfdefenseArr;
-  var retval ="";
-  retval += "<hr>";
-  for (var i in arr)  {retval += arr[i];}
-    retval += "<hr>";
-  return retval;
+ return printObj(selfdefenseObj);
 
 };
 //----------------------------------------------------------------------------
@@ -5741,186 +2057,65 @@ function seneca(){
 
 var senecaFunc = function(){
 
-  var senecaArr = [
-  '<mark>Seneca</mark><br><hr>'
-
-  , '<!--A-->'
-  , '<a href="https://acs.senecac.on.ca/pages/index.php" target="_blank"><abbr title="Academic Computing Systems">ACS</abbr> site </a> <br>'
-  , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=1738900" target="_blank">Alam, Tanvir rating</a><br>'
-
-  , '<!--B-->'
-  , '<hr><b>B</b><br>'
-
-
-
-
-  , '<a href="https://www2.senecacollege.ca/buyback/index.jsp" target="_blank">Book Buyback</a><i> Seneca</i><br>'
-  , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=13003" target="_blank">Boyczuk, Bob rating</a><br>'
-  , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=1613500" target="_blank">Buchner, Mark rating</a><br>'
-
-
-  , '<!--C-->'
-  , '<hr><b>C</b><br>'
-
-  , '<a href="https://inside.senecac.on.ca/clientservices" target="_blank">Client Services</a><i></i> <br>'
-  , '<a href="https://scs.senecac.on.ca/~nebojsa.conkic/dbs301_work.html" target="_blank">Conkic, Nebojsa</a><i> DBS301</i> <br>'
-  , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=13042" target="_blank">Conkic, Nebojsa rating</a><br>'
-  , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=17894" target="_blank">Czegel, Barb rating</a><br>'
-
-
-
-  , '<!--D-->'
-  , '<hr><b>D</b><br>'
-  , '<a href="https://scs.senecac.on.ca/~nebojsa.conkic/dbs301_work.html" target="_blank">DBS301</a><i> Conkic, Nebojsa</i> <br>' 
-  , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=50506" target="_blank">Douglas, Brian rating</a><br>'
-
-
-  , '<!--E-->'
-  , '<hr><b>E</b><br>'
-  , '<a href="https://my.senecacollege.ca/webapps/portal/frameset.jsp" target="_blank">EAC397: Blackboard </a><br>'
-  , '<a href="https://senepr.senecacollege.ca/Empath65/HrLogin.aspx" target="_blank">Empath</a> <i></i><br>'
-
-
-  , '<!--F-->'
-  , '<hr><b>F</b><br>'
-  , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=11374" target="_blank">Frey, Don rated</a><br>'
-
-  , '<!--G-->'
-  , '<hr><b>G</b><br>'
-
-  , '<!--H-->'
-  , '<hr><b>H</b><br>'
-  , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=33852" target="_blank">Heidenreich, Michal rating </a><br>'
-
-  , '<!--I-->'
-  , '<hr><b>I</b><br>'
-
-
-
-  , '<a href="https://zenit.senecac.on.ca/~int222_122b36/index.html" target="_blank">INT222: Zenit</a> <br>' 
-  , '<a href="http://zenit.senecac.on.ca/~int322_123a07/" target="_blank">INT322: zenit </a><br>'
-
-  , '<a href="http://igor01.azurewebsites.net/" target="_blank">igor01 </a><i> Azure</i><br>'
-
-
-
-
-  , '<!--J-->'
-  , '<hr><b>J</b><br>'
-
-
-  , '<!--K-->'
-  , '<hr><b>K</b><br>'
-  , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=13040" target="_blank">Kaduri, Harvey`s rating</a><br>'
-  , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=526261" target="_blank">Kawenka, John rating</a><br>'
-  , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=1607604" target="_blank">Korsantia, Olga rating</a><br>'
-
-  , '<!--L-->'
-  , '<hr><b>L</b><br>'
-  , '<a href="http://zenit.senecac.on.ca/wiki/index.php/BAC344_03_2012" target="_blank">Laurin, Cindy`s BAC344</a> <br>'
-  , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=12975" target="_blank">Laurin, Cindy`s rating</a><br>'
-
-
-
-
-
-  , '<!--M-->'
-  , '<hr><b>M</b><br>'
-  , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=1523999" target="_blank">Messinger, Gal rating</a><br>'
-  , '<a href="https://open.senecac.on.ca/cms/" target="_blank" ><b>Moodle</b></a> <br>'
-  , '<a href="https://my.senecacollege.ca/webapps/portal/frameset.jsp" target="_blank"><img alt="My Seneca" height="20" src="img/myseneca.gif"></a> <br>'
-
-
-  , '<!--N-->'
-  , '<hr><b>N</b><br>'
-
-  , '<!--O-->'
-  , '<hr><b>O</b><br>'
-  , '<a href="https://scs.senecac.on.ca/~emile.ohan/int222/index.html" target="_blank">Ohan, Emile`s INT222</a> <br>'
-  , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=13920" target="_blank">Ohan, Emile rated</a><br>'
-
-
-  , '<a href="https://cs.senecac.on.ca/~oop244/pages/practice/oldTests.html" target="_blank">OOP244: Old Tests</a> <br>'
-  , '<a href="https://scs.senecac.on.ca/~oop244/" target="_blank">OOP244: Site </a> <br>'
-  , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=1144727" target="_blank">Oslopov, Petr rating</a><br>'
-
-  , '<!--P-->'
-  , '<hr><b>P</b><br>'
-  , '<a href="https://scs.senecacollege.ca/~brian.perry/" target="_blank">Perry, Brian</a><i> at Seneca</i><br>'
-  , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=32480" target="_blank">Perry, Brian`s rating</a><br>'
-
-
-  , '<!--Q-->'
-  , '<hr><b>Q</b><br>'
-
-
-  , '<!--R-->'
-  , '<hr><b>R</b><br>'
-  , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=165590" target="_blank">Richards, Peter rating</a><br>'
-
-
-  , '<!--S-->'
-  , '<hr><b>S</b><br>'
-  , '<a href="http://www.senecacollege.ca/index.html" target="_blank"><img alt="Seneca College" height="15" src="img/seneca.png"></a><br>'
-
-  , '<a href="https://scs.senecac.on.ca/ " target="_blank">Seneca , <abbr title="School of Computer Studies">SCS</abbr></a> <br>'
-  , '<a href="https://inside.senecac.on.ca/clientservices " target="_blank">Seneca Client Services </a> <br>'
-
-
-
-
-
-  , '<a href="https://inside.senecac.on.ca/transportation/campusbuses.html" target="_blank">Seneca Campus Bus Schedule </a> <br>'
-  , '<a href="https://portal.microsoftonline.com/IWDefault.aspx" target="_blank">Seneca Email</a> <br>'
-  , '<a href="http://seneca.experience.com/experience/login" target="_blank">Seneca Experience</a> <br>'
-
-  , '<a href="https://scs.senecac.on.ca/staff-list" target="_blank">Seneca Staff List</a> <br>'
-  , '<a href="https://net1.senecac.on.ca/login.pl?action=paint;source=10.255.137.89;destination=http%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3Dsenenet;r=s0QwcIi7276" target="_blank"> SeneNET </a> <br>'
-  , '<a href="https://siris.senecac.on.ca/" target="_blank"><span class="blink"><mark><b>SIRIS</b></mark></span></a> <br>'
-  , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=52138" target="_blank">Surendra, Sam rating</a><br>'
-
-
-  , '<a href="https://open.senecac.on.ca/cms/" target="_blank" >SYS366: Moodle </a> <br>'
-  , '<a href="http://zenit.senecac.on.ca/~sys366_122b02/" target="_blank" >SYS366: Zenit</a> <br>' 
-
-
-  , '<!--T-->'
-  , '<hr><b>T</b><br>'
-  , '<a href="http://rome.proximity.on.ca/ts/index.php" target="_blank">Time-sheet</a> <i></i><br>'
-  , '<a href="http://warp.senecac.on.ca/ian.tipson/default.aspx" target="_blank">Tipson, Ian</a><i> at Seneca</i><br>'
-  , '<a href="http://iantipson.com/" target="_blank">Tipson, Ian`s site</a> <br>'
-  , '<a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=12967" target="_blank">Tipson, Ian rating</a><i></i><br>'
-
-
-  , '<!--U-->'
-  , '<hr><b>U</b><br>'
-
-  , '<!--V-->'
-  , '<hr><b>V</b><br>'
-
-  , '<!--W-->'
-  , '<hr><b>W</b><br>'
-  , '<a href="https://www2.senecacollege.ca/wabs/" target="_blank"> <b>WABS</b></span></a><i> Seneca</i><br>'
-  , '<a href="https://cs.senecac.on.ca/~fac/win210/" target="_blank">WIN210 site </a> <br>'
-
-  , '<!--X-->'
-  , '<hr><b>X</b><br>'
-  , '<!--Y-->'
-  , '<hr><b>Y</b><br>'
-
-  , '<!--Z-->'
-  , '<hr><b>Z</b><br>' 
-
-
-
-  ];
-
-  var arr = senecaArr;
-  var retval ="";
-  retval += "<hr>";
-  for (var i in arr)  {retval += arr[i];}
-    retval += "<hr>";
-  return retval;
+  var senecaObj = {
+
+    "ACS site ":"https://acs.senecac.on.ca/pages/index.php"
+    , "Alam, Tanvir rating":"http://www.ratemyprofessors.com/ShowRatings.jsp?tid=1738900"
+    , "Book Buyback":"https://www2.senecacollege.ca/buyback/index.jsp"
+    , "Boyczuk, Bob rating":"http://www.ratemyprofessors.com/ShowRatings.jsp?tid=13003"
+    , "Buchner, Mark rating":"http://www.ratemyprofessors.com/ShowRatings.jsp?tid=1613500"
+    , "CDOT activity" : "http://rome.proximity.on.ca/projects/cdot_activity/wiki"
+    , "Client Services":"https://inside.senecac.on.ca/clientservices"
+    , "Conkic, Nebojsa":"https://scs.senecac.on.ca/~nebojsa.conkic/dbs301_work.html"
+    , "Conkic, Nebojsa rating":"http://www.ratemyprofessors.com/ShowRatings.jsp?tid=13042"
+    , "Czegel, Barb rating":"http://www.ratemyprofessors.com/ShowRatings.jsp?tid=17894"
+    , "DBS301":"https://scs.senecac.on.ca/~nebojsa.conkic/dbs301_work.html"
+    , "Douglas, Brian rating":"http://www.ratemyprofessors.com/ShowRatings.jsp?tid=50506"
+    , "EAC397: Blackboard ":"https://my.senecacollege.ca/webapps/portal/frameset.jsp"
+    , "Empath":"https://senepr.senecacollege.ca/Empath65/HrLogin.aspx"
+    , "Frey, Don rated":"http://www.ratemyprofessors.com/ShowRatings.jsp?tid=11374"
+    , "Heidenreich, Michal rating ":"http://www.ratemyprofessors.com/ShowRatings.jsp?tid=33852"
+    , "INT222: Zenit":"https://zenit.senecac.on.ca/~int222_122b36/index.html"
+    , "INT322: zenit ":"http://zenit.senecac.on.ca/~int322_123a07/"
+    , "igor01 ":"http://igor01.azurewebsites.net/"
+    , "Kaduri, Harvey`s rating":"http://www.ratemyprofessors.com/ShowRatings.jsp?tid=13040"
+    , "Kawenka, John rating":"http://www.ratemyprofessors.com/ShowRatings.jsp?tid=526261"
+    , "Korsantia, Olga rating":"http://www.ratemyprofessors.com/ShowRatings.jsp?tid=1607604"
+    , "Laurin, Cindy`s BAC344":"http://zenit.senecac.on.ca/wiki/index.php/BAC344_03_2012"
+    , "Laurin, Cindy`s rating":"http://www.ratemyprofessors.com/ShowRatings.jsp?tid=12975"
+    , "Messinger, Gal rating":"http://www.ratemyprofessors.com/ShowRatings.jsp?tid=1523999"
+    , "Moodle":"https://open.senecac.on.ca/cms/"
+    , "My Seneca":"https://my.senecacollege.ca/webapps/portal/frameset.jsp"
+    , "Ohan, Emile`s INT222":"https://scs.senecac.on.ca/~emile.ohan/int222/index.html"
+    , "Ohan, Emile rated":"http://www.ratemyprofessors.com/ShowRatings.jsp?tid=13920"
+    , "OOP244: Old Tests":"https://cs.senecac.on.ca/~oop244/pages/practice/oldTests.html"
+    , "OOP244: Site ":"https://scs.senecac.on.ca/~oop244/"
+    , "Oslopov, Petr rating":"http://www.ratemyprofessors.com/ShowRatings.jsp?tid=1144727"
+    , "Perry, Brian":"https://scs.senecacollege.ca/~brian.perry/"
+    , "Perry, Brian`s rating":"http://www.ratemyprofessors.com/ShowRatings.jsp?tid=32480"
+    , "Richards, Peter rating":"http://www.ratemyprofessors.com/ShowRatings.jsp?tid=165590"
+    , "Seneca College":"http://www.senecacollege.ca/index.html"
+    , "SCS":"https://scs.senecac.on.ca/"
+    , "Seneca Client Services":"https://inside.senecac.on.ca/clientservices"
+    , "Seneca Campus Bus Schedule ":"https://inside.senecac.on.ca/transportation/campusbuses.html"
+    , "Seneca Email":"https://portal.microsoftonline.com/IWDefault.aspx"
+    , "Seneca Experience":"http://seneca.experience.com/experience/login"
+    , "Seneca Staff List":"https://scs.senecac.on.ca/staff-list"
+    , " SeneNET ":"https://net1.senecac.on.ca/login.pl?action=paint;source=10.255.137.89;destination=http%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3Dsenenet;r=s0QwcIi7276"
+    , "SIRIS":"https://siris.senecac.on.ca/"
+    , "Surendra, Sam rating":"http://www.ratemyprofessors.com/ShowRatings.jsp?tid=52138"
+    , "SYS366: Moodle ":"https://open.senecac.on.ca/cms/"
+    , "SYS366: Zenit":"http://zenit.senecac.on.ca/~sys366_122b02/"
+    , "Time-sheet":"http://rome.proximity.on.ca/ts/index.php"
+    , "Tipson, Ian":"http://warp.senecac.on.ca/ian.tipson/default.aspx"
+    , "Tipson, Ian`s site":"http://iantipson.com/"
+    , "Tipson, Ian rating":"http://www.ratemyprofessors.com/ShowRatings.jsp?tid=12967"
+    , "WABS":"https://www2.senecacollege.ca/wabs/"
+    , "WIN210 site ":"https://cs.senecac.on.ca/~fac/win210/"
+
+  };
+
+  return printObj(senecaObj);
 
 };
 //----------------------------------------------------------------------------
@@ -5931,137 +2126,64 @@ function tolkiniana(){
 };
 var tolkinianaFunc = function(){
 
-  var tolkinianaArr = [
-  '<mark>Tolkieniana</mark><br>'
+  var tolkienianaObj = {
 
-  , '<hr><b>A</b><br>'
-  , '<!--A-->'
-  , '<a href="http://www.youtube.com/watch?v=Q6hJqI5BEW8" target="_blank">Aniron</a> <i> Enya</i><br>'
-  , '<a href="http://www.glyphweb.com/arda/default.asp"  target="_blank">Arda </a> <br>'
-
-  , '<!--B-->'
-  , '<hr><b>B</b><br>'
-  , '<a href="https://www.youtube.com/watch?v=suNT5m4_rYI" target="_blank">Battle for Middle Earth</a><i></i><br>'
-
-
-  , '<a href="http://www.youtube.com/watch?v=qINwCRM8acM" target="_blank">Born Of Hope</a> <br>' 
-
-  , '<!--C-->'
-  , '<hr><b>C</b><br>'
-  , '<a href="https://www.youtube.com/watch?v=HtoQWb0jMco" target="_blank">Children of Hurin</a><i> audio-book</i><br>' 
-
-
-
-
-  , '<!--D-->'
-  , '<hr><b>D</b><br>'
-
-
-  , '<!--E-->'
-  , '<hr><b>E</b><br>'
-  , '<a href="http://www.starchamber.com/paracelsus/elvish/elvish-in-ten-minutes.html" target="_blank">Elvish ABC </a><i></i><br>'
+    "Aniron":"http://www.youtube.com/watch?v=Q6hJqI5BEW8"
+    , "Arda ":"http://www.glyphweb.com/arda/default.asp"
+    , "Battle for Middle Earth":"https://www.youtube.com/watch?v=suNT5m4_rYI"
+    , "Born Of Hope":"http://www.youtube.com/watch?v=qINwCRM8acM"
+    , "Children of Hurin":"https://www.youtube.com/watch?v=HtoQWb0jMco"
+    , "Elvish ABC ":"http://www.starchamber.com/paracelsus/elvish/elvish-in-ten-minutes.html"
+    , "Facts behind Fiction":"https://www.youtube.com/watch?v=krqmf5oBDXk"
+    , "Hisweloke ":"http://www.jrrvf.com/hisweloke/sindar/online/sindarin.html"
+    , "Hobbit, The":"https://www.youtube.com/watch?v=A7jYQFTV7EM"
+    , "Hunt For Gollum, The":"http://www.youtube.com/watch?annotation_id=annotation_486943&feature=iv&src_vid=9H09xnhlCQU&v=VaakJk9vR7U"
+    , "Lewis & Tolkien":"https://www.youtube.com/watch?v=iNhCMReS_M4"
+    , "LOTR, The":"https://www.youtube.com/watch?v=mfFQuhWaA_k"
+    , "Master of the M. Earth":"https://www.youtube.com/watch?v=orhnSy4wkqE&list=PL5760D4D3699A3871"
+    , "Middle Earth":"https://www.youtube.com/watch?v=Ew4bsGF0G8U"
+    , "Middle Earth":"https://www.youtube.com/watch?v=UlT1mRYlXZg"
+    , "Monaghan Wood Interview":"https://www.youtube.com/watch?v=27_OmRGPfZw"
+    , "Myths":"https://www.youtube.com/watch?v=NzBT39gx-TE"
+    , "Queen Gandalf ":"https://www.youtube.com/watch?v=G3gR0m2mCGs"
+    , "Ranger ":"http://www.youtube.com/watch?v=zf3Kit2V0CI"
+    , "Silmarillion":"https://www.youtube.com/watch?v=0J1JSLzja7E"
+    , "Silmarillion":"https://www.youtube.com/watch?v=HJLwB3zNY3Q"
+    , "Tolkien Gateway":"http://tolkiengateway.net/wiki/Main_Page"
+    , "Wood Laughs":"https://www.youtube.com/watch?v=HYpjI8ht-K4"
+  };
 
 
-
-  , '<!--F-->'
-  , '<hr><b>F</b><br>'
-  , '<a href="https://www.youtube.com/watch?v=krqmf5oBDXk" target="_blank">Facts behind Fiction</a><i> docum.</i><br>'
-
-  , '<!--G-->'
-  , '<hr><b>G</b><br>'
-
-  , '<!--H-->'
-  , '<hr><b>H</b><br>'
-  , '<a href="http://www.jrrvf.com/hisweloke/sindar/online/sindarin.html" target="_blank">Hisweloke </a><i>Sindarin dictionary</i><br>'
-  , '<a href="https://www.youtube.com/watch?v=A7jYQFTV7EM" target="_blank">Hobbit, The</a><i> audio-book</i><br>'
-  , '<a href="http://www.youtube.com/watch?annotation_id=annotation_486943&feature=iv&src_vid=9H09xnhlCQU&v=VaakJk9vR7U" target="_blank">Hunt For Gollum, The</a><br>'
-
-  , '<!--I-->'
-  , '<hr><b>I</b><br>'
-
-  , '<!--J-->'
-  , '<hr><b>J</b><br>'
-
-  , '<!--K-->'
-  , '<hr><b>K</b><br>'
-
-  , '<!--L-->'
-  , '<hr><b>L</b><br>'
-
-  , '<a href="https://www.youtube.com/watch?v=iNhCMReS_M4" target="_blank">Lewis & Tolkien</a><br>'
-  , '<a href="https://www.youtube.com/watch?v=mfFQuhWaA_k" target="_blank">LOTR, The</a><i> simphony</i><br>'
-
-
-
-  , '<!--M-->'
-  , '<hr><b>M</b><br>'
-  , '<a href="https://www.youtube.com/watch?v=orhnSy4wkqE&list=PL5760D4D3699A3871" target="_blank">Master of the M. Earth</a><i> Doc`ry</i> <br>'
-  , '<a href="https://www.youtube.com/watch?v=Ew4bsGF0G8U" target="_blank">Middle Earth</a><i> Legacy</i> <br>'
-  , '<a href="https://www.youtube.com/watch?v=UlT1mRYlXZg" target="_blank">Middle Earth</a><i> Origins</i> <br>'
-  , '<a href="https://www.youtube.com/watch?v=27_OmRGPfZw" target="_blank">Monaghan Wood Interview</a><br>'
-  , '<a href="https://www.youtube.com/watch?v=NzBT39gx-TE" target="_blank">Myths</a><i> Lewis & Tolkien</i> <br>'
-
-
-  , '<!--N-->'
-  , '<hr><b>N</b><br>'
-
-  , '<!--O-->'
-  , '<hr><b>O</b><br>'
-  , '<!--P-->'
-  , '<hr><b>P</b><br>'
-
-
-  , '<!--Q-->'
-  , '<hr><b>Q</b><br>'
-
-  , '<a href="https://www.youtube.com/watch?v=G3gR0m2mCGs" target="_blank">Queen Gandalf </a> <br>'
-
-  , '<!--R-->'
-  , '<hr><b>R</b><br>'
-  , '<a href="http://www.youtube.com/watch?v=zf3Kit2V0CI" target="_blank">Ranger </a> <br>'
-
-  , '<!--S-->'
-  , '<hr><b>S</b><br>'
-
-  , '<a href="jezreel_porthope@yahoo.ca" target="_blank">Safety Sam</a><br>'
-  , '<a href="https://www.youtube.com/watch?v=0J1JSLzja7E" target="_blank">Silmarillion</a> <i>C.Tolkien</i><br>'
-  , '<a href="https://www.youtube.com/watch?v=HJLwB3zNY3Q" target="_blank">Silmarillion</a> <i>audio-book</i><br>'
-
-
-  , '<!--T-->'
-  , '<hr><b>T</b><br>'
-  , '<a href="http://tolkiengateway.net/wiki/Main_Page" target="_blank">Tolkien Gateway</a><br>'
-
-
-  , '<!--U-->'
-  , '<hr><b>U</b><br>'
-
-  , '<!--V-->'
-  , '<hr><b>V</b><br>'
-
-  , '<!--W-->'
-  , '<hr><b>W</b><br>'
-  , '<a href="https://www.youtube.com/watch?v=HYpjI8ht-K4" target="_blank">Wood Laughs</a><br>'
-
-  , '<!--X-->'
-  , '<hr><b>X</b><br>'
-  , '<!--Y-->'
-  , '<hr><b>Y</b><br>'
-
-  , '<!--Z-->'
-  , '<hr><b>Z</b><br>'
-
-  , '<a href="file:///D:/Personal/My Journal X/html/mj_index.html" target="_blank">777</a><br>'
-  ];
-  var arr = tolkinianaArr;
-  var retval ="";
-  retval += "<hr>";
-  for (var i in arr)  {retval += arr[i];}
-    retval += "<hr>";
-  return retval;
+  return printObj(tolkienianaObj);
 
 };
 //----------------------------------------------------------------------------
+
+
+
+function transifex(){
+  document.getElementById("demo").innerHTML = transifexFunc();
+};
+
+var transifexFunc = function(){
+  var transifexObj = {
+
+
+
+    "Define an i18n bundle":"http://requirejs.org/docs/api.html#i18n"
+    , "Managing your project":"http://help.transifex.com/intro/projects.html#managing-your-project"
+    , "Projects":"http://help.transifex.com/intro/projects.html#projects"
+    , "Translations":"http://help.transifex.com/features/api/api-v2.html#translations"
+
+  };
+  return printObj(transifexObj);
+}; // end of videoFunc()
+
+//---------------------------------------------------------------------------
+
+
+
+
 
 
 
@@ -6219,6 +2341,7 @@ var unsortedFunc = function(){
     , "Sheep Laughs, The":"http://www.sheeplaughs.com/"
     , "Simplish":"http://www.simplish.org/"
     , "Slashdot":"http://slashdot.org/"
+    , "Slid.es" : "https://slid.es/igoryentaltsev/new"
     , "Snopes":"http://www.snopes.com/"
     , "Snorgtees":"http://www.snorgtees.com/"
     , "Soul Surfer":"http://soulsurfer.com/index.html"
@@ -6287,181 +2410,128 @@ function video(){
 
 var videoFunc = function(){
 
-  var videoArr = [
-
-  '<mark>Video</mark><br>'
-
-  , '<hr ><b>A</b><br>'
-  , '<!--A-->'
-  , '<a href="https://www.youtube.com/watch?v=vZ3gxKCgtEU">Aloisius<a/><br>'
-
-
-
-
-  , '<!--B-->'
-  , '<hr ><b>B</b><br>'
-  , '<a href="https://www.youtube.com/watch?v=LC1d_2lschs" target="_blank">Bubentsov before firing squad </a> <br>'
-  , '<a href="https://www.youtube.com/watch?v=XVsIeZW3OFU" target="_blank">Bubentsov`s story </a> <br>'
-
-
-
-
-
-  , '<!--C-->'
-  , '<hr ><b>C</b><br>'
-  , '<a href="https://www.youtube.com/watch?v=WSpiVm6BkeA" target="_blank">Castle & Beckett</a><br>'
-
-
-
-
-  , '<!--D-->'
-  , '<hr ><b>D</b><br>'
-
-  , '<a href="xxx" target="_blank">xxx</a><i> xxx</i><br>'
-
-
-
-
-
-
-
-
-
-  , '<!--E-->'
-  , '<hr ><b>E</b><br>'
-  , '<a href="http://www.youtube.com/watch?v=3eiIMZQWkdQ" target="_blank">Eltsin & Clinton</a><i> 1995-10-23 (cons. trns)</i><br>'
-
-  , '<!--F-->'
-  , '<hr ><b>F</b><br>'
-  , '<a href="http://vimeo.com/58385453" target="_blank">Moon-rise</a> <i></i><br>'
-
-
-
-  , '<!--G-->'
-  , '<hr ><b>G</b><br>'
-  , '<a href="http://www.youtube.com/watch?v=pnIbwWEH4UA" target="_blank">Gun Control</a><i> Puchkov</i><br>'
-
-  , '<!--H-->'
-  , '<hr ><b>H</b><br>'
-
-
-
-
-  , '<!--I-->'
-  , '<hr ><b>I</b><br>'
-  , '<a href="https://www.youtube.com/watch?v=-o9-r26b--E" target="_blank">In the blue sea...</a><i> 1984</i> <br>'
-  , '<a href="http://www.youtube.com/watch?v=au9Aqd_-2hc" target="_blank">Inside Saudi Kingdom</a><i> BBC film</i> <br>'
-  , '<a href="http://www.youtube.com/watch?v=ua0anM-afY0" target="_blank">Is this your church</a><i> </i> <br>'
-  , '<a href="https://www.youtube.com/watch?v=r8jP8UJFWso" target="_blank">It`s Possible!</a><i> Inspirational</i> <br>'
-
-
-
-
-
-
-  , '<!--J-->'
-  , '<hr ><b>J</b><br>'
-
-
-
-
-
-
-  , '<!--K-->'
-  , '<hr ><b>K</b><br>'
-
-  , '<!--L-->'
-  , '<hr ><b>L</b><br>'
-  , '<a href="http://www.youtube.com/watch?v=PwxwqVDnUmc" target="_blank">Last Year`s Snow was falling</a><i> 1983</i><br>'
-
-
-  , '<!--M-->'
-  , '<hr ><b>M</b><br>'
-
-  , '<a href="https://www.youtube.com/watch?v=Wgprb0KcYmw" target="_blank">猛龍過江</a><i> Maang Lung Gwo Gong </i> <br>'
-  , '<a href="https://www.youtube.com/watch?v=Hyw8973Ql30" target="_blank">Magneto`s Revenge </a><i>X-Men First Class</i> <br>'
-
-  , '<a href="https://www.youtube.com/watch?v=x3giQCbs7SA" target="_blank">Minkova Milena Latine </a><i></i> <br>'
-  , '<a href="https://www.youtube.com/watch?v=eOfI88NKRzY&feature=endscreen&NR=1" target="_blank">Monty Python </a><i></i> <br>'
-
-
-
-
-  , '<!--N-->'
-  , '<hr ><b>N</b><br>'
-
-  , '<!--O-->'
-  , '<hr ><b>O</b><br>'
-  , '<a href="http://www.youtube.com/watch?v=7Wl-OZ3breE" target="_blank">Our Father</a><i> Anglo-Saxon</i><br>'
-
-
-  , '<!--P-->'
-  , '<hr ><b>P</b><br>'
-  , '<a href="http://www.youtube.com/watch?v=GpEx7pdp2-Q" target="_blank">Prometheus Explained</a> <i></i><br>'
-
-
-
-  , '<!--Q-->'
-  , '<hr ><b>Q</b><br>'
-
-
-  , '<!--R-->'
-  , '<hr ><b>R</b><br>'
-  , '<a href="https://www.youtube.com/watch?v=yM_XkP6HMU4&list=PL1CE2A366DFCCCFB5" target="_blank">Russian guy speaking Latin<a/><br>'
-
-
-
-
-
-
-  , '<!--S-->'
-  , '<hr ><b>S</b><br>'
-  , '<a href="http://www.youtube.com/watch?v=1r8zgU7wE8w" target="_blank">Saving Pr. Ryan</a> <i>Ending scene</i><br>'  
-
-  , '<a href="https://www.youtube.com/watch?v=5-ZpP4j09s0" target="_blank">Seven Seconds to Sell Yourself</a><br>'  
-
-
-
-  , '<!--T-->'
-  , '<hr ><b>T</b><br>'
-
-  , '<a href="https://www.youtube.com/watch?v=mi_6LIPEP7M" target="_blank">Terentius et Milena </a> <br>'
-  , '<a href="https://www.youtube.com/watch?v=jdDlmb-lgXk" target="_blank">Three Killer Questions at Interview </a> <br>'
-
-
-
-  , '<!--U-->'
-  , '<hr ><b>U</b><br>'
-
-  , '<!--V-->'
-  , '<hr ><b>V</b><br>'
-
-  , '<!--W-->'
-  , '<hr ><b>W</b><br>'
-
-  , '<!--X-->'
-  , '<hr ><b>X</b><br>'
-
-  , '<!--Y-->'
-  , '<hr ><b>Y</b><br>'
-
-  , '<!--Z-->'
-  , '<hr ><b>Z</b><br>'  
-  ];
-
-  var arr = videoArr;
-  var retval ="";
-  retval += "<hr>";
-
-  for (var i in arr)  {
-    retval += arr[i];
-  }
-  retval += "<hr>";
-
-  return retval;
+  var videoObj = {
+
+    "Aloisius":"https://www.youtube.com/watch?v=vZ3gxKCgtEU"
+    , "Bubentsov before firing squad ":"https://www.youtube.com/watch?v=LC1d_2lschs"
+    , "Bubentsov`s story ":"https://www.youtube.com/watch?v=XVsIeZW3OFU"
+    , "Castle & Beckett":"https://www.youtube.com/watch?v=WSpiVm6BkeA"
+    , "Eltsin & Clinton":"http://www.youtube.com/watch?v=3eiIMZQWkdQ"
+    , "Moon-rise":"http://vimeo.com/58385453"
+    , "Gun Control":"http://www.youtube.com/watch?v=pnIbwWEH4UA"
+    , "In the blue sea...":"https://www.youtube.com/watch?v=-o9-r26b--E"
+    , "Inside Saudi Kingdom":"http://www.youtube.com/watch?v=au9Aqd_-2hc"
+    , "Is this your church":"http://www.youtube.com/watch?v=ua0anM-afY0"
+    , "It`s Possible!":"https://www.youtube.com/watch?v=r8jP8UJFWso"
+    , "Last Year`s Snow was falling":"http://www.youtube.com/watch?v=PwxwqVDnUmc"
+    , "猛龍過江":"https://www.youtube.com/watch?v=Wgprb0KcYmw"
+    , "Magneto`s Revenge ":"https://www.youtube.com/watch?v=Hyw8973Ql30"
+    , "Minkova Milena Latine ":"https://www.youtube.com/watch?v=x3giQCbs7SA"
+    , "Monty Python ":"https://www.youtube.com/watch?v=eOfI88NKRzY&feature=endscreen&NR=1"
+    , "Our Father":"http://www.youtube.com/watch?v=7Wl-OZ3breE"
+    , "Prometheus Explained":"http://www.youtube.com/watch?v=GpEx7pdp2-Q"
+    , "Russian guy speaking Latin":"https://www.youtube.com/watch?v=yM_XkP6HMU4&list=PL1CE2A366DFCCCFB5"
+    , "Saving Pr. Ryan":"http://www.youtube.com/watch?v=1r8zgU7wE8w"
+    , "Seven Seconds to Sell Yourself":"https://www.youtube.com/watch?v=5-ZpP4j09s0"
+    , "Terentius et Milena ":"https://www.youtube.com/watch?v=mi_6LIPEP7M"
+    , "Three Killer Questions at Interview ":"https://www.youtube.com/watch?v=jdDlmb-lgXk"
+  };
+
+  
+  
+
+  return printObj(videoObj);
 
 }; // end of videoFunc()
 //----------------------------------------------------------------------------
+function webdev(){
+  document.getElementById("demo").innerHTML = webdevFunc();
+};
+
+var webdevFunc = function(){
+
+  var webdevObj = {
+
+   "action=":"http://www.w3schools.com/tags/att_form_action.asp"
+   , "addColorStop()":"http://www.w3schools.com/tags/canvas_addcolorstop.asp"
+   , "alert()":"http://www.w3schools.com/jsref/met_win_alert.asp"
+   , "arc()":"http://www.w3schools.com/tags/canvas_arc.asp"
+   , "back()":"http://www.w3schools.com/jsref/met_his_back.asp"
+   , "beginPath()":"http://www.w3schools.com/tags/canvas_beginpath.asp"
+   , "bgColor=":"http://www.w3schools.com/tags/att_body_bgcolor.asp"
+   , "canvas":"http://www.w3schools.com/html/html5_canvas.asp"
+   , "ceil()":"http://www.w3schools.com/jsref/jsref_ceil.asp"
+   , "charset=":"http://www.w3schools.com/jsref/prop_anchor_charset.asp"
+   , "codeexamples (ether)" : "https://etherpad.mozilla.org/codeexamples"
+   , "confirm()":"http://www.w3schools.com/jsref/met_win_confirm.asp"
+   , "createLinearGradient()":"http://www.w3schools.com/tags/canvas_createlineargradient.asp"
+   , "createRadialGradient()":"http://www.w3schools.com/tags/canvas_createradialgradient.asp"
+   , "Date":"http://www.w3schools.com/js/js_obj_date.asp"
+   , "display a clock":"http://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock"
+   , "drawImage()":"http://www.w3schools.com/tags/canvas_drawimage.asp"
+   , "elements":"http://www.w3schools.com/jsref/coll_form_elements.asp"
+   , "eval()":"http://www.w3schools.com/jsref/jsref_eval.asp"
+   , "fieldset":"http://www.w3schools.com/tags/tag_fieldset.asp"
+   , "fillRect()":"http://www.w3schools.com/tags/canvas_fillrect.asp"
+   , "fillStyle":"http://www.w3schools.com/tags/canvas_fillstyle.asp"
+   , "fillText()":"http://www.w3schools.com/tags/canvas_filltext.asp"
+   , "floor()":"http://www.w3schools.com/jsref/jsref_floor.asp"
+   , "font=":"http://www.w3schools.com/tags/canvas_font.asp"
+   , "Font Awesome" : "http://fortawesome.github.io/Font-Awesome/"
+   , "forms":"http://www.w3schools.com/jsref/coll_doc_forms.asp"
+   , "forward()":"http://www.w3schools.com/jsref/met_his_forward.asp"
+   , "function":"http://www.w3schools.com/js/js_functions.asp"
+   , "getElementById()":"http://www.w3schools.com/jsref/met_doc_getelementbyid.asp"
+   , "getDay()":"http://www.w3schools.com/jsref/jsref_getday.asp"
+   , "getFullYear()":"http://www.w3schools.com/jsref/jsref_getfullyear.asp"
+   , "getTime()":"http://www.w3schools.com/jsref/jsref_gettime.asp"
+   , "go()":"http://www.w3schools.com/jsref/met_his_go.asp"
+   , "history":"http://www.w3schools.com/jsref/obj_history.asp"
+   , "host":"http://www.w3schools.com/jsref/prop_loc_host.asp"
+   , "hostname":"http://www.w3schools.com/jsref/prop_loc_hostname.asp"
+   , "innerHTML=":"http://www.w3schools.com/jsref/prop_html_innerhtml.asp"
+   , "lastModified":"http://www.w3schools.com/jsref/prop_doc_lastmodified.asp"
+   , "length":"http://www.w3schools.com/jsref/jsref_length_string.asp"
+   , "lineTo()":"http://www.w3schools.com/tags/canvas_lineto.asp"
+   , "links":"http://www.w3schools.com/jsref/coll_doc_links.asp"
+   , "location":"http://www.w3schools.com/jsref/obj_location.asp"
+   , "max()":"http://www.w3schools.com/jsref/jsref_max.asp"
+   , "min()":"http://www.w3schools.com/jsref/jsref_min.asp"
+   , "MongoDB" : "http://www.mongodb.org/"
+   , "moveTo()":"http://www.w3schools.com/tags/canvas_moveto.asp"
+   , "meta":"http://www.w3schools.com/tags/tag_meta.asp"
+   , "name":"http://www.w3schools.com/jsref/prop_meta_name.asp"
+   , "onclick=":"http://www.w3schools.com/jsref/event_onclick.asp"
+   , "onsubmit=":"http://www.w3schools.com/tags/ev_onsubmit.asp"
+   , "port":"http://www.w3schools.com/jsref/prop_loc_port.asp"
+   , "pow()":"http://www.w3schools.com/jsref/jsref_pow.asp"
+   , "prompt()":"http://www.w3schools.com/jsref/met_win_prompt.asp"
+   , "protocol":"http://www.w3schools.com/jsref/prop_loc_protocol.asp"
+   , "random()":"http://www.w3schools.com/jsref/jsref_random.asp"
+   , "replace()":"http://www.w3schools.com/jsref/jsref_replace.asp"
+   , "round()":"http://www.w3schools.com/jsref/jsref_round.asp"
+   , "setFullYear()":"http://www.w3schools.com/jsref/jsref_setfullyear.asp"
+   , "split()":"http://www.w3schools.com/jsref/jsref_split.asp"
+   , "sqrt()":"http://www.w3schools.com/jsref/jsref_sqrt.asp"
+   , "src":"http://www.w3schools.com/jsref/prop_frame_src.asp"
+   , "stroke()":"http://www.w3schools.com/tags/canvas_stroke.asp"
+   , "strokeText()":"http://www.w3schools.com/tags/canvas_stroketext.asp"
+   , "switch()":"http://www.w3schools.com/js/js_switch.asp"
+   , "toLocaleString()":"http://www.w3schools.com/jsref/jsref_tolocalestring.asp"
+   , "toUTCString()":"http://www.w3schools.com/jsref/jsref_toutcstring.asp"
+   , "Web_Console":"https://developer.mozilla.org/en-US/docs/Tools/Web_Console"
+   , "while loop":"http://www.w3schools.com/js/js_loop_while.asp"
+   , "write()":"http://www.w3schools.com/jsref/met_doc_write.asp"
+   , "writeln()":"http://www.w3schools.com/jsref/met_doc_writeln.asp"
+ };
+
+
+
+
+ return printObj(webdevObj);
+
+}; // end of videoFunc()
+
 /*
 var webdev = [
 '<a href="https://developer.mozilla.org/en-US/docs/Tools/Web_Console" target="_blank">Web_Console</a> <i></i><br>'
