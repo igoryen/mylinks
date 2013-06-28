@@ -229,6 +229,7 @@ var git2 = function (){
     , "Create a repo":"https://help.github.com/articles/create-a-repo"
     , "Culinary fruit, list":"http://en.wikipedia.org/wiki/List_of_culinary_fruits"
     , "EJS":"https://github.com/visionmedia/ejs"
+    , "foreman" : "https://github.com/ddollar/foreman"
     , "Friendlycode":"https://github.com/mozilla/friendlycode"
     , "Transifex":"https://www.transifex.com/projects/p/friendlycode/"
     , "Friendlycode, trivial embedding":"http://localhost:8005/examples/bare.html"
@@ -259,6 +260,7 @@ var git2 = function (){
     , "My links":"https://github.com/igoryen/mylinks"
     , "NVM":"https://github.com/creationix/nvm"
     , "node-webmaker-loginapi":"https://github.com/mozilla/node-webmaker-loginapi"
+    , "nodemon" : "https://github.com/remy/nodemon"
     , "Pay attention to Node.js":"http://readwrite.com/2010/10/20/why-developers-should-pay-atte"
     , "Popcorn_maker":"https://github.com/mozilla/popcorn_maker"
     , "popcorn.webmaker.org":"https://github.com/mozilla/popcorn.webmaker.org"
@@ -270,6 +272,8 @@ var git2 = function (){
     , "thimble.webmaker.org (moz)":"https://github.com/mozilla/thimble.webmaker.org"
     , "Toolness":"https://github.com/toolness"
     , "Webmaker.org":"https://github.com/mozilla/webmaker.org"
+    , "zsh shell" : "https://github.com/robbyrussell/oh-my-zsh"
+    , "zsh syntax highlighting" : "https://github.com/zsh-users/zsh-syntax-highlighting"
     , "bug870429 (locales)":"https://bugzilla.mozilla.org/show_bug.cgi?id=870429"
     , "bug869643 (MONGO)":"https://bugzilla.mozilla.org/show_bug.cgi?id=869643"
     , "bug873064 (prune)":"https://bugzilla.mozilla.org/show_bug.cgi?id=873064"
@@ -659,13 +663,6 @@ var gregorianaFunc = function(){
   
     ////////////////////////////////////
 
-
-
-
-
-
-
-
 //----------------------------------------------------------------------------
 
 
@@ -911,6 +908,7 @@ var itt2 = function (){
    , "CVS":"http://en.wikipedia.org/wiki/Concurrent_Versions_System"
    , "Database":"http://en.wikipedia.org/wiki/Database_management_system"
    , "Database schema":"http://en.wikipedia.org/wiki/Database_schema"
+   , "Delimiter" : "http://en.wikipedia.org/wiki/Delimiter"
    , "Delta differencing":"http://en.wikipedia.org/wiki/Data_differencing"
    , "Delta encoding":"http://en.wikipedia.org/wiki/Delta_encoding"
    , "Design Engineer":"http://en.wikipedia.org/wiki/Design_engineer"
@@ -1181,6 +1179,7 @@ var jsFunc = function(){
     , "JS hint":"http://www.jshint.com/"
     , "JS the Good Parts":"http://eleventyone.done.hu/OReilly.JavaScript.The.Good.Parts.May.2008.pdf"
     , "Nunjucks" : "http://nunjucks.jlongster.com/"
+    , "Nunjucks (@ npmjs)":"https://npmjs.org/package/nunjucks"
     , "onclick=":"http://www.w3schools.com/jsref/event_onclick.asp"
     , "setFullYear()":"http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_setfullyear2"
     , "setInterval()":"http://www.w3schools.com/js/js_timing.asp"
@@ -1249,6 +1248,10 @@ var mozillaFunc = function(){
   var mozillaObj = {
     "Webmaker Meetings 13/06/25-27" : "https://etherpad.mozilla.org/webmaker-post15th-meetings"
   ,  "Wiki Mizilla": "https://wiki.mozilla.org/Main_Page"
+  , "webmaker liking makes" : "https://etherpad.mozilla.org/webmaker-liking-makes"
+  , "webmaker postmortem  group 1" : "https://etherpad.mozilla.org/webmakerpostmortemgroup1"
+  , "webmaker postmortem  group 2" : "https://etherpad.mozilla.org/webmakerpostmortemgroup2"
+  , "webmaker postmortem  group 3" : "https://etherpad.mozilla.org/webmakerpostmortemgroup3"
   };
   return printObj(mozillaObj);
 };
@@ -1476,6 +1479,7 @@ var node = function (){
    , "commander":"https://npmjs.org/package/commander"
    , "config":"https://npmjs.org/doc/config.html"
    , "What is it good for?":"http://readwrite.com/2011/01/25/wait-whats-nodejs-good-for-aga"
+   , "EJS [puke]" : "http://embeddedjs.com/"
    , "Event-driven programming":"http://code.danyork.com/2011/01/25/node-js-doctors-offices-and-fast-food-restaurants-understanding-event-driven-programming/"
    , "Everyone`s talking about it":"http://mashable.com/2011/03/10/node-js/"
    , "exports (github)" :"https://github.com/vesln/exports"
@@ -1598,6 +1602,7 @@ var p_wFunc = function(){
     , "Maranatha Double Praise 08":"https://www.youtube.com/watch?v=Bl0R9AT0lPk"
     , "Maranatha Double Praise 11":"https://www.youtube.com/watch?NR=1&feature=endscreen&v=uyrxmG1Ctio"
     , "Maranathe Double Praise 14":"https://www.youtube.com/watch?v=Pce_M-XT8Jc"
+    , "To the Ends of the Earth" : "https://www.youtube.com/watch?v=UvD4kYus0rM" 
   };
 
   
@@ -1871,7 +1876,6 @@ var unsortedFunc = function(){
     , "GIF bin":"http://www.gifbin.com/"
     , "Gmail ":"http://mail.google.com/mail/u/0/?shva=1#inbox"
     , "Gmail Inbox ":"https://accounts.google.com/ServiceLogin?service=mail&passive=true&rm=false&continue=http://mail.google.com/mail/&scc=1<mpl=default<mplcache=2"
-    , "Google Docs ":"https://docs.google.com/?tab=mo&authuser=0#home"
     , "Google Translate":"http://translate.google.com/"
     , "Gorodok":"http://gorodok.tv/"
     , "Got Questions? ":"http://gotquestions.org/"
@@ -1893,6 +1897,7 @@ var unsortedFunc = function(){
     , "IMDb ":"http://www.imdb.com/"
     , "Indigo Books & Music":"http://www.chapters.indigo.ca/home/"
     , "Jesus Is Lord ":"http://www.jesus-is-lord.com/"
+    , "Jim Carrey" : "http://www.jimcarrey.com/"
     , "Job Interview Tips ":"https://www.youtube.com/watch?v=wllwJM6EyOI"
     , "Jokes from Russia":"http://www.anekdot.ru/"
     , "Kinopoisk":"http://www.kinopoisk.ru/"
@@ -1912,9 +1917,11 @@ var unsortedFunc = function(){
     , "Mozilla Press Center":"https://blog.mozilla.org/press/"
     , "Multitran":"http://www.multitran.ru/c/m.exe?a=1"
     , "MyAccount":"http://www.cra-arc.gc.ca/myaccount/"
+    , "My Drive @ Google":"https://docs.google.com/?tab=mo&authuser=0#home"
     , "mx-mx":"http://mx-mx.com/lab/cizzle/#/curiosity"
     , "netflix":"http://movies.netflix.com/WiHome"
     , "Next Bus":"http://www.nextbus.com/predictor/stopSelector.jsp?a=ttc"
+    , "Nexus 4 (Google)" : "http://www.google.ca/nexus/4/"
     , "Nurgitz, Richard":"http://brimleydental.com/dr_n.html"
     , "Odnoklassninki":"http://www.odnoklassniki.ru"
     , "Omniglot":"http://www.omniglot.com/writing/index.htm"
@@ -2148,10 +2155,3 @@ var webdev = [
 
 
 
-
-
-
-var p_w = [
-'<a href="https://www.youtube.com/watch?v=UvD4kYus0rM" target="_blank">To the ends of the earth</a> <i></i><br>'
-
-];
