@@ -1048,6 +1048,7 @@ var itt2 = function (){
     , "POSIX":"http://en.wikipedia.org/wiki/POSIX"
     , "Presentation semantics":"http://en.wikipedia.org/wiki/Presentation_semantics"
     , "Processor core":"http://en.wikipedia.org/wiki/Processor_core"
+    , "procfs" : "http://en.wikipedia.org/wiki/Procfs"
     , "Programming paradigm":"http://en.wikipedia.org/wiki/Programming_paradigm"
     , "Property list":"http://en.wikipedia.org/wiki/Property_list"
     , "Proxy server":"http://en.wikipedia.org/wiki/Proxy_server"
