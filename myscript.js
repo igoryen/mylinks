@@ -1494,6 +1494,7 @@ var mus2 = function (){
    , "Voyage voyage ":"http://www.youtube.com/watch?v=6PDmZnG8KsM"
    , "War ":"http://www.youtube.com/watch?v=CUPH5il-Cf0"
    , "Watermark":"https://www.youtube.com/watch?v=LQ00OPea4GI"
+   , "We didn't start the fire":"http://www.youtube.com/watch?v=eFTLKWw542g"
    , "We`ll be together":"http://www.youtube.com/watch?v=bCCzPC_TTvI"
    , "What a wonderful world (IZ)": "http://www.youtube.com/watch?v=ggU2il6EaEU"
    , "What is love ":"https://www.youtube.com/watch?v=VVmbhYKDKfU"
