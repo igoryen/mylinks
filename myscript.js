@@ -1639,6 +1639,7 @@ var p_tFunc = function(){
     , "God`s healing Power" : "http://www.youtube.com/watch?v=553lN-JaHAI"
     , "God`s Medicine":"http://www.youtube.com/watch?v=d2Wp5_bL338"
     , "Hagin (playlist)":"http://www.youtube.com/playlist?list=PL4C095CACCE805213"
+    , "Why speak in tongues" : "http://www.youtube.com/watch?v=ysI9wMt09OU"
     , "Words & Confessions" : "http://www.youtube.com/watch?v=bSkSreKP_3g"
 
   };
