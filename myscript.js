@@ -4,31 +4,32 @@
 // VERSION 2: printing out a json object of buttons
 
 var buttons = {
-  "Funny":"funny()"
-  , "Git": "git()"
-  , "Gregoriana":"gregoriana()"
-  , "Health":"health()"
-  , "HTML5":"html5()"
-  , "IT stuff":"its()"
-  , "IT terms":"itt()"
-  , "Java":"java()"
-  , "JavaScript":"js()"
-  , "Job Search" : "jobsearch()"
-  , "Latina":"latina()"
-  , "Localization":"l10n()"
-  , "Mozilla" : "mozilla()"
-  , "Music":"mus()"
-  , "Node.js":"nodejs()"
-  , "PHP":"php()"
-  , "Preach & Teach":"p_t()"
-  , "Praise & Worship":"p_w()"
-  , "Self-Defense":"selfdefense()"
-  , "Seneca":"seneca()"
-  , "Tolkieniana":"tolkiniana()"
-  , "Transifex" : "transifex()"
-  , "Unsorted":"unsorted()"
-  , "Video":"video()"
-  , "Webdev":"webdev()"
+ "Funny":"funny()"
+ , "Git": "git()"
+ , "Gregoriana":"gregoriana()"
+ , "Health":"health()"
+ , "HTML5":"html5()"
+ , "IT stuff":"its()"
+ , "IT terms":"itt()"
+ , "Java":"java()"
+ , "JavaScript":"js()"
+ , "Job Search" : "jobsearch()"
+ , "Latina":"latina()"
+ , "Localization":"l10n()"
+ , "Mozilla" : "mozilla()"
+ , "Mozilla bugs" : "mozBugs()" 
+ , "Music":"mus()"
+ , "Node.js":"nodejs()"
+ , "PHP":"php()"
+ , "Preach & Teach":"p_t()"
+ , "Praise & Worship":"p_w()"
+ , "Self-Defense":"selfdefense()"
+ , "Seneca":"seneca()"
+ , "Tolkieniana":"tolkiniana()"
+ , "Transifex" : "transifex()"
+ , "Unsorted":"unsorted()"
+ , "Video":"video()"
+ , "Webdev":"webdev()"
 };
 var keys = [];
 var key,f;
@@ -98,8 +99,11 @@ function printObj(obj){
     
     // assign the current key and the next jey
     currentKey = keys[f]; //console.log('currentKey: '+ currentKey);
-    if (keys[f+1]) {
+    if (keys[f+1]) {   // if nextKey exists
       nextKey = keys[f+1]; //console.log('nextKey: ' + nextKey);
+    }
+    else{
+      nextKey = ' ';
     }
 
 
@@ -123,6 +127,33 @@ function printObj(obj){
 
 //=========================================================================================
 
+
+function mozBugs(){
+  document.getElementById("demo").innerHTML=bugsFunc();
+}
+
+var bugsFunc = function(){
+
+  var bugsObj = {
+    "888565 (login.webm... l10n" : "https://github.com/mozilla/login.webmaker.org/pull/121/files"
+      , "885193 (search field)" : "https://bugzilla.mozilla.org/show_bug.cgi?id=885193"
+      , "870429 (locales)":"https://bugzilla.mozilla.org/show_bug.cgi?id=870429"
+      , "869643 (MONGO)":"https://bugzilla.mozilla.org/show_bug.cgi?id=869643"
+      , "873064 (prune)":"https://bugzilla.mozilla.org/show_bug.cgi?id=873064"
+      , "873098 (old code)":"https://bugzilla.mozilla.org/show_bug.cgi?id=873098"
+      , "877269 (MakeAPI unit tests)" : "https://bugzilla.mozilla.org/show_bug.cgi?id=877269"
+      , "877305 (comma)":"https://bugzilla.mozilla.org/show_bug.cgi?id=877305"
+      , "881734 (audit)":"https://bugzilla.mozilla.org/show_bug.cgi?id=881734"
+      , "870995 (Make! - '!')":"https://bugzilla.mozilla.org/show_bug.cgi?id=870995"
+      , "883426 (update module)":"https://bugzilla.mozilla.org/show_bug.cgi?id=883426"
+      , "885193 (search field)":"https://bugzilla.mozilla.org/show_bug.cgi?id=885193"
+
+    };
+    return printObj(bugsObj);;
+  };
+
+
+//---------------------------------------------------------------------
 function funny(){
   document.getElementById("demo").innerHTML=funnyFunc();
 }
@@ -231,7 +262,6 @@ var funnyFunc = function(){
       , "Who Could Be President ":"http://www.youtube.com/watch?v=0SHsg20-9LM"
       , "Who farted?":"https://www.youtube.com/watch?v=78WEaRm2W2k"
       , "Why is the rum gone? ":"http://www.youtube.com/watch?v=JImcvtJzIK8"
-      , "Litvinkovich":"https://www.youtube.com/watch?v=-8VxxHAaBbw"
     };
     return printObj(funnyObj);;
   };
@@ -261,7 +291,6 @@ var git2 = function (){
     , "Atemoya":"https://github.com/igoryen/atemoya"
     , "Avocado":"https://github.com/igoryen/avocado"
     , "Banana":"https://github.com/igoryen/banana"
-    , "Butter":"https://github.com/mozilla/butter"
     , "Create a repo":"https://help.github.com/articles/create-a-repo"
     , "Culinary fruit, list":"http://en.wikipedia.org/wiki/List_of_culinary_fruits"
     , "EJS":"https://github.com/visionmedia/ejs"
@@ -280,45 +309,24 @@ var git2 = function (){
     , "Hello World!":"https://github.com/alicoding/Hello-World/"
     , "Interactive Rebase":"https://help.github.com/articles/interactive-rebase"
     , "Igoryen":"https://github.com/igoryen"
-    , "LoginAPI & User Model" : "https://github.com/mozilla/login.webmaker.org/wiki/LoginAPI-&-User-Model"
-    , "login.webmaker.org (igoryen)":"https://github.com/igoryen/login.webmaker.org"
-    , "login.webmaker.org (mozilla)":"https://github.com/humphd/login.webmaker.org"
-    , "login.webmaker.org (humph)":"https://github.com/mozilla/login.webmaker.org"
     , "localhost:3000":"http://localhost:3000"
     , "localhost:7777":"http://localhost:7777"
-    , "MakeAPI (igoryen)":"https://github.com/igoryen/MakeAPI"
-    , "MakeAPI (humphd)" : "https://github.com/humphd/MakeAPI"
-    , "MakeAPI (moz)":"https://github.com/mozilla/MakeAPI"
-    , "MakeAPI model" : "https://gist.github.com/mjschranz/e37e7429373861a3d11e"
-    , "MakeAPI API reference"  : "https://github.com/mozilla/MakeAPI/wiki/API-Reference"
+    
     , "Mango":"https://github.com/igoryen/mango"
     , "Markdown Syntax":"https://github.com/fletcher/MultiMarkdown/blob/master/Documentation/Markdown%20Syntax.md"
     , "My links":"https://github.com/igoryen/mylinks"
     , "NVM":"https://github.com/creationix/nvm"
-    , "node-webmaker-loginapi":"https://github.com/mozilla/node-webmaker-loginapi"
     , "nodemon" : "https://github.com/remy/nodemon"
     , "Pay attention to Node.js":"http://readwrite.com/2010/10/20/why-developers-should-pay-atte"
-    , "Popcorn_maker":"https://github.com/mozilla/popcorn_maker"
-    , "popcorn.webmaker.org":"https://github.com/mozilla/popcorn.webmaker.org"
     , "Power your workflow":"https://www.youtube.com/watch?v=GYnOwPl8yCE"
     , "SSH keys: generating":"https://help.github.com/articles/generating-ssh-keys"
     , "SIL2013":"https://github.com/storytellinginnovationlab2013"
     , "10 things I hate about git":"http://steveko.wordpress.com/2012/02/24/10-things-i-hate-about-git/"
     , "Test":"https://github.com/igoryen/Test"
-    , "thimble.webmaker.org (moz)":"https://github.com/mozilla/thimble.webmaker.org"
     , "Toolness":"https://github.com/toolness"
-    , "Webmaker.org":"https://github.com/mozilla/webmaker.org"
     , "zsh shell" : "https://github.com/robbyrussell/oh-my-zsh"
     , "zsh syntax highlighting" : "https://github.com/zsh-users/zsh-syntax-highlighting"
-    , "bug870429 (locales)":"https://bugzilla.mozilla.org/show_bug.cgi?id=870429"
-    , "bug869643 (MONGO)":"https://bugzilla.mozilla.org/show_bug.cgi?id=869643"
-    , "bug873064 (prune)":"https://bugzilla.mozilla.org/show_bug.cgi?id=873064"
-    , "bug873098 (old code)":"https://bugzilla.mozilla.org/show_bug.cgi?id=873098"
-    , "bug877305 (comma)":"https://bugzilla.mozilla.org/show_bug.cgi?id=877305"
-    , "bug881734 (audit)":"https://bugzilla.mozilla.org/show_bug.cgi?id=881734"
-    , "bug870995 (Make! - '!')":"https://bugzilla.mozilla.org/show_bug.cgi?id=870995"
-    , "bug883426 (update module)":"https://bugzilla.mozilla.org/show_bug.cgi?id=883426"
-    , "bug885193 (search field)":"https://bugzilla.mozilla.org/show_bug.cgi?id=885193"
+    
   };
 
   return printObj(gitObj);
@@ -792,8 +800,6 @@ var its2 = function (){
     , "Blog 006":"http://igoryen.wordpress.com/2013/06/14/mocha-unit-testing-the-simplest-example-var-assert/"
     , "Blog 007":"http://igoryen.wordpress.com/2013/06/23/setting-up-servers-to-run-locally/"
     , "Branching model, a":"http://nvie.com/posts/a-successful-git-branching-model/"
-    , "Bugzilla":"https://bugzilla.mozilla.org/"
-    , "Bugzilla: work with bugs":"http://sedgestuff.wordpress.com/2013/05/09/howto-working-with-open-bugs-on-bugzilla/"
     , "Cloud9 IDE" : "https://c9.io/"
     , "Config":"http://www.12factor.net/config"
     , "CSS Validator":"http://jigsaw.w3.org/css-validator/"
@@ -1123,6 +1129,7 @@ var itt2 = function (){
     , "User" : "http://en.wikipedia.org/wiki/User_%28computing%29"
     , "User agent":"http://en.wikipedia.org/wiki/User_agent"
     , "User space":"http://en.wikipedia.org/wiki/User_space"
+    , "UUID" : "http://en.wikipedia.org/wiki/Universally_unique_identifier"
     , "V8":"http://en.wikipedia.org/wiki/V8_%28JavaScript_engine%29"
     , "VGA":"http://en.wikipedia.org/wiki/Vga"
     , "VM":"http://en.wikipedia.org/wiki/Virtual_machine"
@@ -1250,12 +1257,14 @@ function latina(){
 };
 var latinaFunc = function(){
   var latinaObj = {
-    "Latin Links":"http://www.frcoulter.com/latin/links.html"
+    "Grammar (Orbilat)" : "http://www.orbilat.com/Languages/Latin/Grammar/index.html"
+    , "Latin Links":"http://www.frcoulter.com/latin/links.html"
     , "Latinum":"https://sites.google.com/site/janualinguae/latin"
     , "Nuntii Latini":"http://yle.fi/radio1/tiede/nuntii_latini/"
     , "Orbilat":"http://www.orbilat.com/"
     , "Romanian closest to Classical Latin":"http://www.antimoon.com/forum/t2129-0.htm"
     , "Recens Latinitas ":"file:///D:/Language/Latina/html/latinitas_recens_latine.html"
+    , "Schola" : "http://schola.ning.com/"
 
   };
 
@@ -1292,14 +1301,34 @@ function mozilla(){
 };
 var mozillaFunc = function(){
   var mozillaObj = {
-    "Webmaker Meetings 13/06/25-27" : "https://etherpad.mozilla.org/webmaker-post15th-meetings"
-    ,  "Wiki Mizilla": "https://wiki.mozilla.org/Main_Page"
-    , "webmaker liking makes" : "https://etherpad.mozilla.org/webmaker-liking-makes"
-    , "webmaker postmortem  group 1" : "https://etherpad.mozilla.org/webmakerpostmortemgroup1"
-    , "webmaker postmortem  group 2" : "https://etherpad.mozilla.org/webmakerpostmortemgroup2"
-    , "webmaker postmortem  group 3" : "https://etherpad.mozilla.org/webmakerpostmortemgroup3"
-  };
-  return printObj(mozillaObj);
+   "Bugzilla":"https://bugzilla.mozilla.org/"
+   , "Bugzilla: work with bugs":"http://sedgestuff.wordpress.com/2013/05/09/howto-working-with-open-bugs-on-bugzilla/"
+   , "Butter":"https://github.com/mozilla/butter"
+   , "June 2nd" : "https://webmaker.etherpad.mozilla.org/July2nd"
+   , "Localizing Webmaker" : "http://vocamus.net/dave/?p=1605"
+   , "LoginAPI & User Model" : "https://github.com/mozilla/login.webmaker.org/wiki/LoginAPI-&-User-Model"
+   , "login.webmaker.org (igoryen)":"https://github.com/igoryen/login.webmaker.org"
+   , "login.webmaker.org (mozilla)":"https://github.com/humphd/login.webmaker.org"
+   , "login.webmaker.org (humph)":"https://github.com/mozilla/login.webmaker.org"
+   , "MakeAPI (igoryen)":"https://github.com/igoryen/MakeAPI"
+   , "MakeAPI (humphd)" : "https://github.com/humphd/MakeAPI"
+   , "MakeAPI (moz)":"https://github.com/mozilla/MakeAPI"
+   , "MakeAPI model" : "https://gist.github.com/mjschranz/e37e7429373861a3d11e"
+   , "MakeAPI API reference"  : "https://github.com/mozilla/MakeAPI/wiki/API-Reference"
+   , "node-webmaker-loginapi":"https://github.com/mozilla/node-webmaker-loginapi"
+   , "popcorn_maker":"https://github.com/mozilla/popcorn_maker"
+   , "popcorn.webmaker.org":"https://github.com/mozilla/popcorn.webmaker.org"
+   , "thimble.webmaker.org (moz)":"https://github.com/mozilla/thimble.webmaker.org"
+   , "Webmaker Meetings 13/06/25-27" : "https://etherpad.mozilla.org/webmaker-post15th-meetings"
+   , "Wiki Mizilla": "https://wiki.mozilla.org/Main_Page"
+   , "webmaker.org":"https://github.com/mozilla/webmaker.org"
+   , "webmaker liking makes" : "https://etherpad.mozilla.org/webmaker-liking-makes"
+   , "webmaker postmortem  group 1" : "https://etherpad.mozilla.org/webmakerpostmortemgroup1"
+   , "webmaker postmortem  group 2" : "https://etherpad.mozilla.org/webmakerpostmortemgroup2"
+   , "webmaker postmortem  group 3" : "https://etherpad.mozilla.org/webmakerpostmortemgroup3"
+
+ };
+ return printObj(mozillaObj);
 };
 //-----------------------------------------------------------
 function mus(){
@@ -1551,6 +1580,7 @@ var node = function (){
    , "Nodeguide":"http://nodeguide.com/"
    , "NodeJS on Fedora":"http://fedoraproject.org/wiki/Features/NodeJS"
    , "Node Tuts":"http://nodetuts.com/"
+
    , "Node wiki":"https://github.com/joyent/node/wiki"
    , "npm cheatsheet":"http://blog.nodejitsu.com/npm-cheatsheet"
    , "NPMjs":"https://npmjs.org/"
