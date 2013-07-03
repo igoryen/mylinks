@@ -1456,6 +1456,7 @@ var mus2 = function (){
    , "Reggae Praise":"https://www.youtube.com/watch?v=v5tWLQfFhmA&list=PL99DC3501551CA6FC"
    , "Remember Me":"https://www.youtube.com/watch?v=3yy6SIzq8Mc"
    , "Right Here Waiting":"https://www.youtube.com/watch?v=S_E2EHVxNAE"
+   , "River of Dreams, The" : "http://www.youtube.com/watch?v=hSq4B_zHqPM"
    , "Room for a step forward":"http://www.youtube.com/watch?NR=1&v=6JJw-ntEG_0&feature=endscreen"
    , "Runaway Train":"http://www.youtube.com/watch?v=NRtvqT_wMeY"
    , "Sea Shore Sounds ":"http://www.youtube.com/watch?v=1ASJxKpztWg"
