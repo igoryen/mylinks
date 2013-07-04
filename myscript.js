@@ -1283,9 +1283,12 @@ var l10nFunc = function(){
     , "i18n guy":"http://www.i18nguy.com/"
     , "i18n in Node":"http://ejohn.org/blog/a-strategy-for-i18n-and-node/"
     , "I love you":"http://iloveyou-localized.herokuapp.com/"
-    , "l10n-abide":"https://github.com/mozilla/i18n-abide"
+    , "i18n-abide":"https://github.com/mozilla/i18n-abide"
+    , "i18n-abide README" : "https://github.com/humphd/i18n-abide/blob/806b132347426d3114421a6e804f9adf8b1c10ab/README.md"
+    , "i18n-abide changes" : "https://github.com/humphd/i18n-abide/commit/806b132347426d3114421a6e804f9adf8b1c10ab"
     , "l10n community":"https://hacks.mozilla.org/2013/04/localization-community-tools-process-part-2-of-3-a-node-js-holiday-season-part-10/"
     , "Language identifiers":"http://www.i18nguy.com/unicode/language-identifiers.html"
+    , "Language subtag registry" : "http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"
     , "Transifex":"https://www.transifex.com/"
     , "Transifex":"http://help.transifex.com/contents.html"
 
@@ -1313,7 +1316,7 @@ var mozillaFunc = function(){
    , "MakeAPI (igoryen)":"https://github.com/igoryen/MakeAPI"
    , "MakeAPI (humphd)" : "https://github.com/humphd/MakeAPI"
    , "MakeAPI (moz)":"https://github.com/mozilla/MakeAPI"
-   , "MakeAPI model" : "https://gist.github.com/mjschranz/e37e7429373861a3d11e"
+   , "MakeAPI make_model" : "https://gist.github.com/mjschranz/e37e7429373861a3d11e"
    , "MakeAPI API reference"  : "https://github.com/mozilla/MakeAPI/wiki/API-Reference"
    , "node-webmaker-loginapi":"https://github.com/mozilla/node-webmaker-loginapi"
    , "popcorn_maker":"https://github.com/mozilla/popcorn_maker"
@@ -1323,6 +1326,7 @@ var mozillaFunc = function(){
    , "Wiki Mizilla": "https://wiki.mozilla.org/Main_Page"
    , "webmaker.org":"https://github.com/mozilla/webmaker.org"
    , "webmaker liking makes" : "https://etherpad.mozilla.org/webmaker-liking-makes"
+   , "webmaker needs" : "https://github.com/humphd/amore.webmaker.org/tree/webmaker-needs"
    , "webmaker postmortem  group 1" : "https://etherpad.mozilla.org/webmakerpostmortemgroup1"
    , "webmaker postmortem  group 2" : "https://etherpad.mozilla.org/webmakerpostmortemgroup2"
    , "webmaker postmortem  group 3" : "https://etherpad.mozilla.org/webmakerpostmortemgroup3"
@@ -2145,8 +2149,8 @@ function webdev(){
 var webdevFunc = function(){
 
   var webdevObj = {
-
-   "action=":"http://www.w3schools.com/tags/att_form_action.asp"
+     "Accept-Language" :"http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4"
+   , "action=":"http://www.w3schools.com/tags/att_form_action.asp"
    , "addColorStop()":"http://www.w3schools.com/tags/canvas_addcolorstop.asp"
    , "alert()":"http://www.w3schools.com/jsref/met_win_alert.asp"
    , "arc()":"http://www.w3schools.com/tags/canvas_arc.asp"
@@ -2233,6 +2237,7 @@ var webdev = [
 ];
 */
 
+//======================================
 
 
 
