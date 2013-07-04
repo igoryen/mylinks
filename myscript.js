@@ -283,6 +283,7 @@ var git2 = function (){
     "Abiu":"https://github.com/igoryen/abiu"
     , "Acerola":"https://github.com/igoryen/acerola"
     , "Ackee":"https://github.com/igoryen/ackee"
+    , "Ali Al Dallal" : "https://github.com/alicoding"
     , "Ambarella":"https://github.com/igoryen/ambarella"
     , "Amore":"https://github.com/humphd/amore.webmaker.org"
     , "Apple":"https://github.com/igoryen/apple"
@@ -293,6 +294,7 @@ var git2 = function (){
     , "Banana":"https://github.com/igoryen/banana"
     , "Create a repo":"https://help.github.com/articles/create-a-repo"
     , "Culinary fruit, list":"http://en.wikipedia.org/wiki/List_of_culinary_fruits"
+    , "David Humphrey" : "https://github.com/humphd/"
     , "EJS":"https://github.com/visionmedia/ejs"
     , "foreman" : "https://github.com/ddollar/foreman"
     , "Friendlycode":"https://github.com/mozilla/friendlycode"
@@ -1304,10 +1306,14 @@ function mozilla(){
 };
 var mozillaFunc = function(){
   var mozillaObj = {
-   "Bugzilla":"https://bugzilla.mozilla.org/"
+    "amore (humph) webmaker needs":"https://github.com/humphd/amore.webmaker.org/tree/webmaker-needs"
+   , "Bugzilla":"https://bugzilla.mozilla.org/"
    , "Bugzilla: work with bugs":"http://sedgestuff.wordpress.com/2013/05/09/howto-working-with-open-bugs-on-bugzilla/"
    , "Butter":"https://github.com/mozilla/butter"
-   , "June 2nd" : "https://webmaker.etherpad.mozilla.org/July2nd"
+   , "i18n-abide (humph)" : "https://github.com/humphd/i18n-abide"
+   , "i18n-abide (humph) webmaker needs" : "https://github.com/humphd/i18n-abide/commit/fc932caa42a4cfa88161dfe1a27e88085e85e3bd"
+   , "i18n-abide (moz) issue 38" : "https://github.com/mozilla/i18n-abide/issues/38"
+   , "July 2nd (eth.)" : "https://webmaker.etherpad.mozilla.org/July2nd"
    , "Localizing Webmaker" : "http://vocamus.net/dave/?p=1605"
    , "LoginAPI & User Model" : "https://github.com/mozilla/login.webmaker.org/wiki/LoginAPI-&-User-Model"
    , "login.webmaker.org (igoryen)":"https://github.com/igoryen/login.webmaker.org"
@@ -1323,13 +1329,15 @@ var mozillaFunc = function(){
    , "popcorn.webmaker.org":"https://github.com/mozilla/popcorn.webmaker.org"
    , "thimble.webmaker.org (moz)":"https://github.com/mozilla/thimble.webmaker.org"
    , "Webmaker Meetings 13/06/25-27" : "https://etherpad.mozilla.org/webmaker-post15th-meetings"
-   , "Wiki Mizilla": "https://wiki.mozilla.org/Main_Page"
-   , "webmaker.org":"https://github.com/mozilla/webmaker.org"
+   , "webmaker.org (moz)":"https://github.com/mozilla/webmaker.org"
+   , "webmaker.org (igoryen)" : "https://github.com/igoryen/webmaker.org"
    , "webmaker liking makes" : "https://etherpad.mozilla.org/webmaker-liking-makes"
    , "webmaker needs" : "https://github.com/humphd/amore.webmaker.org/tree/webmaker-needs"
    , "webmaker postmortem  group 1" : "https://etherpad.mozilla.org/webmakerpostmortemgroup1"
    , "webmaker postmortem  group 2" : "https://etherpad.mozilla.org/webmakerpostmortemgroup2"
    , "webmaker postmortem  group 3" : "https://etherpad.mozilla.org/webmakerpostmortemgroup3"
+   , "Wiki Mozilla": "https://wiki.mozilla.org/Main_Page"
+
 
  };
  return printObj(mozillaObj);
@@ -1569,6 +1577,7 @@ var node = function (){
    , "express (npm.js)":"https://npmjs.org/package/express"
    , "express js" : "http://expressjs.com/"
    , "Express Guide":"http://expressjs.com/guide.html"
+   , "express-locale" : "https://npmjs.org/package/express-locale"
    , "First Look":"http://www.lynda.com/Nodejs-tutorials/Nodejs-First-Look/101554-2.html"
    , "fs":"http://nodejs.org/api/fs.html#fs_file_system"
    , "for beginners":"http://net.tutsplus.com/tutorials/javascript-ajax/node-js-for-beginners/"
