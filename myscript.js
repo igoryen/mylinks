@@ -51,7 +51,7 @@ for (f = 0; f < keys.length; f++){
 // end of VERSION 2
 
 // end of Printing buttons out.
-//--------------------------------------------------
+//----------------------------------------------------------------------------
 
 
 
@@ -153,7 +153,7 @@ var bugsFunc = function(){
   };
 
 
-//---------------------------------------------------------------------
+//----------------------------------------------------------------------------
 function funny(){
   document.getElementById("demo").innerHTML=funnyFunc();
 }
@@ -321,6 +321,7 @@ var git2 = function (){
     , "nodemon" : "https://github.com/remy/nodemon"
     , "Pay attention to Node.js":"http://readwrite.com/2010/10/20/why-developers-should-pay-atte"
     , "Power your workflow":"https://www.youtube.com/watch?v=GYnOwPl8yCE"
+    , "Spectrum (Ali)" : "https://github.com/alicoding/spectrum"
     , "SSH keys: generating":"https://help.github.com/articles/generating-ssh-keys"
     , "SIL2013":"https://github.com/storytellinginnovationlab2013"
     , "10 things I hate about git":"http://steveko.wordpress.com/2012/02/24/10-things-i-hate-about-git/"
@@ -843,12 +844,12 @@ var its2 = function (){
     , "Kieran`s Blog":"http://sedgestuff.wordpress.com/"
     , "Lynda.com":"http://www.lynda.com/"
     , "Mac Essentials":"https://etherpad.mozilla.org/macessentials"
+    , "MacPorts" : "http://www.macports.org/"
     , "Mongo DB":"http://www.mongodb.org/"
     , "Mozilla Developer Network":"https://developer.mozilla.org/en-US/"
     , "Mozilla Foundation":"http://www.mozilla.org/foundation/"
     , "Mozilla Wiki":"https://wiki.mozilla.org/Main_Page"
-    , "Mozilla/login.webmaker.org":"https://github.com/mozilla/login.webmaker.org"
-    , "mine":"https://github.com/mozilla/login.webmaker.org"
+    , "Moving from MacPorts to Homebrew" : "http://bitboxer.de/2010/06/03/moving-from-macports-to-homebrew/"
     , "MSDN Library ":"http://msdn.microsoft.com/library/default.aspx"
     , "NetBeans.org":"http://netbeans.org/index.html"
     , "npm: intro":"http://howtonode.org/introduction-to-npm"
@@ -872,6 +873,7 @@ var its2 = function (){
     , "Solarized":"http://ethanschoonover.com/solarized"
     , "Stack Overflow ":"http://stackoverflow.com/"
     , "Sublime Text":"http://www.sublimetext.com/"
+    , "Sublime as default editor" : "https://gist.github.com/artero/1236170"
     , "Sublime Text Tut":"https://tutsplus.com/course/improve-workflow-in-sublime-text-2/"
     , "Sublime Text on Fedora":"https://gist.github.com/dantoncancella/4977978"
     , "Tech On The Net ":"http://www.techonthenet.com/index.php"
@@ -1018,7 +1020,9 @@ var itt2 = function (){
     , "Locale":"https://en.wikipedia.org/wiki/Locale"
     , "Localization":"https://en.wikipedia.org/wiki/Localization"
     , "Look and feel":"http://en.wikipedia.org/wiki/Look_and_feel"
+    , "MacPorts" : "http://en.wikipedia.org/wiki/MacPorts"
     , "MAMP":"http://en.wikipedia.org/wiki/MAMP"
+    , "Mashup" : "http://en.wikipedia.org/wiki/Mashup_%28web_application_hybrid%29"
     , "Memory footprint":"http://en.wikipedia.org/wiki/Memory_footprint"
     , "Markup language":"http://en.wikipedia.org/wiki/Markup_language"
     , "Merge":"https://en.wikipedia.org/wiki/Merge_(revision_control)"
@@ -1136,6 +1140,7 @@ var itt2 = function (){
     , "VGA":"http://en.wikipedia.org/wiki/Vga"
     , "VM":"http://en.wikipedia.org/wiki/Virtual_machine"
     , "VPS":"http://en.wikipedia.org/wiki/Virtual_private_server"
+    , "Web API" : "http://en.wikipedia.org/wiki/Web_API"
     , "Web application":"http://en.wikipedia.org/wiki/Web_application"
     , "Web application framework":"http://en.wikipedia.org/wiki/Web_application_framework"
     , "Web browser":"http://en.wikipedia.org/wiki/Web_browser"
@@ -1207,8 +1212,6 @@ var jobsearchFunc = function(){
 
 };
 
-
-
 //----------------------------------------------------------------------------
 
 function js(){
@@ -1253,7 +1256,7 @@ var jsFunc = function(){
 
 };
 
-/////////////////////////////////////////////////////////////////////////
+//----------------------------------------------------------------------------
 function latina(){
   document.getElementById("demo").innerHTML=latinaFunc();
 };
@@ -1273,14 +1276,16 @@ var latinaFunc = function(){
   return printObj(latinaObj);
 
 };
-//////////////////////////
+//----------------------------------------------------------------------------
+
 function l10n(){
   document.getElementById("demo").innerHTML = l10nFunc();
 
 };
 var l10nFunc = function(){
   var l10nObj = {
-    "Header field definitions":"http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html"
+     "Define an i18n bundle":"http://requirejs.org/docs/api.html#i18n"
+    , "Header field definitions":"http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html"
     , "IETF language tag":"http://en.wikipedia.org/wiki/IETF_language_tag"
     , "i18n guy":"http://www.i18nguy.com/"
     , "i18n in Node":"http://ejohn.org/blog/a-strategy-for-i18n-and-node/"
@@ -1291,15 +1296,14 @@ var l10nFunc = function(){
     , "l10n community":"https://hacks.mozilla.org/2013/04/localization-community-tools-process-part-2-of-3-a-node-js-holiday-season-part-10/"
     , "Language identifiers":"http://www.i18nguy.com/unicode/language-identifiers.html"
     , "Language subtag registry" : "http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"
-    , "Transifex":"https://www.transifex.com/"
-    , "Transifex":"http://help.transifex.com/contents.html"
+    
 
   };
 
   return printObj(l10nObj);
 
 };
-//-------------------------------------------------------
+//----------------------------------------------------------------------------
 function mozilla(){
   document.getElementById("demo").innerHTML = mozillaFunc();
 
@@ -1307,42 +1311,44 @@ function mozilla(){
 var mozillaFunc = function(){
   var mozillaObj = {
     "amore (humph) webmaker needs":"https://github.com/humphd/amore.webmaker.org/tree/webmaker-needs"
-   , "Bugzilla":"https://bugzilla.mozilla.org/"
-   , "Bugzilla: work with bugs":"http://sedgestuff.wordpress.com/2013/05/09/howto-working-with-open-bugs-on-bugzilla/"
-   , "Butter":"https://github.com/mozilla/butter"
-   , "i18n-abide (humph)" : "https://github.com/humphd/i18n-abide"
-   , "i18n-abide (humph) webmaker needs" : "https://github.com/humphd/i18n-abide/commit/fc932caa42a4cfa88161dfe1a27e88085e85e3bd"
-   , "i18n-abide (moz) issue 38" : "https://github.com/mozilla/i18n-abide/issues/38"
-   , "July 2nd (eth.)" : "https://webmaker.etherpad.mozilla.org/July2nd"
-   , "Localizing Webmaker" : "http://vocamus.net/dave/?p=1605"
-   , "LoginAPI & User Model" : "https://github.com/mozilla/login.webmaker.org/wiki/LoginAPI-&-User-Model"
-   , "login.webmaker.org (igoryen)":"https://github.com/igoryen/login.webmaker.org"
-   , "login.webmaker.org (mozilla)":"https://github.com/humphd/login.webmaker.org"
-   , "login.webmaker.org (humph)":"https://github.com/mozilla/login.webmaker.org"
-   , "MakeAPI (igoryen)":"https://github.com/igoryen/MakeAPI"
-   , "MakeAPI (humphd)" : "https://github.com/humphd/MakeAPI"
-   , "MakeAPI (moz)":"https://github.com/mozilla/MakeAPI"
-   , "MakeAPI make_model" : "https://gist.github.com/mjschranz/e37e7429373861a3d11e"
-   , "MakeAPI API reference"  : "https://github.com/mozilla/MakeAPI/wiki/API-Reference"
-   , "node-webmaker-loginapi":"https://github.com/mozilla/node-webmaker-loginapi"
-   , "popcorn_maker":"https://github.com/mozilla/popcorn_maker"
-   , "popcorn.webmaker.org":"https://github.com/mozilla/popcorn.webmaker.org"
-   , "thimble.webmaker.org (moz)":"https://github.com/mozilla/thimble.webmaker.org"
-   , "Webmaker Meetings 13/06/25-27" : "https://etherpad.mozilla.org/webmaker-post15th-meetings"
-   , "webmaker.org (moz)":"https://github.com/mozilla/webmaker.org"
-   , "webmaker.org (igoryen)" : "https://github.com/igoryen/webmaker.org"
-   , "webmaker liking makes" : "https://etherpad.mozilla.org/webmaker-liking-makes"
-   , "webmaker needs" : "https://github.com/humphd/amore.webmaker.org/tree/webmaker-needs"
-   , "webmaker postmortem  group 1" : "https://etherpad.mozilla.org/webmakerpostmortemgroup1"
-   , "webmaker postmortem  group 2" : "https://etherpad.mozilla.org/webmakerpostmortemgroup2"
-   , "webmaker postmortem  group 3" : "https://etherpad.mozilla.org/webmakerpostmortemgroup3"
-   , "Wiki Mozilla": "https://wiki.mozilla.org/Main_Page"
+    , "Bugzilla":"https://bugzilla.mozilla.org/"
+    , "Bugzilla: work with bugs":"http://sedgestuff.wordpress.com/2013/05/09/howto-working-with-open-bugs-on-bugzilla/"
+    , "Butter":"https://github.com/mozilla/butter"
+    , "i18n-abide (humph)" : "https://github.com/humphd/i18n-abide"
+    , "i18n-abide (humph) webmaker needs" : "https://github.com/humphd/i18n-abide/commit/fc932caa42a4cfa88161dfe1a27e88085e85e3bd"
+    , "i18n-abide (moz) issue 38" : "https://github.com/mozilla/i18n-abide/issues/38"
+    , "prio 130702 (eth.)" : "https://webmaker.etherpad.mozilla.org/July2nd"
+    , "prio 130706" : "https://webmaker.etherpad.mozilla.org/demos"
+    , "prio 130708" : "https://webmaker.etherpad.mozilla.org/July8th"
+    , "Localizing Webmaker" : "http://vocamus.net/dave/?p=1605"
+    , "LoginAPI & User Model" : "https://github.com/mozilla/login.webmaker.org/wiki/LoginAPI-&-User-Model"
+    , "login.webmaker.org (igoryen)":"https://github.com/igoryen/login.webmaker.org"
+    , "login.webmaker.org (mozilla)":"https://github.com/humphd/login.webmaker.org"
+    , "login.webmaker.org (humph)":"https://github.com/mozilla/login.webmaker.org"
+    , "MakeAPI (igoryen)":"https://github.com/igoryen/MakeAPI"
+    , "MakeAPI (humphd)" : "https://github.com/humphd/MakeAPI"
+    , "MakeAPI (moz)":"https://github.com/mozilla/MakeAPI"
+    , "MakeAPI make_model" : "https://gist.github.com/mjschranz/e37e7429373861a3d11e"
+    , "MakeAPI API reference"  : "https://github.com/mozilla/MakeAPI/wiki/API-Reference"
+    , "node-webmaker-loginapi":"https://github.com/mozilla/node-webmaker-loginapi"
+    , "popcorn_maker":"https://github.com/mozilla/popcorn_maker"
+    , "popcorn.webmaker.org":"https://github.com/mozilla/popcorn.webmaker.org"
+    , "thimble.webmaker.org (moz)":"https://github.com/mozilla/thimble.webmaker.org"
+    , "Webmaker Meetings 13/06/25-27" : "https://etherpad.mozilla.org/webmaker-post15th-meetings"
+    , "webmaker.org (moz)":"https://github.com/mozilla/webmaker.org"
+    , "webmaker.org (igoryen)" : "https://github.com/igoryen/webmaker.org"
+    , "webmaker liking makes" : "https://etherpad.mozilla.org/webmaker-liking-makes"
+    , "webmaker needs" : "https://github.com/humphd/amore.webmaker.org/tree/webmaker-needs"
+    , "webmaker postmortem  group 1" : "https://etherpad.mozilla.org/webmakerpostmortemgroup1"
+    , "webmaker postmortem  group 2" : "https://etherpad.mozilla.org/webmakerpostmortemgroup2"
+    , "webmaker postmortem  group 3" : "https://etherpad.mozilla.org/webmakerpostmortemgroup3"
+    , "Wiki Mozilla": "https://wiki.mozilla.org/Main_Page"
 
 
- };
- return printObj(mozillaObj);
+  };
+  return printObj(mozillaObj);
 };
-//-----------------------------------------------------------
+//----------------------------------------------------------------------------
 function mus(){
   document.getElementById("demo").innerHTML= mus2();
 };
@@ -1584,6 +1590,7 @@ var node = function (){
    , "fs.writeFile()":"http://nodejs.org/api/fs.html#fs_fs_writefile_filename_data_options_callback"
    , "Get started":"http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js"
    , "gobbledygook":"https://npmjs.org/package/gobbledygook"
+   , "habitat (library)" : "https://github.com/brianloveswords/habitat"
    , "How to Node":"http://howtonode.org/streams-explained"
    , "Intro by Ryan Dahl":"http://www.youtube.com/watch?v=jo_B4LTHi3I"
    , "joyent/node":"https://github.com/joyent/node/wiki/modules"
@@ -1715,17 +1722,15 @@ var p_wFunc = function(){
     , "Maranatha Double Praise 08":"https://www.youtube.com/watch?v=Bl0R9AT0lPk"
     , "Maranatha Double Praise 11":"https://www.youtube.com/watch?NR=1&feature=endscreen&v=uyrxmG1Ctio"
     , "Maranathe Double Praise 14":"https://www.youtube.com/watch?v=Pce_M-XT8Jc"
+    , "Open Sky - Iona" : "https://www.youtube.com/watch?v=0c6g0HItFdg"
     , "To the Ends of the Earth" : "https://www.youtube.com/watch?v=UvD4kYus0rM" 
   };
 
   
   return printObj(p_wObj);
 
-
 }; 
 //----------------------------------------------------------------------------
-
-
 
 function selfdefense(){
   document.getElementById("demo").innerHTML = selfdefenseFunc();
@@ -1865,8 +1870,6 @@ var tolkinianaFunc = function(){
 };
 //----------------------------------------------------------------------------
 
-
-
 function transifex(){
   document.getElementById("demo").innerHTML = transifexFunc();
 };
@@ -1875,22 +1878,20 @@ var transifexFunc = function(){
   var transifexObj = {
 
 
-
-    "Define an i18n bundle":"http://requirejs.org/docs/api.html#i18n"
+      "Amore" : "https://www.transifex.com/projects/p/amore/"
+    , "Login.webmaker.org" : "https://www.transifex.com/projects/p/loginwebmakerorg/"
     , "Managing your project":"http://help.transifex.com/intro/projects.html#managing-your-project"
     , "Projects":"http://help.transifex.com/intro/projects.html#projects"
-    , "Translations":"http://help.transifex.com/features/api/api-v2.html#translations"
+    , "Transifex":"https://www.transifex.com/"
+    , "Transifex - help":"http://help.transifex.com/contents.html"
+    , "Translations":"http://help.transifex.com/features/api/api-v2.html#translations" 
+    , "Webmaker.org" : "https://www.transifex.com/projects/p/webmakerorg/"
 
   };
   return printObj(transifexObj);
 }; // end of videoFunc()
 
-//---------------------------------------------------------------------------
-
-
-
-
-
+//----------------------------------------------------------------------------
 
 
 function unsorted(){
@@ -2082,6 +2083,7 @@ var unsortedFunc = function(){
     , "Vidiyo":"https://v.mozilla.com/flex.html?csrf_tkn=E549181F441C34A40A78F3EF3AF006D8"
     , "Walmart":"http://www.walmart.ca/en"
     , "War Amps":"http://www.waramps.ca/home.html"
+    , "Webchaynik (rus webmaker)": "http://www.webchaynik.ru/"
     , "Webmaker":"https://webmaker.org/en-US/"
     , "Webmaker.MoFoStaging":"http://webmaker.mofostaging.net/"
     , "Webster 1828 ":"http://www.webster1828.com/"
@@ -2159,7 +2161,7 @@ function webdev(){
 var webdevFunc = function(){
 
   var webdevObj = {
-     "Accept-Language" :"http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4"
+   "Accept-Language" :"http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4"
    , "action=":"http://www.w3schools.com/tags/att_form_action.asp"
    , "addColorStop()":"http://www.w3schools.com/tags/canvas_addcolorstop.asp"
    , "alert()":"http://www.w3schools.com/jsref/met_win_alert.asp"
@@ -2177,6 +2179,8 @@ var webdevFunc = function(){
    , "Date":"http://www.w3schools.com/js/js_obj_date.asp"
    , "display a clock":"http://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock"
    , "drawImage()":"http://www.w3schools.com/tags/canvas_drawimage.asp"
+   , "ElasticSearch" : "http://www.elasticsearch.org/"
+   , "ElasticSearch tutorial" : "http://www.elasticsearchtutorial.com/elasticsearch-in-5-minutes.html"
    , "elements":"http://www.w3schools.com/jsref/coll_form_elements.asp"
    , "eval()":"http://www.w3schools.com/jsref/jsref_eval.asp"
    , "fieldset":"http://www.w3schools.com/tags/tag_fieldset.asp"
@@ -2225,6 +2229,7 @@ var webdevFunc = function(){
    , "stroke()":"http://www.w3schools.com/tags/canvas_stroke.asp"
    , "strokeText()":"http://www.w3schools.com/tags/canvas_stroketext.asp"
    , "switch()":"http://www.w3schools.com/js/js_switch.asp"
+   , "templates" : "http://jinja.pocoo.org/docs/templates/"
    , "toLocaleString()":"http://www.w3schools.com/jsref/jsref_tolocalestring.asp"
    , "toUTCString()":"http://www.w3schools.com/jsref/jsref_toutcstring.asp"
    , "Web_Console":"https://developer.mozilla.org/en-US/docs/Tools/Web_Console"
