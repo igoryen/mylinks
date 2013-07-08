@@ -1296,6 +1296,7 @@ var l10nFunc = function(){
     , "l10n community":"https://hacks.mozilla.org/2013/04/localization-community-tools-process-part-2-of-3-a-node-js-holiday-season-part-10/"
     , "Language identifiers":"http://www.i18nguy.com/unicode/language-identifiers.html"
     , "Language subtag registry" : "http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"
+    , "Localizing a node.js app - Ali" : "http://alicoding.com/localized-first-webmaker-org-node-js-app/"
     
 
   };

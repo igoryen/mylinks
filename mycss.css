@@ -17,8 +17,8 @@
 body 
 {
     /*font-family: sans-serif;*/
-    font-family: Verdana , Gill Sans MT, sans-serif;
-    /*font-family:  Consolas, monospace;*/
+    /* font-family: Verdana , Gill Sans MT, sans-serif;*/
+    font-family:  Consolas, monospace;
     font-size: 10px;
     font-weight:  lighter;
     color: green;
