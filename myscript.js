@@ -4,42 +4,44 @@
 // VERSION 2: printing out a json object of buttons
 
 var buttons = {
-  "Funny": "funny()"
-  , "Git": "git()"
-  , "Gregoriana": "gregoriana()"
-  , "Health": "health()"
-  , "HTML5": "html5()"
-  , "IT stuff": "its()"
-  , "IT terms": "itt()"
-  , "Java": "java()"
-  , "JavaScript": "js()"
-  , "Job Search": "jobsearch()"
-  , "Latina": "latina()"
-  , "Localization": "l10n()"
-  , "Mozilla": "mozilla()"
-  , "Mozilla bugs": "mozBugs()"
-  , "Music": "mus()"
-  , "Node.js": "nodejs()"
-  , "PHP": "php()"
-  , "Preach & Teach": "p_t()"
-  , "Praise & Worship": "p_w()"
-  , "Self-Defense": "selfdefense()"
-  , "Seneca": "seneca()"
-  , "Tolkieniana": "tolkiniana()"
-  , "Transifex": "transifex()"
-  , "Unsorted": "unsorted()"
-  , "Video": "video()"
-  , "Webdev": "webdev()"
+
+ "Funny":"funny()"
+ , "Git": "git()"
+ , "Gregoriana":"gregoriana()"
+ , "Health":"health()"
+ , "HTML5":"html5()"
+ , "IT stuff":"its()"
+ , "IT terms":"itt()"
+ , "Java":"java()"
+ , "JavaScript":"js()"
+ , "Job Search" : "jobsearch()"
+ , "Latina":"latina()"
+ , "Localization":"l10n()"
+ , "Mozilla" : "mozilla()"
+ , "Mozilla bugs" : "mozBugs()" 
+ , "Music":"mus()"
+ , "Node.js":"nodejs()"
+ , "PHP":"php()"
+ , "Preach & Teach":"p_t()"
+ , "Praise & Worship":"p_w()"
+ , "Self-Defense":"selfdefense()"
+ , "Seneca":"seneca()"
+ , "Tolkieniana":"tolkiniana()"
+ , "Transifex" : "transifex()"
+ , "Unsorted":"unsorted()"
+ , "Video":"video()"
+ , "Webdev":"webdev()"
 };
 var keys = [];
-var key, f;
+var key,f;
 
-for (var key in buttons) {
-  if (buttons.hasOwnProperty(key)) {
+for (var key in buttons){
+  if (buttons.hasOwnProperty(key)){
     keys.push(key);
   }
 }
 keys.sort();
+
 
 for (f = 0; f < keys.length; f++) {
   key = keys[f];
@@ -68,15 +70,16 @@ function insensitive(s1, s2) {
 
 //----------------------------------------------------------------------------
 // function to print out a js object
-function printObj(obj) {
+
+function printObj(obj){
 
   var keys = [];  // declare variable to put array keys in
-  var currentKey, nextKey, f;
+  var currentKey,nextKey, f;
   var bag = "";
   var startingLetter = "";
 
-  for (var k in obj) {  // for every key in json object 
-    if (obj.hasOwnProperty(k)) { // if key has a property 
+  for (var k in obj){  // for every key in json object 
+    if (obj.hasOwnProperty(k)){ // if key has a property 
       keys.push(k);   // put key (and its property) into the -keys- array
     }
   } // end for()
@@ -108,23 +111,24 @@ function printObj(obj) {
 
 
 
-    if (currentKey.toLowerCase().charAt(0) != nextKey.toLowerCase().charAt(0)) {
-      //console.log('in if()');
-      //console.log(currentKey.charAt(0).toLowerCase() + " vs " + nextKey.charAt(0).toLowerCase());
-      startingLetter += "<hr>" + nextKey.toUpperCase().charAt(0) + "<br>";
-      //console.log('startingLetter: '+startingLetter);
-    }
+    if( currentKey.toLowerCase().charAt(0)  != nextKey.toLowerCase().charAt(0) ){
+    //console.log('in if()');
+    //console.log(currentKey.charAt(0).toLowerCase() + " vs " + nextKey.charAt(0).toLowerCase());
+    startingLetter += "<hr>" + nextKey.toUpperCase().charAt(0) + "<br>";
+    //console.log('startingLetter: '+startingLetter);
+  }
 
 
 
-    bag += '<a href="' + obj[currentKey] + '" target="_blank">' + currentKey + '</a><br>';
+  bag += '<a href="'+ obj[currentKey] + '" target="_blank">'+ currentKey + '</a><br>';
 
-    bag += startingLetter; // add the letter to the bag
+  bag += startingLetter; // add the letter to the bag
 
   } // end for()
-  return bag; // if you use 'document.write()' the document will have only the contents of the object on white background
-}
-; // end printObj()
+      return bag; // if you use 'document.write()' the document will have only the contents of the object on white background
+}; // end printObj()
+
+//=========================================================================================
 
 //=========================================================================================
 
@@ -682,7 +686,6 @@ var gregorianaFunc = function() {
   return printObj(gregorianaObj);
 }; // end of gregoriana
 
-////////////////////////////////////
 
 //----------------------------------------------------------------------------
 
@@ -2320,6 +2323,7 @@ var webdevFunc = function() {
  */
 
 //======================================
+
 
 
 
